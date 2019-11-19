@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< refs/remotes/origin/master
 guid: 531492c6fd7f549e98f6becb3e257561
+=======
+guid: 2f8228e17e82c9d4d955f11c60986b88
+>>>>>>> Merge Commit
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
