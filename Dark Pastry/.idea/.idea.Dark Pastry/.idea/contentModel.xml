@@ -7,6 +7,8 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="AgataMovement.cs" t="Include" />
+        <e p="Inventory.cs" t="Include" />
+        <e p="PlaceholdersLogic.cs" t="Include" />
         <e p="EnemyMovement.cs" t="Include" />
         <e p="Plugin_Notes" t="Include">
           <e p="Easy Notes" t="Include">

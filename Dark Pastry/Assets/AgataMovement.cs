@@ -1,6 +1,8 @@
 ﻿using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using Tile = UnityEngine.WSA.Tile;
 
 public class AgataMovement : MonoBehaviour
 {
@@ -11,6 +13,21 @@ public class AgataMovement : MonoBehaviour
     private float _unit;
 
     private float _speed=5f;
+
+    public Tilemap screenItems;
+
+    public Tilemap placeholdersTileMap;
+
+    public Tilemap wallMap;
+
+    public TileBase mushroomTile;
+
+    public TileBase skullTile;
+
+    public TileBase noPlaceholderTile;
+
+    public TileBase placeholderTile;
+
     // Start is called before the first frame update
 
     // Update is called once per frame
@@ -42,7 +59,7 @@ public class AgataMovement : MonoBehaviour
         }*/
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("PowerUp"))
         {
@@ -53,7 +70,16 @@ public class AgataMovement : MonoBehaviour
             }
             _pos = ComputePos(_tr.position);
             DeleteNearestTile(tm,_pos);
-            _speed += 1f;
+            Inventory.PickItem(mushroomTile, screenItems);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Placeholder"))
+        {
+            Debug.Log(other.contacts[0].point.x+"."+other.contacts[0].point.y);
+            PlaceholdersLogic.LightUp(other.contacts[0].point.x,other.contacts[0].point.y,placeholdersTileMap,noPlaceholderTile,placeholderTile,screenItems,wallMap);
         }
     }
 
@@ -90,4 +116,5 @@ public class AgataMovement : MonoBehaviour
     {
         return Math.Sqrt(Math.Pow(pos1.x - pos2.x, 2) + Math.Pow(pos1.y - pos2.y, 2));
     }
+    
 }
