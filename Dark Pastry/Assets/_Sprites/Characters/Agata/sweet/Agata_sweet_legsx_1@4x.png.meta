@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< refs/remotes/origin/master
 guid: 95eb5e8313fc44fc4a62da713daaeede
+=======
+guid: 570c8f51315f14d45bbce5b421d3e4f8
+>>>>>>> Merge Commit
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
