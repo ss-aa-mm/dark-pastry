@@ -1,12 +1,6 @@
-<<<<<<< refs/remotes/origin/master
 {
-  "process_id": 709,
-  "version": "2019.2.6f1"
-=======
-{
-	"process_id" : 9848,
+	"process_id" : 16900,
 	"version" : "2019.2.6f1",
 	"app_path" : "D:/Unity/Unity 2019.2.6f1/Editor/Unity.exe",
 	"app_contents_path" : "D:/Unity/Unity 2019.2.6f1/Editor/Data"
->>>>>>> Merge Commit
 }
