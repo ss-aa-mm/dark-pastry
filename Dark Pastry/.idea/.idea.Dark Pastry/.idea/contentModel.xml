@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\Giulia\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Giulia\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Dark Pastry.1174435904.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Giulia\Desktop\dark-pastry\Dark Pastry" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="AgataMovement.cs" t="Include" />
+        <e p="Inventory.cs" t="Include" />
+        <e p="PlaceholdersLogic.cs" t="Include" />
+        <e p="EnemyMovement.cs" t="Include" />
+        <e p="Plugin_Notes" t="Include">
+          <e p="Easy Notes" t="Include">
+            <e p="Notes" t="Include">
+              <e p="Info.txt" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="Dark Pastry.sln" t="IncludeFlat" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
