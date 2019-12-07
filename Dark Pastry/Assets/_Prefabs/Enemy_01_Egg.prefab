@@ -399,9 +399,12 @@ GameObject:
   - component: {fileID: 7103197582456809358}
   - component: {fileID: 7103197582456809357}
   - component: {fileID: 7103197582456809356}
+  - component: {fileID: 7685859004570932829}
+  - component: {fileID: 8700916248823197921}
+  - component: {fileID: 5592687652174920211}
   m_Layer: 0
   m_Name: Enemy_01_Egg
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -459,6 +462,71 @@ MonoBehaviour:
   tags: 
   color: {r: 1, g: 1, b: 1, a: 1}
   show: 1
+--- !u!114 &7685859004570932829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7103197582456809355}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 071ebab0b72fe4b00a22704902bd5e52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropsHeart: 0
+  dropsPocketItem: 0
+--- !u!50 &8700916248823197921
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7103197582456809355}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
+--- !u!60 &5592687652174920211
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7103197582456809355}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.10061908, y: 0.6310642}
+      - {x: -0.17964566, y: 0.5639179}
+      - {x: -0.23226547, y: -0.03760612}
+      - {x: 0.09890115, y: -0.025463104}
+      - {x: 0.26684844, y: 0.35597265}
 --- !u!1 &7103197582564679134
 GameObject:
   m_ObjectHideFlags: 0

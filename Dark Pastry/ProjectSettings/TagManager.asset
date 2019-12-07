@@ -6,6 +6,9 @@ TagManager:
   tags:
   - PowerUp
   - Placeholder
+  - Hearts
+  - DropItem
+  - Pedestal
   layers:
   - Default
   - TransparentFX
