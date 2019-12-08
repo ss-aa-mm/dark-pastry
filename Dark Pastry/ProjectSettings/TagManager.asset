@@ -9,6 +9,7 @@ TagManager:
   - Hearts
   - DropItem
   - Pedestal
+  - Enemy
   layers:
   - Default
   - TransparentFX
