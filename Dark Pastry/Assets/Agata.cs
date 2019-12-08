@@ -17,8 +17,6 @@ public class Agata : MonoBehaviour
 
     private float _unit;
 
-    private bool _isAttacking;
-
     private const float Speed=3f;
     
     public GameObject userInterface;
@@ -36,55 +34,44 @@ public class Agata : MonoBehaviour
     private void Update()
     {
         if(Dead) return;
-        _isAttacking = false;
+        ResetAnimator();
         var position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         _tr = transform;
         _unit = Speed * Time.deltaTime;
         if (Input.GetButton("Horizontal"))
         {
             transform.Translate(_unit * Input.GetAxis("Horizontal"), 0f, 0f);
-            /*if (Input.GetAxis("Horizontal") < 0)
+            if (Input.GetAxis("Horizontal") < 0)
             {
-                _agataAnimator.ResetTrigger("WalkRight");
-                _agataAnimator.ResetTrigger("WalkUp");
-                _agataAnimator.ResetTrigger("WalkDown");
-                _agataAnimator.SetTrigger("WalkLeft");
+                _agataAnimator.SetBool("WalkLeft",true);
             }
             else
             {
-                _agataAnimator.ResetTrigger("WalkLeft");
-                _agataAnimator.ResetTrigger("WalkUp");
-                _agataAnimator.ResetTrigger("WalkDown");
-                _agataAnimator.SetTrigger("WalkRight");
-            }*/
+                _agataAnimator.SetBool("WalkRight",true);
+            }
                 
         }
 
         if (Input.GetButton("Vertical"))
         {
             transform.Translate(0f, _unit * Input.GetAxis("Vertical"), 0f);
-            /*if (Input.GetAxis("Vertical") < 0)
+            if (Input.GetAxis("Vertical") < 0)
             {
-                _agataAnimator.ResetTrigger("WalkUp");
-                _agataAnimator.ResetTrigger("WalkRight");
-                _agataAnimator.ResetTrigger("WalkLeft");
-                _agataAnimator.SetTrigger("WalkDown");
+                _agataAnimator.SetBool("WalkDown",true);
             }
             else
             {
-                _agataAnimator.ResetTrigger("WalkDown");
-                _agataAnimator.ResetTrigger("WalkRight");
-                _agataAnimator.ResetTrigger("WalkLeft");
-                _agataAnimator.SetTrigger("WalkUp");
-            }*/
+                _agataAnimator.SetBool("WalkUp",true);
+            }
         }
 
         //Stub of the attack
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            var armPosition = gameObject.GetComponentsInChildren<Transform>()[8].position;
-            Debug.DrawLine(new Vector2(armPosition.x+0.3f,armPosition.y),armPosition+transform.right*10,Color.red);
-            var hit = Physics2D.Raycast(new Vector2(armPosition.x+0.3f,armPosition.y), armPosition+transform.right*100,0.3f);
+            AnimatedAttack();
+            var (pos, dir) = FireCoordinates();
+            Debug.DrawLine(pos,pos+dir,Color.red);
+            var hit = Physics2D.Raycast(pos, dir,0.3f);
             Debug.Log(hit.collider.gameObject.tag);
             if (hit.collider.gameObject.CompareTag("Enemy"))
             {
@@ -116,6 +103,66 @@ public class Agata : MonoBehaviour
         }
     }
 
+    private void ResetAnimator()
+    {
+        _agataAnimator.SetBool("WalkUp",false);
+        _agataAnimator.SetBool("WalkRight",false);
+        _agataAnimator.SetBool("WalkDown",false);
+        _agataAnimator.SetBool("WalkLeft",false);
+        _agataAnimator.SetBool("AttackUp",false);
+        _agataAnimator.SetBool("AttackRight",false);
+        _agataAnimator.SetBool("AttackDown",false);
+        _agataAnimator.SetBool("AttackLeft",false);
+    }
+
+    private void AnimatedAttack()
+    {
+        if (_agataAnimator.GetBool("WalkUp"))
+        {
+            _agataAnimator.SetBool("AttackUp",true);
+        }
+        else if (_agataAnimator.GetBool("WalkLeft"))
+        {
+            _agataAnimator.SetBool("AttackLeft",true);
+        }
+        else if (_agataAnimator.GetBool("WalkRight"))
+        {
+            _agataAnimator.SetBool("AttackRight",true);
+        }
+        else
+        {
+            _agataAnimator.SetBool("AttackDown",true);
+        }
+    }
+
+    private Tuple<Vector3,Vector3> FireCoordinates()
+    {
+        Vector3 firePosition;
+        Vector3 fireDirection;
+        if (_agataAnimator.GetBool("AttackUp"))
+        {
+            firePosition = gameObject.GetComponentsInChildren<Head>()[0].transform.position;
+            fireDirection = Vector3.up;
+        }
+        else if (_agataAnimator.GetBool("AttackRight"))
+        {
+            firePosition = gameObject.GetComponentsInChildren<RightArm>()[0].transform.position;
+            fireDirection = Vector3.right;
+        }
+        else if (_agataAnimator.GetBool("AttackLeft"))
+        {
+            firePosition = gameObject.GetComponentsInChildren<LeftArm>()[0].transform.position;
+            fireDirection = Vector3.left;
+        }
+        else
+        {
+            firePosition = gameObject.GetComponentsInChildren<Body>()[0].transform.position+new Vector3(0,-0.2f,0);
+            fireDirection = Vector3.down;
+        }
+
+        return Tuple.Create(firePosition, fireDirection);
+    }
+    
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Hearts"))
@@ -126,10 +173,7 @@ public class Agata : MonoBehaviour
 
         if (other.gameObject.CompareTag("Enemy"))
         {
-            if(_isAttacking)
-                Destroy(other.gameObject);
-            else
-                UiMechanics.LoseHeart(userInterface);
+            UiMechanics.LoseHeart(userInterface);
         }
     }
 }

@@ -6,6 +6,12 @@
       <e p="Assets" t="Include">
         <e p="Agata.cs" t="Include" />
         <e p="AgataMovement.cs" t="Include" />
+        <e p="EmptyScripts" t="Include">
+          <e p="Body.cs" t="Include" />
+          <e p="Head.cs" t="Include" />
+          <e p="LeftArm.cs" t="Include" />
+          <e p="RightArm.cs" t="Include" />
+        </e>
         <e p="EnemyEgg.cs" t="Include" />
         <e p="EnemyMovement.cs" t="Include" />
         <e p="GenericEnemy.cs" t="Include" />

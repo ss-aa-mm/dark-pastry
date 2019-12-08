@@ -200,6 +200,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5465951588859769856}
   - component: {fileID: 5465951588859769859}
+  - component: {fileID: 5313141791772810206}
   m_Layer: 0
   m_Name: AgataHead
   m_TagString: Untagged
@@ -271,6 +272,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5313141791772810206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5465951588859769857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f15c45fdbbd474b11acdd21fb2003e4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5465951589167558642
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,6 +328,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5465951589286988687}
+  - component: {fileID: 5270695888625976686}
   m_Layer: 0
   m_Name: Legs
   m_TagString: Untagged
@@ -338,6 +352,18 @@ Transform:
   m_Father: {fileID: 5465951589167558645}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5270695888625976686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5465951589286988684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31b72bd0b9a7143e8b8281c221ca7c5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5465951589468836231
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,6 +455,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5465951589599750057}
   - component: {fileID: 5465951589599750056}
+  - component: {fileID: 2263666675765637145}
   m_Layer: 0
   m_Name: AgataWeaponLeft
   m_TagString: Untagged
@@ -499,6 +526,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2263666675765637145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5465951589599750054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41515a05da57f49ffa42e45d8d386154, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5465951589765359300
 GameObject:
   m_ObjectHideFlags: 0
@@ -571,6 +610,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5465951589882559347}
   - component: {fileID: 5465951589882559346}
+  - component: {fileID: 5993365271976871567}
   m_Layer: 0
   m_Name: AgataWeaponRight
   m_TagString: Untagged
@@ -641,6 +681,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5993365271976871567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5465951589882559344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79acaa05f50a74d6fa4eeb7620a0dd71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5465951589884303915
 GameObject:
   m_ObjectHideFlags: 0
