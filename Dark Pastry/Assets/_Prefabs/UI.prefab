@@ -703,6 +703,7 @@ GameObject:
   - component: {fileID: 2363340081400100319}
   - component: {fileID: 2363340081400100316}
   - component: {fileID: 3278474744221162440}
+  - component: {fileID: 4546615593524416542}
   m_Layer: 5
   m_Name: UI
   m_TagString: Untagged
@@ -813,6 +814,18 @@ MonoBehaviour:
   tags: 
   color: {r: 1, g: 1, b: 1, a: 1}
   show: 1
+--- !u!114 &4546615593524416542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2363340081400100317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67ff8cfb8f3d04925af057837b329929, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2363340081473996049
 GameObject:
   m_ObjectHideFlags: 0
