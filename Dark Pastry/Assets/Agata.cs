@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using LevelScripts;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
 
 public class Agata : MonoBehaviour
@@ -21,6 +23,8 @@ public class Agata : MonoBehaviour
     
     public GameObject userInterface;
 
+    private GenericLevel _currentLevel;
+
     private static Collider2D _solidObject;
 
     private void Awake()
@@ -28,6 +32,7 @@ public class Agata : MonoBehaviour
         UiMechanics.ConsumePocket(userInterface);
         _agataAnimator = gameObject.GetComponent<Animator>();
         _solidObject = null;
+        _currentLevel = userInterface.GetComponent<GenericLevel>();
         Dead = false;
     }
 
@@ -76,7 +81,7 @@ public class Agata : MonoBehaviour
             if (hit.collider.gameObject.CompareTag("Enemy"))
             {
                 Debug.Log("Enemy hit");
-                hit.collider.gameObject.GetComponent<GenericEnemy>().Collapse();
+                hit.collider.gameObject.GetComponent<GenericEnemy>().Collapse(_currentLevel);
             }
         }
 
@@ -87,6 +92,7 @@ public class Agata : MonoBehaviour
         catch (IndexOutOfRangeException e)
         {
             UiMechanics.PedestalRemoveHovering();
+            UiMechanics.ItemRemoveHovering();
             return;
         }
 
@@ -98,8 +104,16 @@ public class Agata : MonoBehaviour
             UiMechanics.PedestalHovering(_solidObject.gameObject);
             if (Input.GetMouseButton(0))
             {
-                UiMechanics.PlaceItemOnPedestal(_solidObject.gameObject, userInterface);
+                var placed = UiMechanics.PlaceItemOnPedestal(_solidObject.gameObject, userInterface);
+                if (!placed)
+                {
+                    UiMechanics.RetakeItemFromPedestal(_solidObject.gameObject,userInterface);
+                }
             }
+        }
+        else if(_solidObject.gameObject.CompareTag("DropItem"))
+        {
+            UiMechanics.ItemHovering(_solidObject.gameObject);
         }
     }
 
@@ -175,5 +189,21 @@ public class Agata : MonoBehaviour
         {
             UiMechanics.LoseHeart(userInterface);
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        StartCoroutine(LevelTransition(other));
+        
+    }
+
+    private IEnumerator LevelTransition(Component other)
+    {
+        if (other.gameObject.CompareTag("TriggerZone") && _currentLevel.IsClear())
+        {
+            Dead = true;
+            SceneManager.LoadScene(_currentLevel.GetNext());
+        }
+        yield return new WaitForSeconds(0.5f);
     }
 }

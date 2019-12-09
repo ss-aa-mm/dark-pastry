@@ -10,6 +10,7 @@ TagManager:
   - DropItem
   - Pedestal
   - Enemy
+  - TriggerZone
   layers:
   - Default
   - TransparentFX

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Dynamic;
 using System.Net.Mime;
+using LevelScripts;
 using TMPro;
 using Unity.Collections.LowLevel.Unsafe;
 using UnityEditor;
@@ -23,7 +24,9 @@ public class UiMechanics : MonoBehaviour
     private static float _hearts = 2f;
     private static DropItems _pocketItem = DropItems.Egg;
     private static bool _hoveringPedestal;
+    private static bool _hoveringItem;
     private static SpriteRenderer _currentPedestal;
+    private static SpriteRenderer _currentItem;
     private static MonoBehaviour _instance;
 
     public static GameObject Heart;
@@ -33,9 +36,11 @@ public class UiMechanics : MonoBehaviour
     private static Sprite _halfHeart;
     private static Sprite _emptyHeart;
     private static Sprite _eggDropItem;
+    private static Sprite _eggDropItemHighlighted;
     private static Sprite _eggPocketItem;
     private static Sprite _selectedPedestal;
     private static Sprite _normalPedestal;
+    private static Sprite _wrongPedestal;
     private static Sprite _eggOnPedestal;
 
     public void Awake()
@@ -44,9 +49,11 @@ public class UiMechanics : MonoBehaviour
         _halfHeart = Resources.Load<Sprite>("Healthbar_half@4x");
         _emptyHeart = Resources.Load<Sprite>("Healthbar_empty@4x");
         _eggDropItem = Resources.Load<Sprite>("Egg_deadbody_4@4x");
+        _eggDropItemHighlighted = Resources.Load<Sprite>("highlight_dead egg@4x");
         _eggPocketItem = Resources.Load<Sprite>("Egg_body@4x");
         _selectedPedestal = Resources.Load<Sprite>("PedestalSelected");
         _normalPedestal = Resources.Load<Sprite>("Pedestal");
+        _wrongPedestal = Resources.Load<Sprite>("Environment/Pentagram/pedestalWrong");
         _eggOnPedestal = Resources.Load<Sprite>("Egg_deadbody_4@4x");
         _instance = this;
         Heart = Resources.Load<GameObject>("Heart");
@@ -157,21 +164,47 @@ public class UiMechanics : MonoBehaviour
         }
     }
 
-    public static void PlaceItemOnPedestal(GameObject pedestal, GameObject ui)
+    public static bool PlaceItemOnPedestal(GameObject pedestal, GameObject ui)
     {
         switch (_pocketItem)
         {
             case DropItems.None:
             {
-                return;
+                if(pedestal.GetComponentsInChildren<SpriteRenderer>()[1].sprite!=null) return false;
+                _instance.StartCoroutine(PedestalFlashing(pedestal));
+                return false;
             }
             case DropItems.Egg:
             {
-                if(pedestal.GetComponentsInChildren<SpriteRenderer>()[1].sprite!=null) return;
+                if(pedestal.GetComponentsInChildren<SpriteRenderer>()[1].sprite!=null) return false;
                 pedestal.GetComponentsInChildren<SpriteRenderer>()[1].sprite = _eggOnPedestal;
                 ConsumePocket(ui);
                 ModifySpeedPentagram(pedestal,0.3f);
-                break;
+                ui.GetComponent<GenericLevel>().ItemPlaced();
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public static void RetakeItemFromPedestal(GameObject pedestal, GameObject ui)
+    {
+        if(pedestal.GetComponentsInChildren<SpriteRenderer>()[1].sprite==null) return;
+        if (_pocketItem != DropItems.None)
+        {
+            _instance.StartCoroutine(PedestalFlashing(pedestal));
+            return;
+        }
+        else
+        {
+            if (pedestal.GetComponentsInChildren<SpriteRenderer>()[1].sprite == _eggOnPedestal)
+            {
+                var egg = new GameObject {name = "DroppedEgg"};
+                CollectItemInPocket(egg,ui);
+                ModifySpeedPentagram(pedestal,-0.3f);
+                pedestal.GetComponentsInChildren<SpriteRenderer>()[1].sprite = null;
+                ui.GetComponent<GenericLevel>().ItemTaken();
             }
         }
     }
@@ -201,6 +234,17 @@ public class UiMechanics : MonoBehaviour
         UpdateHealthBarUi(ui);
     }
 
+    private static IEnumerator PedestalFlashing(GameObject pedestal)
+    {
+        pedestal.GetComponent<SpriteRenderer>().sprite = _wrongPedestal;
+        yield return new WaitForSeconds(0.1f);
+        pedestal.GetComponent<SpriteRenderer>().sprite = _hoveringPedestal ? _selectedPedestal : _normalPedestal;
+        yield return new WaitForSeconds(0.1f);
+        pedestal.GetComponent<SpriteRenderer>().sprite = _wrongPedestal;
+        yield return new WaitForSeconds(0.1f);
+        pedestal.GetComponent<SpriteRenderer>().sprite = _hoveringPedestal ? _selectedPedestal : _normalPedestal;
+    }
+
     public static void PedestalHovering(GameObject pedestal)
     {
         if (_hoveringPedestal) return;
@@ -215,6 +259,29 @@ public class UiMechanics : MonoBehaviour
         _currentPedestal.sprite = _normalPedestal;
         _currentPedestal = null;
         _hoveringPedestal = false;
+    }
+    
+    public static void ItemHovering(GameObject item)
+    {
+        if (_hoveringItem) return;
+        _currentItem = item.GetComponent<SpriteRenderer>();
+        _currentItem.sprite = _eggDropItemHighlighted;
+        _hoveringItem = true;
+    }
+    
+    public static void ItemRemoveHovering()
+    {
+        if (!_hoveringItem) return;
+        try
+        {
+            _currentItem.sprite = _eggDropItem;
+        }
+        catch (MissingReferenceException e)
+        {
+            
+        }
+        _currentItem = null;
+        _hoveringItem = false;
     }
 
 }

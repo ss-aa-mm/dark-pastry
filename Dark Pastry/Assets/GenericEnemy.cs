@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using LevelScripts;
 using UnityEngine;
 using Random = System.Random;
 
@@ -47,6 +48,6 @@ public abstract class GenericEnemy : MonoBehaviour
 
     }
 
-    public abstract void Collapse();
+    public abstract void Collapse(GenericLevel level);
     
 }
