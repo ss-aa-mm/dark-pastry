@@ -11,6 +11,7 @@ namespace LevelScripts
         public void Awake()
         {
             NextLevel = "Level_2";
+            CurrentLevel = "Level_1";
         }
 
 

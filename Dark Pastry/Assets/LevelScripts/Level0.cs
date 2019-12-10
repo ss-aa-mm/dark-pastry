@@ -10,6 +10,7 @@ namespace LevelScripts
         public void Awake()
         {
             NextLevel = "Level_1";
+            CurrentLevel = "Level_0";
         }
 
         public override void EnemyKilled()

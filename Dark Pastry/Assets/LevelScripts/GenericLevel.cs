@@ -7,6 +7,7 @@ namespace LevelScripts
 
         protected bool LevelCleared;
         protected string NextLevel;
+        protected string CurrentLevel;
         public abstract void EnemyKilled();
         public abstract void ItemPlaced();
         public abstract void ItemTaken();
@@ -19,6 +20,11 @@ namespace LevelScripts
         public string GetNext()
         {
             return NextLevel;
+        }
+
+        public string GetCurrent()
+        {
+            return CurrentLevel;
         }
 
         protected void OpenDoor(GameObject door)

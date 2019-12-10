@@ -229,7 +229,7 @@ public class UiMechanics : MonoBehaviour
         // Agata death's animation
         Agata.Dead = true;
         yield return new WaitForSeconds(1);
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene(ui.GetComponentInChildren<GenericLevel>().GetCurrent());
         _hearts = 2f;
         UpdateHealthBarUi(ui);
     }

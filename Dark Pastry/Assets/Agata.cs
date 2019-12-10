@@ -202,8 +202,9 @@ public class Agata : MonoBehaviour
         if (other.gameObject.CompareTag("TriggerZone") && _currentLevel.IsClear())
         {
             Dead = true;
+            userInterface.GetComponentsInChildren<Animator>(true)[0].gameObject.SetActive(true);
+            yield return new WaitForSeconds(1f);
             SceneManager.LoadScene(_currentLevel.GetNext());
         }
-        yield return new WaitForSeconds(0.5f);
     }
 }

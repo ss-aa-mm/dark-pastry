@@ -20,7 +20,9 @@
           <e p="GenericLevel.cs" t="Include" />
           <e p="Level0.cs" t="Include" />
           <e p="Level1.cs" t="Include" />
+          <e p="Level2.cs" t="Include" />
         </e>
+        <e p="MainMenu.cs" t="Include" />
         <e p="PlaceholdersLogic.cs" t="Include" />
         <e p="Plugin_Notes" t="Include">
           <e p="Easy Notes" t="Include">
