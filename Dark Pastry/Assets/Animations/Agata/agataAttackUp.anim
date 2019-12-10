@@ -251,6 +251,13 @@ AnimationClip:
     path: Root/Body/AgataBody
     classID: 212
     script: {fileID: 0}
+  - curve:
+    - time: 0
+      value: {fileID: 21300000, guid: 617616bc9e0074698bd72c5e383f4816, type: 3}
+    attribute: m_Sprite
+    path: Root/Head/AgataHead
+    classID: 212
+    script: {fileID: 0}
   m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
@@ -288,6 +295,13 @@ AnimationClip:
       isPPtrCurve: 0
     - serializedVersion: 2
       path: 1245699748
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+    - serializedVersion: 2
+      path: 600662507
       attribute: 0
       script: {fileID: 0}
       typeID: 212
@@ -358,6 +372,7 @@ AnimationClip:
       isPPtrCurve: 0
     pptrCurveMapping:
     - {fileID: 21300000, guid: 42bb45ea12479a64aaac787f6bd66ccd, type: 3}
+    - {fileID: 21300000, guid: 617616bc9e0074698bd72c5e383f4816, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
