@@ -30,7 +30,7 @@ namespace LevelScripts
         protected void OpenDoor(GameObject door)
         {
             LevelCleared = true;
-            var states = door.GetComponentsInChildren<EasyNotesGO>(true);
+            var states = door.GetComponentsInChildren<BoxCollider2D>(true);
             states[0].gameObject.SetActive(false);
             states[1].gameObject.SetActive(true);
         }
@@ -38,7 +38,7 @@ namespace LevelScripts
         protected void CloseDoor(GameObject door)
         {
             LevelCleared = false;
-            var states = door.GetComponentsInChildren<EasyNotesGO>(true);
+            var states = door.GetComponentsInChildren<BoxCollider2D>(true);
             states[0].gameObject.SetActive(true);
             states[1].gameObject.SetActive(false);
         }

@@ -2,7 +2,6 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.Tilemaps;
-using Tile = UnityEngine.WSA.Tile;
 
 public class AgataMovement : MonoBehaviour
 {
