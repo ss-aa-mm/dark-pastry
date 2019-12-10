@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using LevelScripts;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 using UnityEngine.Tilemaps;
 
 public class Agata : MonoBehaviour
@@ -13,7 +14,7 @@ public class Agata : MonoBehaviour
     
     private Transform _tr;
 
-    private Animator _agataAnimator;
+    public static Animator AgataAnimator;
     
     private Vector3Int _pos;
 
@@ -30,7 +31,8 @@ public class Agata : MonoBehaviour
     private void Awake()
     {
         UiMechanics.ConsumePocket(userInterface);
-        _agataAnimator = gameObject.GetComponent<Animator>();
+        //UiMechanics.UpdateHealthBarUi(userInterface);
+        AgataAnimator = gameObject.GetComponent<Animator>();
         _solidObject = null;
         _currentLevel = userInterface.GetComponent<GenericLevel>();
         Dead = false;
@@ -48,11 +50,11 @@ public class Agata : MonoBehaviour
             transform.Translate(_unit * Input.GetAxis("Horizontal"), 0f, 0f);
             if (Input.GetAxis("Horizontal") < 0)
             {
-                _agataAnimator.SetBool("WalkLeft",true);
+                AgataAnimator.SetBool("WalkLeft",true);
             }
             else
             {
-                _agataAnimator.SetBool("WalkRight",true);
+                AgataAnimator.SetBool("WalkRight",true);
             }
                 
         }
@@ -62,11 +64,11 @@ public class Agata : MonoBehaviour
             transform.Translate(0f, _unit * Input.GetAxis("Vertical"), 0f);
             if (Input.GetAxis("Vertical") < 0)
             {
-                _agataAnimator.SetBool("WalkDown",true);
+                AgataAnimator.SetBool("WalkDown",true);
             }
             else
             {
-                _agataAnimator.SetBool("WalkUp",true);
+                AgataAnimator.SetBool("WalkUp",true);
             }
         }
 
@@ -119,33 +121,33 @@ public class Agata : MonoBehaviour
 
     private void ResetAnimator()
     {
-        _agataAnimator.SetBool("WalkUp",false);
-        _agataAnimator.SetBool("WalkRight",false);
-        _agataAnimator.SetBool("WalkDown",false);
-        _agataAnimator.SetBool("WalkLeft",false);
-        _agataAnimator.SetBool("AttackUp",false);
-        _agataAnimator.SetBool("AttackRight",false);
-        _agataAnimator.SetBool("AttackDown",false);
-        _agataAnimator.SetBool("AttackLeft",false);
+        AgataAnimator.SetBool("WalkUp",false);
+        AgataAnimator.SetBool("WalkRight",false);
+        AgataAnimator.SetBool("WalkDown",false);
+        AgataAnimator.SetBool("WalkLeft",false);
+        AgataAnimator.SetBool("AttackUp",false);
+        AgataAnimator.SetBool("AttackRight",false);
+        AgataAnimator.SetBool("AttackDown",false);
+        AgataAnimator.SetBool("AttackLeft",false);
     }
 
     private void AnimatedAttack()
     {
-        if (_agataAnimator.GetBool("WalkUp"))
+        if (AgataAnimator.GetBool("WalkUp"))
         {
-            _agataAnimator.SetBool("AttackUp",true);
+            AgataAnimator.SetBool("AttackUp",true);
         }
-        else if (_agataAnimator.GetBool("WalkLeft"))
+        else if (AgataAnimator.GetBool("WalkLeft"))
         {
-            _agataAnimator.SetBool("AttackLeft",true);
+            AgataAnimator.SetBool("AttackLeft",true);
         }
-        else if (_agataAnimator.GetBool("WalkRight"))
+        else if (AgataAnimator.GetBool("WalkRight"))
         {
-            _agataAnimator.SetBool("AttackRight",true);
+            AgataAnimator.SetBool("AttackRight",true);
         }
         else
         {
-            _agataAnimator.SetBool("AttackDown",true);
+            AgataAnimator.SetBool("AttackDown",true);
         }
     }
 
@@ -153,17 +155,17 @@ public class Agata : MonoBehaviour
     {
         Vector3 firePosition;
         Vector3 fireDirection;
-        if (_agataAnimator.GetBool("AttackUp"))
+        if (AgataAnimator.GetBool("AttackUp"))
         {
             firePosition = gameObject.GetComponentsInChildren<Head>()[0].transform.position;
             fireDirection = Vector3.up;
         }
-        else if (_agataAnimator.GetBool("AttackRight"))
+        else if (AgataAnimator.GetBool("AttackRight"))
         {
             firePosition = gameObject.GetComponentsInChildren<RightArm>()[0].transform.position;
             fireDirection = Vector3.right;
         }
-        else if (_agataAnimator.GetBool("AttackLeft"))
+        else if (AgataAnimator.GetBool("AttackLeft"))
         {
             firePosition = gameObject.GetComponentsInChildren<LeftArm>()[0].transform.position;
             fireDirection = Vector3.left;

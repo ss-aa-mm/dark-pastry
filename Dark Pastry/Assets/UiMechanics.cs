@@ -21,7 +21,7 @@ public class UiMechanics : MonoBehaviour
         Egg
     }
     
-    private static float _hearts = 2f;
+    private static float _hearts;
     private static DropItems _pocketItem = DropItems.Egg;
     private static bool _hoveringPedestal;
     private static bool _hoveringItem;
@@ -58,8 +58,10 @@ public class UiMechanics : MonoBehaviour
         _instance = this;
         Heart = Resources.Load<GameObject>("Heart");
         DropEgg = Resources.Load<GameObject>("DroppedEgg");
+        _hearts = 3f; 
+        UpdateHealthBarUi(gameObject);
     }
-    
+
     public static void GainHeart(GameObject ui)
     {
         if (!_fullHeart || !_emptyHeart || !_halfHeart)
@@ -226,7 +228,7 @@ public class UiMechanics : MonoBehaviour
 
     private static IEnumerator Die(GameObject ui)
     {
-        // Agata death's animation
+        Agata.AgataAnimator.SetTrigger("death");
         Agata.Dead = true;
         yield return new WaitForSeconds(1);
         SceneManager.LoadScene(ui.GetComponentInChildren<GenericLevel>().GetCurrent());

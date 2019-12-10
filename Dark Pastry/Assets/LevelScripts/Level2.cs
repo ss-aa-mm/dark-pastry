@@ -11,7 +11,7 @@ namespace LevelScripts
         private bool _bossBeaten;
         public void Awake()
         {
-            NextLevel = "Level_3";
+            NextLevel = "FinishGame";
             CurrentLevel = "Level_2";
             _boss = Resources.Load<GameObject>("Prefabs/Relatives/Boss_01");
         }
@@ -24,8 +24,11 @@ namespace LevelScripts
             if (_killsCounter == 6)
             {
                 _bossBeaten = true;
-                if(_eggPlaced==5)
+                if (_eggPlaced == 5)
+                {
                     OpenDoor(door);
+                    Agata.AgataAnimator.SetTrigger("dance");
+                }
             }
                     
         }
@@ -36,6 +39,7 @@ namespace LevelScripts
             if (_eggPlaced.Equals(5) && _bossBeaten)
             {
                 OpenDoor(door);
+                Agata.AgataAnimator.SetTrigger("dance");
             }
         }
 

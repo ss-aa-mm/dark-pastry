@@ -26,6 +26,7 @@ namespace LevelScripts
             if (_eggPlaced.Equals(5))
             {
                 OpenDoor(door);
+                Agata.AgataAnimator.SetTrigger("dance");
             }
         }
 
