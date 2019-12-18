@@ -11,6 +11,9 @@ TagManager:
   - Pedestal
   - Enemy
   - TriggerZone
+  - Laser
+  - Agata
+  - NPC
   layers:
   - Default
   - TransparentFX
