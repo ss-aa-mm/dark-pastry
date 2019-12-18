@@ -1,0 +1,9 @@
+﻿-3 Field
+-2 Wall
+-1 WallOverWall
+ 0 Shadows
+ 1 Platforms
+ 2 Collectibles
+ 3 Enemies
+ 4 Boss
+ 5 Agata
