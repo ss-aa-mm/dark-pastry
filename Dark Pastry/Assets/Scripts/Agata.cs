@@ -35,13 +35,18 @@ public class Agata : MonoBehaviour
         AgataAnimator = gameObject.GetComponent<Animator>();
         _solidObject = null;
         _currentLevel = userInterface.GetComponent<GenericLevel>();
-        Dead = false;
+        Dead = false; 
+        var obj = FindObjectsOfType(typeof(MonoBehaviour));
+        foreach (var objc in obj)
+        {
+            Debug.Log(objc.name);
+        }
     }
 
     private void Update()
     {
         if(Dead) return;
-        ResetAnimator();
+        //ResetAnimator();
         var position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         _tr = transform;
         _unit = Speed * Time.deltaTime;

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5778977953770633408}
   m_Layer: 0
   m_Name: Item_Placeholder
-  m_TagString: Untagged
+  m_TagString: PedestalPlaceholder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 7391563214109090829}
   m_Layer: 0
   m_Name: Item_Placeholder
-  m_TagString: Untagged
+  m_TagString: PedestalPlaceholder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -172,7 +172,7 @@ GameObject:
   - component: {fileID: 3692435473521227814}
   m_Layer: 0
   m_Name: Item_Placeholder
-  m_TagString: Untagged
+  m_TagString: PedestalPlaceholder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -252,7 +252,7 @@ GameObject:
   - component: {fileID: 8806954852319988569}
   m_Layer: 0
   m_Name: Item_Placeholder
-  m_TagString: Untagged
+  m_TagString: PedestalPlaceholder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -332,7 +332,7 @@ GameObject:
   - component: {fileID: 1607781356642224248}
   m_Layer: 0
   m_Name: Item_Placeholder
-  m_TagString: Untagged
+  m_TagString: PedestalPlaceholder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -531,6 +531,7 @@ GameObject:
   - component: {fileID: 8517763550931058867}
   - component: {fileID: 4223498254147477977}
   - component: {fileID: 393210317108701901}
+  - component: {fileID: 2481076017398747408}
   m_Layer: 0
   m_Name: Pedestal_3
   m_TagString: Pedestal
@@ -639,6 +640,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2481076017398747408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8517763550931058865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87ec64de1140405a8fd14de8d6e5db5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8517763551021808713
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,6 +744,7 @@ GameObject:
   - component: {fileID: 8517763551051446390}
   - component: {fileID: 2823175969598374418}
   - component: {fileID: 4604876978477716381}
+  - component: {fileID: 7910501889718309857}
   m_Layer: 0
   m_Name: Pedestal_4
   m_TagString: Pedestal
@@ -839,6 +853,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.35
+--- !u!114 &7910501889718309857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8517763551051446388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87ec64de1140405a8fd14de8d6e5db5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8517763551098357298
 GameObject:
   m_ObjectHideFlags: 0
@@ -851,6 +877,7 @@ GameObject:
   - component: {fileID: 8517763551098357308}
   - component: {fileID: 6797400516866442026}
   - component: {fileID: 2597969244405452229}
+  - component: {fileID: 6794696732658028566}
   m_Layer: 0
   m_Name: Pedestal_1
   m_TagString: Pedestal
@@ -959,6 +986,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &6794696732658028566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8517763551098357298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87ec64de1140405a8fd14de8d6e5db5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8517763551465606222
 GameObject:
   m_ObjectHideFlags: 0
@@ -971,6 +1010,7 @@ GameObject:
   - component: {fileID: 8517763551465606216}
   - component: {fileID: 4440318555573556687}
   - component: {fileID: 48678425307590055}
+  - component: {fileID: 2064705926925683892}
   m_Layer: 0
   m_Name: Pedestal_5
   m_TagString: Pedestal
@@ -1079,6 +1119,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2064705926925683892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8517763551465606222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87ec64de1140405a8fd14de8d6e5db5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8517763551909325487
 GameObject:
   m_ObjectHideFlags: 0
@@ -6004,6 +6056,7 @@ GameObject:
   - component: {fileID: 8517763552454322797}
   - component: {fileID: 2638695080095222583}
   - component: {fileID: 7859727367765576390}
+  - component: {fileID: 6781403205169498421}
   m_Layer: 0
   m_Name: Pedestal_2
   m_TagString: Pedestal
@@ -6112,6 +6165,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.35
+--- !u!114 &6781403205169498421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8517763552454322787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87ec64de1140405a8fd14de8d6e5db5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8517763552578520184
 GameObject:
   m_ObjectHideFlags: 0
@@ -6122,6 +6187,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8517763552578520187}
   - component: {fileID: 3804899697485986337}
+  - component: {fileID: 7691230938503454465}
   m_Layer: 0
   m_Name: PentagramGround
   m_TagString: Untagged
@@ -6172,3 +6238,15 @@ MonoBehaviour:
   tags: 
   color: {r: 1, g: 1, b: 1, a: 1}
   show: 1
+--- !u!114 &7691230938503454465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8517763552578520184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa841214dccd340e3844cd74a1f4d6bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
