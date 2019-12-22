@@ -17,6 +17,12 @@ public class Pedestal : HighlightableObject
         _objectRenderer.sprite = _pedestalSprites[agataObject];
         AgataNew.SetItem(_object);
         _object = agataObject;
+        if(agataObject!=DropItems.None)
+            Pentagram.ObjectAdded();
+        else
+        {
+            Pentagram.ObjectRemoved();
+        }
     }
 
     protected override void AssignReferences()
