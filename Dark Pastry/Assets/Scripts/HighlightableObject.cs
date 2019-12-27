@@ -68,12 +68,17 @@ public abstract class HighlightableObject : MonoBehaviour
     {
         DetectAgata();
     }
-
-    /* TODO private IEnumerator WrongAnimation() 
+    protected IEnumerator WrongAnimation()
     {
-        _renderer.sprite = WrongSprite;
-        yield return new WaitForSeconds(0.1f);
-    }*/
+        for (var i = 0; i < 2; i++)
+        {
+            _renderer.sprite = WrongSprite;
+            yield return new WaitForSeconds(0.1f);
+            _renderer.sprite = _highlighted ? HighlightedSprite : NormalSprite;
+            yield return new WaitForSeconds(0.1f);
+        }
+        
+    }
 
     public abstract void Interact();
 

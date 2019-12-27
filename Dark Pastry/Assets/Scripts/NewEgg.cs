@@ -2,6 +2,9 @@
 
 public class NewEgg : NewEnemy
 {
+    private int _frames;
+    private int _xAxis;
+    private int _yAxis;
     protected override void AssignReferences()
     {
         DamageInflicted = 0.5f;

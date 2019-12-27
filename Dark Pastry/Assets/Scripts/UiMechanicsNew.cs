@@ -7,7 +7,16 @@ using Image = UnityEngine.UI.Image;
 public enum DropItems
 {
     None,
-    Egg
+    Egg,
+    Key
+}
+
+public static class Extensions
+{
+    public static bool CanBePlaced (this DropItems item)
+    {
+        return item != DropItems.Key;
+    }
 }
 
 public class UiMechanicsNew : MonoBehaviour
@@ -83,6 +92,7 @@ public class UiMechanicsNew : MonoBehaviour
     private static void InitializeDictionary()
     {
         _itemsSprites.Add(DropItems.Egg, Resources.Load<Sprite>("PocketItems/Egg"));
+        _itemsSprites.Add(DropItems.Key, Resources.Load<Sprite>("PocketItems/Key"));
         _itemsSprites.Add(DropItems.None,null);
     }
     
