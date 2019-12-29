@@ -3,28 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - PowerUp
-  - Placeholder
-  - Hearts
-  - DropItem
-  - Pedestal
-  - Enemy
-  - TriggerZone
-<<<<<<< HEAD
-  - Laser
-  - Agata
-  - NPC
-=======
-  - Agata
-  - UIHeart
-  - UILabel
-  - UIItem
-  - PedestalPlaceholder
-  - RollingPin
-  - ClosedDoor
-  - OpenDoor
->>>>>>> master
+  tags: []
   layers:
   - Default
   - TransparentFX
