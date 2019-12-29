@@ -1,9 +1,5 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Scenes/IndividulWorkScenes/Scene_Kemal.unity
-=======
-- path: Assets/Scenes/Development.unity
->>>>>>> master
   isLoaded: 1
   isActive: 1
   isSubScene: 0
