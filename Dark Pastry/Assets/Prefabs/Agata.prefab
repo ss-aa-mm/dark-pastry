@@ -456,8 +456,8 @@ GameObject:
   - component: {fileID: 5465951589599750057}
   - component: {fileID: 5465951589599750056}
   - component: {fileID: 2263666675765637145}
-  - component: {fileID: 4529170813223479000}
-  - component: {fileID: 7766099753716822317}
+  - component: {fileID: 507591557}
+  - component: {fileID: 507591558}
   m_Layer: 0
   m_Name: AgataWeaponLeft
   m_TagString: RollingPin
@@ -540,7 +540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41515a05da57f49ffa42e45d8d386154, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!60 &4529170813223479000
+--- !u!60 &507591557
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -592,7 +592,7 @@ PolygonCollider2D:
       - {x: 0.01591835, y: -0.04487251}
       - {x: 0.050918348, y: 0.0051274872}
       - {x: 0.08091835, y: 0.00012748718}
---- !u!114 &7766099753716822317
+--- !u!114 &507591558
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -677,8 +677,8 @@ GameObject:
   - component: {fileID: 5465951589882559347}
   - component: {fileID: 5465951589882559346}
   - component: {fileID: 5993365271976871567}
-  - component: {fileID: 8891089555931791294}
   - component: {fileID: 4536696925966074741}
+  - component: {fileID: 534445942}
   m_Layer: 0
   m_Name: AgataWeaponRight
   m_TagString: RollingPin
@@ -761,7 +761,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79acaa05f50a74d6fa4eeb7620a0dd71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!60 &8891089555931791294
+--- !u!114 &4536696925966074741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5465951589882559344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eae53d312588496f8dbc59c67986cf4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!60 &534445942
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -813,18 +825,6 @@ PolygonCollider2D:
       - {x: 0.01591835, y: -0.04487251}
       - {x: 0.050918348, y: 0.0051274872}
       - {x: 0.08091835, y: 0.00012748718}
---- !u!114 &4536696925966074741
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5465951589882559344}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5eae53d312588496f8dbc59c67986cf4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5465951589884303915
 GameObject:
   m_ObjectHideFlags: 0
@@ -1112,7 +1112,7 @@ GameObject:
   - component: {fileID: 1624188879}
   - component: {fileID: 1143922065}
   - component: {fileID: 1143922064}
-  - component: {fileID: 1143922063}
+  - component: {fileID: 2682444222751982985}
   m_Layer: 0
   m_Name: Agata
   m_TagString: Agata
@@ -1276,7 +1276,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.34188962, y: 0.40938568}
   m_EdgeRadius: 0
---- !u!114 &1143922063
+--- !u!114 &2682444222751982985
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1285,10 +1285,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5465951590381497298}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd40250372f0647f28ad931851cfe415, type: 3}
+  m_Script: {fileID: 11500000, guid: 1c6583e915be54e2fa41f81dea7feea0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userInterface: {fileID: 0}
 --- !u!1001 &2072110123531834466
 PrefabInstance:
   m_ObjectHideFlags: 0
