@@ -11,9 +11,20 @@ TagManager:
   - Pedestal
   - Enemy
   - TriggerZone
+<<<<<<< HEAD
   - Laser
   - Agata
   - NPC
+=======
+  - Agata
+  - UIHeart
+  - UILabel
+  - UIItem
+  - PedestalPlaceholder
+  - RollingPin
+  - ClosedDoor
+  - OpenDoor
+>>>>>>> master
   layers:
   - Default
   - TransparentFX

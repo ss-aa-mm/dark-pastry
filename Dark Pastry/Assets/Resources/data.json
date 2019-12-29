@@ -1,0 +1,21 @@
+{
+  "levels": [
+    {
+      "number": 0,
+      "ingredients": [
+        "Egg",
+        "Egg",
+        "Egg",
+        "Egg",
+        "Egg"
+      ],
+      "hints": [
+        "Hint1",
+        "Hint2",
+        "Hint3",
+        "Hint4",
+        "Hint5"
+      ]
+    }
+  ]
+}
