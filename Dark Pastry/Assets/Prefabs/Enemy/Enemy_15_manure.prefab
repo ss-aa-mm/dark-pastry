@@ -1024,6 +1024,7 @@ GameObject:
   - component: {fileID: 4918758827821489557}
   - component: {fileID: 4918758827821489563}
   - component: {fileID: 4918758827821489562}
+  - component: {fileID: 2410464749504091308}
   m_Layer: 0
   m_Name: Enemy_15_manure
   m_TagString: Enemy
@@ -1138,6 +1139,20 @@ PolygonCollider2D:
       - {x: -0.5493326, y: 0.097358584}
       - {x: 0.38598037, y: 0.17970872}
       - {x: 0.23427105, y: 0.6432167}
+--- !u!114 &2410464749504091308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4918758827821489561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf7705d0e385483cbf997517d1c0e0de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropsHeart: 0
+  dropsItem: 0
 --- !u!1 &4918758827921748445
 GameObject:
   m_ObjectHideFlags: 0

@@ -564,6 +564,7 @@ GameObject:
   - component: {fileID: 3172412475855801909}
   - component: {fileID: 3172412475855801911}
   - component: {fileID: 3172412475855801912}
+  - component: {fileID: 5050799839463657527}
   m_Layer: 0
   m_Name: Enemy_13_ladyFingers
   m_TagString: Enemy
@@ -676,6 +677,20 @@ PolygonCollider2D:
       - {x: 0.004067421, y: 0.1695032}
       - {x: 0.20152092, y: 0.27193832}
       - {x: 0.20011806, y: 0.9629892}
+--- !u!114 &5050799839463657527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3172412475855801913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c998aeb20bc4f10b41a0b1ad0c1ae1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropsHeart: 0
+  dropsItem: 0
 --- !u!1 &3172412475886922950
 GameObject:
   m_ObjectHideFlags: 0

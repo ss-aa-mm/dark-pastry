@@ -8,7 +8,7 @@ namespace Enemies
     {
         protected float DamageInflicted;
         protected float MovementTime;
-        protected float Unit;
+        protected float Speed;
         protected float Health;
         protected GameObject ItemDropped;
         private GameObject _heart;
@@ -66,16 +66,16 @@ namespace Enemies
             switch (dir)
             {
                 case 0:
-                    transform.Translate(Unit, 0f, 0f);
+                    transform.Translate(Speed * Time.deltaTime, 0f, 0f);
                     break;
                 case 1:
-                    transform.Translate(0f, Unit, 0f);
+                    transform.Translate(0f, Speed * Time.deltaTime, 0f);
                     break;
                 case 2:
-                    transform.Translate(-Unit, 0f, 0f);
+                    transform.Translate(-Speed * Time.deltaTime, 0f, 0f);
                     break;
                 case 3:
-                    transform.Translate(0f, -Unit, 0f);
+                    transform.Translate(0f, -Speed * Time.deltaTime, 0f);
                     break;
             }
 
@@ -88,7 +88,7 @@ namespace Enemies
             if (_timeLeft > 0)
                 return;
 
-            transform.position = Vector2.MoveTowards(transform.position, _agata.transform.position, Unit);
+            transform.position = Vector2.MoveTowards(transform.position, _agata.transform.position, Speed * Time.deltaTime);
 
             _timeLeft += MovementTime;
         }
@@ -99,7 +99,7 @@ namespace Enemies
             if (_timeLeft > 0)
                 return;
 
-            transform.position = Vector2.MoveTowards(transform.position, _agata.transform.position * -1, Unit);
+            transform.position = Vector2.MoveTowards(transform.position, _agata.transform.position * -1, Speed * Time.deltaTime);
 
             _timeLeft += MovementTime;
         }

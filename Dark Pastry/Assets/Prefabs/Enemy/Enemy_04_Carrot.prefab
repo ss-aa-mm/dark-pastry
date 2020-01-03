@@ -501,6 +501,7 @@ GameObject:
   - component: {fileID: 3054758160364748954}
   - component: {fileID: 3054758160364748956}
   - component: {fileID: 3054758160364748957}
+  - component: {fileID: 7183165454811048898}
   m_Layer: 0
   m_Name: Enemy_04_Carrot
   m_TagString: Enemy
@@ -614,6 +615,20 @@ PolygonCollider2D:
       - {x: -0.10697842, y: 0.078731775}
       - {x: 0.13171434, y: 0.069993734}
       - {x: 0.21315396, y: 0.5677676}
+--- !u!114 &7183165454811048898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3054758160364748958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54b32900115a4b7eb2369a3b84a74e3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropsHeart: 0
+  dropsItem: 0
 --- !u!1 &3054758160376079662
 GameObject:
   m_ObjectHideFlags: 0

@@ -416,6 +416,7 @@ GameObject:
   - component: {fileID: 6196109304949164858}
   - component: {fileID: 6196109304949164860}
   - component: {fileID: 6196109304949164861}
+  - component: {fileID: 5658206385793915440}
   m_Layer: 0
   m_Name: Enemy_03_Milk
   m_TagString: Enemy
@@ -528,6 +529,20 @@ PolygonCollider2D:
       - {x: -0.21436715, y: 0.078731775}
       - {x: 0.19734097, y: 0.08192563}
       - {x: 0.2101711, y: 0.4215994}
+--- !u!114 &5658206385793915440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6196109304949164862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6dec876cf2e4742974af976c4fb9eb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropsHeart: 0
+  dropsItem: 0
 --- !u!1 &6196109305016704094
 GameObject:
   m_ObjectHideFlags: 0

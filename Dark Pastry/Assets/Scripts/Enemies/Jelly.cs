@@ -2,7 +2,7 @@
 
 namespace Enemies
 {
-    public class Boss01 : NewEnemy
+    public class Jelly : NewEnemy
     {
         private int _frames;
         private int _xAxis;
@@ -10,7 +10,7 @@ namespace Enemies
 
         protected override void AssignReferences()
         {
-            Health = 5f;
+            Health = 1f;
             DamageInflicted = 0.5f;
             MovementTime = 0.2f;
             Speed = 3f;
@@ -19,7 +19,7 @@ namespace Enemies
 
         protected override void MovementPattern()
         {
-            Chase();
+            MoveRandomly();
         }
     }
 }
