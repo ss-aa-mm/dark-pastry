@@ -750,6 +750,7 @@ GameObject:
   - component: {fileID: 5372138414143659417}
   - component: {fileID: 5810161145730091764}
   - component: {fileID: 7314756414136270854}
+  - component: {fileID: 6637798145408341384}
   m_Layer: 0
   m_Name: Enemy_01_Egg
   m_TagString: Enemy
@@ -861,6 +862,20 @@ PolygonCollider2D:
       - {x: -0.23226547, y: -0.03760612}
       - {x: 0.09890115, y: -0.025463104}
       - {x: 0.26684844, y: 0.35597265}
+--- !u!114 &6637798145408341384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5372138414143659422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee32111e20acc4bc7812417ef91fb3d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropsHeart: 0
+  dropsItem: 1
 --- !u!1 &5372138414231028821
 GameObject:
   m_ObjectHideFlags: 0

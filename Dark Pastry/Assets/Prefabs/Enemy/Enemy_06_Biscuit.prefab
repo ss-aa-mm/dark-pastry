@@ -608,6 +608,7 @@ GameObject:
   - component: {fileID: 7565808237917158718}
   - component: {fileID: 7565808237917158716}
   - component: {fileID: 7565808237917158659}
+  - component: {fileID: 481299164951161266}
   m_Layer: 0
   m_Name: Enemy_06_Biscuit
   m_TagString: Enemy
@@ -720,6 +721,20 @@ PolygonCollider2D:
       - {x: 0.11305189, y: 0.14429498}
       - {x: 0.28990388, y: 0.16938853}
       - {x: 0.2992103, y: 0.7567909}
+--- !u!114 &481299164951161266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7565808237917158658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c52db7bc5a024c258a8d6035a3bb36bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropsHeart: 0
+  dropsItem: 0
 --- !u!1 &7565808237943088753
 GameObject:
   m_ObjectHideFlags: 0

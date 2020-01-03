@@ -808,6 +808,7 @@ GameObject:
   - component: {fileID: 2378805453257317673}
   - component: {fileID: 2378805453257317675}
   - component: {fileID: 2378805453257317652}
+  - component: {fileID: 8416864497915809308}
   m_Layer: 0
   m_Name: Enemy_07_blueBerry
   m_TagString: Enemy
@@ -920,6 +921,20 @@ PolygonCollider2D:
       - {x: 0.0013461113, y: 0.066093445}
       - {x: 0.22873378, y: 0.17124987}
       - {x: 0.32503927, y: 0.504899}
+--- !u!114 &8416864497915809308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2378805453257317653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ac9d9ea573a4db0b2364e6beb5dc191, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropsHeart: 0
+  dropsItem: 0
 --- !u!1 &2378805453292433641
 GameObject:
   m_ObjectHideFlags: 0

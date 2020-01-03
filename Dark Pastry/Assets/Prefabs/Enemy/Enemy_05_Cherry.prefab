@@ -452,6 +452,7 @@ GameObject:
   - component: {fileID: 7554606101023138896}
   - component: {fileID: 7554606101023138898}
   - component: {fileID: 7554606101023138925}
+  - component: {fileID: 2673043288729896092}
   m_Layer: 0
   m_Name: Enemy_05_Cherry
   m_TagString: Enemy
@@ -564,6 +565,20 @@ PolygonCollider2D:
       - {x: -0.020786047, y: 0.0566082}
       - {x: 0.38682055, y: 0.04478073}
       - {x: 0.45150852, y: 0.31835675}
+--- !u!114 &2673043288729896092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7554606101023138924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fc0ad96c3f34f069b505f50f694e568, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropsHeart: 0
+  dropsItem: 0
 --- !u!1 &7554606101116766608
 GameObject:
   m_ObjectHideFlags: 0

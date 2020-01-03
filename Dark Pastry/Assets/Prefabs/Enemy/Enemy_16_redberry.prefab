@@ -285,6 +285,7 @@ GameObject:
   - component: {fileID: 4184278835965652900}
   - component: {fileID: 4184278835965652902}
   - component: {fileID: 4184278835965652897}
+  - component: {fileID: 9039774866221331236}
   m_Layer: 0
   m_Name: Enemy_16_redberry
   m_TagString: Enemy
@@ -399,6 +400,20 @@ PolygonCollider2D:
       - {x: -0.5493326, y: 0.097358584}
       - {x: 0.38598037, y: 0.17970872}
       - {x: 0.23427105, y: 0.6432167}
+--- !u!114 &9039774866221331236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4184278835965652896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27401a7fe2da42b7b15abc43e73a18d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropsHeart: 0
+  dropsItem: 0
 --- !u!1 &4184278836009209554
 GameObject:
   m_ObjectHideFlags: 0

@@ -1248,6 +1248,7 @@ GameObject:
   - component: {fileID: 576910873359867579}
   - component: {fileID: 576910873359867573}
   - component: {fileID: 576910873359867572}
+  - component: {fileID: 687557846471487228}
   m_Layer: 0
   m_Name: Enemy_14_lemon
   m_TagString: Enemy
@@ -1362,3 +1363,17 @@ PolygonCollider2D:
       - {x: -0.013248205, y: 0.10024071}
       - {x: 0.20152092, y: 0.27193832}
       - {x: 0.25156403, y: 0.60286623}
+--- !u!114 &687557846471487228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576910873359867575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7edf93e34b694506a4a9922731cc662b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropsHeart: 0
+  dropsItem: 0

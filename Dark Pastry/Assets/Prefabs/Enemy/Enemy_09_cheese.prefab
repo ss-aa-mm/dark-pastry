@@ -582,6 +582,7 @@ GameObject:
   - component: {fileID: 1515963675041389575}
   - component: {fileID: 1515963675041389569}
   - component: {fileID: 1515963675041389570}
+  - component: {fileID: 5200994243277533125}
   m_Layer: 0
   m_Name: Enemy_09_cheese
   m_TagString: Enemy
@@ -694,6 +695,20 @@ PolygonCollider2D:
       - {x: 0.0013461113, y: 0.066093445}
       - {x: 0.22873378, y: 0.17124987}
       - {x: 0.32503927, y: 0.504899}
+--- !u!114 &5200994243277533125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1515963675041389571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 729f36da01484f368caa30b7fdfa8ffe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropsHeart: 0
+  dropsItem: 0
 --- !u!1 &1515963675081550556
 GameObject:
   m_ObjectHideFlags: 0

@@ -937,6 +937,7 @@ GameObject:
   - component: {fileID: 8570124110519959250}
   - component: {fileID: 8570124110519959248}
   - component: {fileID: 8570124110519959249}
+  - component: {fileID: 637661460743625613}
   m_Layer: 0
   m_Name: Enemy_08_butter
   m_TagString: Enemy
@@ -1049,6 +1050,20 @@ PolygonCollider2D:
       - {x: 0.0013461113, y: 0.15162492}
       - {x: 0.22873378, y: 0.17124987}
       - {x: 0.24806118, y: 1.0309174}
+--- !u!114 &637661460743625613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8570124110519959246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 977bd2225ad4454e9f56bdc5f8004bfc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropsHeart: 0
+  dropsItem: 0
 --- !u!1 &8570124110523310453
 GameObject:
   m_ObjectHideFlags: 0
