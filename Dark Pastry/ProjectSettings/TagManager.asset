@@ -20,6 +20,7 @@ TagManager:
   - UILabel
   - UIItem
   - Agata
+  - EnemyWeapon
   layers:
   - Default
   - TransparentFX
