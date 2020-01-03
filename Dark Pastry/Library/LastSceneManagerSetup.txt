@@ -1,5 +1,13 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Playground.unity
+=======
+<<<<<<< Updated upstream
+- path: Assets/Scenes/IndividulWorkScenes/Scene_Kemal.unity
+=======
+- path: Assets/Scenes/Playground.unity
+>>>>>>> Stashed changes
+>>>>>>> master
   isLoaded: 1
   isActive: 1
   isSubScene: 0

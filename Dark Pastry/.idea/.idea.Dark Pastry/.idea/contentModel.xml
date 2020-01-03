@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
+<<<<<<< HEAD
     <e p="C:\Users\Giulia\.Rider2019.3\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\Giulia\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Dark Pastry.1174435904.00" t="ExcludeRecursive" />
     <e p="C:\Users\Giulia\Desktop\dark-pastry\Dark Pastry" t="IncludeRecursive">
+=======
+    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+>>>>>>> master
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -902,6 +906,7 @@
             <e p="RightArm.cs" t="Include" />
           </e>
           <e p="Enemies" t="Include">
+<<<<<<< HEAD
             <e p="Biscuit.cs" t="Include" />
             <e p="BlueBerry.cs" t="Include" />
             <e p="Boss01.cs" t="Include" />
@@ -921,6 +926,15 @@
             <e p="Milk.cs" t="Include" />
             <e p="RedBerry.cs" t="Include" />
             <e p="Sugar.cs" t="Include" />
+=======
+            <e p="Boss01.cs" t="Include" />
+            <e p="Carrot.cs" t="Include" />
+            <e p="Cherry.cs" t="Include" />
+            <e p="Flour.cs" t="Include" />
+            <e p="Milk.cs" t="Include" />
+            <e p="NewEgg.cs" t="Include" />
+            <e p="NewEnemy.cs" t="Include" />
+>>>>>>> master
           </e>
           <e p="EnemyEgg.cs" t="Include" />
           <e p="EnemyMovement.cs" t="Include" />
@@ -931,8 +945,24 @@
           <e p="HighlightableObject.cs" t="Include" />
           <e p="Inventory.cs" t="Include" />
           <e p="Items" t="Include">
+            <e p="DropBiscuit.cs" t="Include" />
+            <e p="DropBlueberry.cs" t="Include" />
+            <e p="DropButter.cs" t="Include" />
+            <e p="DropCarrot.cs" t="Include" />
+            <e p="DropCheese.cs" t="Include" />
+            <e p="DropCherry.cs" t="Include" />
+            <e p="DropChocolate.cs" t="Include" />
+            <e p="DropCoffee.cs" t="Include" />
             <e p="DropEgg.cs" t="Include" />
+            <e p="DropFlour.cs" t="Include" />
             <e p="DropItem.cs" t="Include" />
+            <e p="DropJellybean.cs" t="Include" />
+            <e p="DropLadyfinger.cs" t="Include" />
+            <e p="DropLemon.cs" t="Include" />
+            <e p="DropMilk.cs" t="Include" />
+            <e p="DropRaspberry.cs" t="Include" />
+            <e p="DropSugar.cs" t="Include" />
+            <e p="DropWhippedCream.cs" t="Include" />
             <e p="Key.cs" t="Include" />
           </e>
           <e p="LevelData.cs" t="Include" />

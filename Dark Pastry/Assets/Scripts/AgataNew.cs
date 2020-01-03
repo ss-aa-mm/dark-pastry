@@ -2,7 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Items;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class AgataNew : MonoBehaviour
 {
@@ -73,7 +75,10 @@ public class AgataNew : MonoBehaviour
         //End of Dance
 
         //DEBUG COMMANDS
-        
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+            _item = DropItems.None;
+        }
         //END OF DEBUG COMMANDS
 
         //Animation

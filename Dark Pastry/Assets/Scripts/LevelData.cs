@@ -11,6 +11,7 @@ using UnityEngine;
 public struct LevelInformation
 {
     public int number;
+    public bool globeEnabled;
     public string[] ingredients;
     public string[] hints;
 }
