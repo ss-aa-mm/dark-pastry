@@ -6,8 +6,8 @@ namespace Items
     {
         protected override void AssignReferences()
         {
-            HighlightedSprite = Resources.Load<Sprite>("DropEgg/Selected");
-            NormalSprite = Resources.Load<Sprite>("DropEgg/Normal");
+            HighlightedSprite = Resources.Load<Sprite>("Items/DropEgg/Selected");
+            NormalSprite = Resources.Load<Sprite>("Items/DropEgg/Normal");
             //WrongSprite = Resources.Load<Sprite>("");
             Type = DropItems.Egg;
         }

@@ -8,7 +8,27 @@ public enum DropItems
 {
     None,
     Egg,
-    Key
+    Key,
+    WhippedCream,
+    Biscuit,
+    Lemon,
+    Almond,
+    Apple,
+    Coconut,
+    Milk,
+    Sugar,
+    Butter,
+    Ladyfinger,
+    Cherry,
+    Carrot,
+    Flour,
+    Chocolate,
+    Jellybean,
+    Coffee,
+    Cheese,
+    Blueberry,
+    Raspberry,
+    Blood
 }
 
 public static class Extensions
@@ -17,6 +37,7 @@ public static class Extensions
     {
         return item != DropItems.Key;
     }
+    
 }
 
 public class UiMechanicsNew : MonoBehaviour
@@ -91,9 +112,25 @@ public class UiMechanicsNew : MonoBehaviour
 
     private static void InitializeDictionary()
     {
+        _itemsSprites.Add(DropItems.None,null);
         _itemsSprites.Add(DropItems.Egg, Resources.Load<Sprite>("PocketItems/Egg"));
         _itemsSprites.Add(DropItems.Key, Resources.Load<Sprite>("PocketItems/Key"));
-        _itemsSprites.Add(DropItems.None,null);
+        _itemsSprites.Add(DropItems.Biscuit, Resources.Load<Sprite>("PocketItems/Biscuit"));
+        _itemsSprites.Add(DropItems.Blueberry,Resources.Load<Sprite>("PocketItems/Blueberry"));
+        _itemsSprites.Add(DropItems.Butter,Resources.Load<Sprite>("PocketItems/Butter"));
+        _itemsSprites.Add(DropItems.Carrot,Resources.Load<Sprite>("PocketItems/Carrot"));
+        _itemsSprites.Add(DropItems.Cheese,Resources.Load<Sprite>("PocketItems/Cheese"));
+        _itemsSprites.Add(DropItems.Cherry,Resources.Load<Sprite>("PocketItems/Cherry"));
+        _itemsSprites.Add(DropItems.Chocolate,Resources.Load<Sprite>("PocketItems/Chocolate"));
+        _itemsSprites.Add(DropItems.Coffee,Resources.Load<Sprite>("PocketItems/Coffee"));
+        _itemsSprites.Add(DropItems.Flour,Resources.Load<Sprite>("PocketItems/Flour"));
+        _itemsSprites.Add(DropItems.Jellybean,Resources.Load<Sprite>("PocketItems/Jellybean"));
+        _itemsSprites.Add(DropItems.Ladyfinger,Resources.Load<Sprite>("PocketItems/Ladyfinger"));
+        _itemsSprites.Add(DropItems.Lemon,Resources.Load<Sprite>("PocketItems/Lemon"));
+        _itemsSprites.Add(DropItems.Milk,Resources.Load<Sprite>("PocketItems/Milk"));
+        _itemsSprites.Add(DropItems.Raspberry,Resources.Load<Sprite>("PocketItems/Raspberry"));
+        _itemsSprites.Add(DropItems.Sugar,Resources.Load<Sprite>("PocketItems/Sugar"));
+        _itemsSprites.Add(DropItems.WhippedCream,Resources.Load<Sprite>("PocketItems/WhippedCream"));
     }
     
 }
