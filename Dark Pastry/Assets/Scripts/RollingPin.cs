@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Enemies;
+﻿using Enemies;
 using UnityEngine;
 
 public class RollingPin : MonoBehaviour
@@ -11,6 +9,8 @@ public class RollingPin : MonoBehaviour
     {
         if (!other.gameObject.CompareTag("Enemy") || AgataNew.GetAnimatorHash() != AttackHash)
             return;
+
         other.GetComponent<NewEnemy>().OnHit();
+        other.GetComponent<Rigidbody>().AddForce(transform.position * -50);
     }
 }

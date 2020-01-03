@@ -608,6 +608,7 @@ GameObject:
   - component: {fileID: 2378805453166397051}
   - component: {fileID: 2378805453166397028}
   - component: {fileID: 2378805453166397031}
+  - component: {fileID: 3583033709700173964}
   m_Layer: 0
   m_Name: WeaponPivot_right
   m_TagString: EnemyWeapon
@@ -715,6 +716,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &3583033709700173964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2378805453166397030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff762ace09342ef9e5d188e81dcaa25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2378805453238106480
 GameObject:
   m_ObjectHideFlags: 0
@@ -6083,6 +6096,7 @@ GameObject:
   - component: {fileID: 2378805453892473935}
   - component: {fileID: 2378805453892473928}
   - component: {fileID: 2378805453892473931}
+  - component: {fileID: 7940500309182741046}
   m_Layer: 0
   m_Name: WeaponPivot_left
   m_TagString: EnemyWeapon
@@ -6190,6 +6204,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7940500309182741046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2378805453892473930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ff762ace09342ef9e5d188e81dcaa25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2378805454015541458
 GameObject:
   m_ObjectHideFlags: 0
