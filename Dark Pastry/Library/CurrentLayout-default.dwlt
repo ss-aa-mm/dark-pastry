@@ -8,7 +8,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> master
   m_EditorHideFlags: 1
   m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
@@ -43,6 +46,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 43
     width: 1920
     height: 997
@@ -53,6 +57,8 @@ MonoBehaviour:
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 =======
+=======
+>>>>>>> master
     y: 30
     width: 2560
     height: 1341
@@ -123,6 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Children:
   - {fileID: 3}
   - {fileID: 5}
@@ -141,6 +148,12 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
+=======
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+>>>>>>> master
     y: 811
     width: 2041
     height: 530
@@ -173,6 +186,7 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1920
     height: 30
   m_MinSize: {x: 0, y: 0}
@@ -180,6 +194,8 @@ MonoBehaviour:
   m_LastLoadedLayoutName: 
 --- !u!114 &4
 =======
+=======
+>>>>>>> master
     width: 2560
     height: 1391
   m_MinSize: {x: 950, y: 300}
@@ -201,6 +217,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 977
     width: 1920
     height: 20
@@ -213,6 +230,13 @@ MonoBehaviour:
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
+=======
+    y: 0
+    width: 2560
+    height: 30
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+>>>>>>> master
   m_LastLoadedLayoutName: Default
 --- !u!114 &8
 >>>>>>> master
@@ -226,6 +250,7 @@ MonoBehaviour:
   m_Script: {fileID: 12042, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_Children:
   - {fileID: 6}
@@ -246,6 +271,12 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
+=======
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+>>>>>>> master
     y: 1371
     width: 2560
     height: 20
@@ -267,6 +298,10 @@ MonoBehaviour:
   - {fileID: 7}
   - {fileID: 10}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  - {fileID: 5}
+>>>>>>> master
 =======
   - {fileID: 5}
 >>>>>>> master
@@ -274,6 +309,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
     width: 1531
     height: 947
@@ -283,6 +319,8 @@ MonoBehaviour:
   controlID: 51
 --- !u!114 &7
 =======
+=======
+>>>>>>> master
     width: 2041
     height: 1341
   m_MinSize: {x: 406, y: 492}
@@ -303,8 +341,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Children:
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 8}
   - {fileID: 9}
+=======
+  - {fileID: 4}
+  - {fileID: 11}
+>>>>>>> master
 =======
   - {fileID: 4}
   - {fileID: 11}
@@ -314,6 +357,7 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1531
     height: 573
   m_MinSize: {x: 406, y: 222}
@@ -322,6 +366,8 @@ MonoBehaviour:
   controlID: 52
 --- !u!114 &8
 =======
+=======
+>>>>>>> master
     width: 2041
     height: 811
   m_MinSize: {x: 406, y: 221}
@@ -345,6 +391,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 505
     y: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
     width: 379
     height: 573
@@ -591,11 +638,24 @@ MonoBehaviour:
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 37ce70d163d1e154c89d029a5e9afe5d
 --- !u!114 &14
+=======
+    width: 1536
+    height: 811
+  m_MinSize: {x: 204, y: 221}
+  m_MaxSize: {x: 4004, y: 4021}
+  m_ActualView: {fileID: 16}
+  m_Panes:
+  - {fileID: 16}
+  - {fileID: 17}
+  - {fileID: 12}
+  m_Selected: 0
+  m_LastSelected: 1
+--- !u!114 &12
+>>>>>>> master
 MonoBehaviour:
   m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
@@ -712,8 +772,12 @@ MonoBehaviour:
     width: 973
     height: 501
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &16
+=======
+--- !u!114 &13
+>>>>>>> master
 =======
 --- !u!114 &13
 >>>>>>> master
@@ -740,10 +804,16 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     y: 646
     width: 1531
     height: 355
   m_ViewDataDictionary: {fileID: 0}
+=======
+    y: 905
+    width: 2039
+    height: 509
+>>>>>>> master
 =======
     y: 905
     width: 2039
@@ -761,13 +831,18 @@ MonoBehaviour:
     m_SearchArea: 0
     m_Folders:
 <<<<<<< HEAD
+<<<<<<< HEAD
     - Assets/Scenes
+=======
+    - Assets
+>>>>>>> master
 =======
     - Assets
 >>>>>>> master
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
+<<<<<<< HEAD
 <<<<<<< HEAD
   - Assets/Scenes
   m_LastFoldersGridSize: 16
@@ -785,10 +860,20 @@ MonoBehaviour:
   m_LastProjectPath: /Users/danielbrauer/Unity Projects/New Unity Project 20
   m_IsLocked: 0
   m_FolderTreeState:
+=======
+  - Assets
+  m_LastFoldersGridSize: -1
+  m_LastProjectPath: /Users/danielbrauer/Unity Projects/New Unity Project 20
+  m_IsLocked: 0
+  m_FolderTreeState:
+>>>>>>> master
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: b0230000
     m_LastClickedID: 9136
     m_ExpandedIDs: 00000000b023000000ca9a3bffffff7f
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -807,7 +892,10 @@ MonoBehaviour:
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_SearchString: 
+=======
+>>>>>>> master
 =======
 >>>>>>> master
     m_CreateAssetUtility:
@@ -823,7 +911,11 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000c4380000f6380000e6390000803b00000e3c0000183e0000004000004e4300006a4300003a44000084460000b2460000b64a00005e560000c0580000005c0000f65d00003e5e000090650000c4660000a4680000a4690000e0690000186e00001a6e00001c6e00001e6e0000206e0000226e0000246e0000266e0000286e00002a6e00002c6e0000
+=======
+    m_ExpandedIDs: 00000000b023000000ca9a3bffffff7f
+>>>>>>> master
 =======
     m_ExpandedIDs: 00000000b023000000ca9a3bffffff7f
 >>>>>>> master
@@ -855,7 +947,11 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_HadKeyboardFocusLastEvent: 1
+=======
+    m_HadKeyboardFocusLastEvent: 0
+>>>>>>> master
 =======
     m_HadKeyboardFocusLastEvent: 0
 >>>>>>> master
@@ -876,7 +972,11 @@ MonoBehaviour:
       m_OriginalEventType: 0
       m_IsRenamingFilename: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
       m_ClientGUIView: {fileID: 10}
+=======
+      m_ClientGUIView: {fileID: 0}
+>>>>>>> master
 =======
       m_ClientGUIView: {fileID: 0}
 >>>>>>> master
@@ -889,10 +989,16 @@ MonoBehaviour:
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_GridSize: 16
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 192
 --- !u!114 &17
+=======
+    m_GridSize: 64
+  m_DirectoriesAreaWidth: 115
+--- !u!114 &14
+>>>>>>> master
 =======
     m_GridSize: 64
   m_DirectoriesAreaWidth: 115
@@ -920,6 +1026,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 0
     y: 646
     width: 1531
@@ -927,6 +1034,8 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
 --- !u!114 &18
 =======
+=======
+>>>>>>> master
     x: 2043
     y: 94
     width: 517
@@ -1071,6 +1180,9 @@ MonoBehaviour:
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
 --- !u!114 &17
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1094,6 +1206,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1531
     y: 73
     width: 387
@@ -1112,6 +1225,8 @@ MonoBehaviour:
   m_LastInspectedObjectInstanceID: -1
   m_LastVerticalScrollValue: 0
 =======
+=======
+>>>>>>> master
     x: 507
     y: 94
     width: 1532
@@ -1191,4 +1306,7 @@ MonoBehaviour:
     y: 718
     width: 1366
     height: 308
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master

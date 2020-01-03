@@ -7,6 +7,9 @@
     <e p="C:\Users\Giulia\Desktop\dark-pastry\Dark Pastry" t="IncludeRecursive">
 =======
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -907,6 +910,7 @@
           </e>
           <e p="Enemies" t="Include">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <e p="Biscuit.cs" t="Include" />
             <e p="BlueBerry.cs" t="Include" />
             <e p="Boss01.cs" t="Include" />
@@ -927,6 +931,8 @@
             <e p="RedBerry.cs" t="Include" />
             <e p="Sugar.cs" t="Include" />
 =======
+=======
+>>>>>>> master
             <e p="Boss01.cs" t="Include" />
             <e p="Carrot.cs" t="Include" />
             <e p="Cherry.cs" t="Include" />
@@ -934,6 +940,9 @@
             <e p="Milk.cs" t="Include" />
             <e p="NewEgg.cs" t="Include" />
             <e p="NewEnemy.cs" t="Include" />
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
           </e>
           <e p="EnemyEgg.cs" t="Include" />

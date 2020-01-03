@@ -21,6 +21,7 @@ TagManager:
   - UIItem
   - Agata
   - EnemyWeapon
+  - Boss_1
   layers:
   - Default
   - TransparentFX
