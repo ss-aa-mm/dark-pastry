@@ -1216,6 +1216,7 @@ GameObject:
   - component: {fileID: 3209367277393490803}
   - component: {fileID: 3209367277393490801}
   - component: {fileID: 3209367277393490800}
+  - component: {fileID: 1978544220592703170}
   m_Layer: 0
   m_Name: Enemy_12_jelly
   m_TagString: Enemy
@@ -1328,6 +1329,20 @@ PolygonCollider2D:
       - {x: 0.004067421, y: 0.1695032}
       - {x: 0.20152092, y: 0.27193832}
       - {x: 0.25156403, y: 0.60286623}
+--- !u!114 &1978544220592703170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3209367277393490807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f9dc5f778974e40b6ac8f3f35262b43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropsHeart: 0
+  dropsItem: 0
 --- !u!1 &3209367277713171292
 GameObject:
   m_ObjectHideFlags: 0

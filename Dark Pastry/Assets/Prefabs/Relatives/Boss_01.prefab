@@ -733,9 +733,9 @@ GameObject:
   - component: {fileID: 1813304010697500899}
   - component: {fileID: 1813304010697500896}
   - component: {fileID: 1813304010697500897}
-  - component: {fileID: 1229534349508614448}
   - component: {fileID: 217962548592246668}
   - component: {fileID: 3901438044761453950}
+  - component: {fileID: 6536731585635002678}
   m_Layer: 0
   m_Name: Boss_01
   m_TagString: Enemy
@@ -796,20 +796,6 @@ MonoBehaviour:
   tags: 
   color: {r: 1, g: 1, b: 1, a: 1}
   show: 1
---- !u!114 &1229534349508614448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1813304010697500902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 071ebab0b72fe4b00a22704902bd5e52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dropsHeart: 0
-  dropsPocketItem: 0
 --- !u!50 &217962548592246668
 Rigidbody2D:
   serializedVersion: 4
@@ -863,6 +849,20 @@ PolygonCollider2D:
       - {x: -0.589756, y: -0.054233417}
       - {x: 0.58941144, y: -0.06703169}
       - {x: 0.75735873, y: 0.8049143}
+--- !u!114 &6536731585635002678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813304010697500902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ef3585c238d4f10a5dbeaeb5550d476, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropsHeart: 1
+  dropsItem: 0
 --- !u!1 &1813304010779767085
 GameObject:
   m_ObjectHideFlags: 0

@@ -737,6 +737,7 @@ GameObject:
   - component: {fileID: 2880568630800426280}
   - component: {fileID: 4455652416057619013}
   - component: {fileID: 646058398280267959}
+  - component: {fileID: -563302783752706425}
   m_Layer: 0
   m_Name: Enemy_02_Flour
   m_TagString: Enemy
@@ -848,6 +849,20 @@ PolygonCollider2D:
       - {x: -0.22648382, y: 0.0915215}
       - {x: 0.22802877, y: 0.10366464}
       - {x: 0.26684844, y: 0.35597265}
+--- !u!114 &-563302783752706425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2880568630800426287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 088573eb80ac4051abb696b235ebc574, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropsHeart: 0
+  dropsItem: 0
 --- !u!1 &2880568630947740900
 GameObject:
   m_ObjectHideFlags: 0

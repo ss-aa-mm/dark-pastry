@@ -12,8 +12,8 @@ namespace Enemies
         {
             Health = 5f;
             DamageInflicted = 0.5f;
-            MovementTime = 0.5f;
-            Unit = 0.5f;
+            MovementTime = 0.2f;
+            Speed = 3f;
             ItemDropped = Resources.Load<GameObject>("Prefabs/DroppedEgg");
         }
 

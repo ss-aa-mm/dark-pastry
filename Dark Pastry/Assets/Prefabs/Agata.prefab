@@ -552,7 +552,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5465951589599750057}
   - component: {fileID: 5465951589599750056}
-  - component: {fileID: 2263666675765637145}
+  - component: {fileID: 3718906909909055719}
+  - component: {fileID: 4769765156205451217}
   m_Layer: 0
   m_Name: AgataWeaponLeft
   m_TagString: Untagged
@@ -623,7 +624,59 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2263666675765637145
+--- !u!60 &3718906909909055719
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5465951589599750054}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.19079511, y: 0.15214455}
+    oldSize: {x: 0.48, y: 0.64}
+    newSize: {x: 0.1, y: 0.2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.09841835, y: 0.022627486}
+      - {x: 0.28591835, y: 0.3201275}
+      - {x: 0.28591835, y: 0.33262748}
+      - {x: 0.27091834, y: 0.35762748}
+      - {x: 0.29591835, y: 0.40762746}
+      - {x: 0.29591835, y: 0.43012747}
+      - {x: 0.28091833, y: 0.4451275}
+      - {x: 0.24341835, y: 0.4451275}
+      - {x: 0.20341834, y: 0.39012748}
+      - {x: 0.19341834, y: 0.39762747}
+      - {x: 0.16591835, y: 0.39512748}
+      - {x: 0.15841834, y: 0.38512748}
+      - {x: 0.14341834, y: 0.35762748}
+      - {x: 0.03841835, y: 0.19512749}
+      - {x: -0.011581649, y: 0.11762749}
+      - {x: -0.029081648, y: 0.09012748}
+      - {x: -0.029081648, y: 0.065127485}
+      - {x: -0.0140816495, y: 0.045127485}
+      - {x: -0.02408165, y: 0.032627486}
+      - {x: -0.04658165, y: -0.0048725125}
+      - {x: -0.051581647, y: -0.017372513}
+      - {x: -0.051581647, y: -0.05237251}
+      - {x: -0.04158165, y: -0.062372513}
+      - {x: -0.00908165, y: -0.062372513}
+      - {x: 0.01591835, y: -0.04487251}
+      - {x: 0.050918348, y: 0.0051274872}
+      - {x: 0.08091835, y: 0.00012748718}
+--- !u!114 &4769765156205451217
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -632,7 +685,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5465951589599750054}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41515a05da57f49ffa42e45d8d386154, type: 3}
+  m_Script: {fileID: 11500000, guid: 5eae53d312588496f8dbc59c67986cf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &5465951589765359300
@@ -707,7 +760,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5465951589882559347}
   - component: {fileID: 5465951589882559346}
-  - component: {fileID: 5993365271976871567}
+  - component: {fileID: 1018972573590123554}
+  - component: {fileID: 4594657486046077421}
   m_Layer: 0
   m_Name: AgataWeaponRight
   m_TagString: Untagged
@@ -778,7 +832,59 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5993365271976871567
+--- !u!60 &1018972573590123554
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5465951589882559344}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.19079511, y: 0.15214455}
+    oldSize: {x: 0.48, y: 0.64}
+    newSize: {x: 0.1, y: 0.2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.09841835, y: 0.022627486}
+      - {x: 0.28591835, y: 0.3201275}
+      - {x: 0.28591835, y: 0.33262748}
+      - {x: 0.27091834, y: 0.35762748}
+      - {x: 0.29591835, y: 0.40762746}
+      - {x: 0.29591835, y: 0.43012747}
+      - {x: 0.28091833, y: 0.4451275}
+      - {x: 0.24341835, y: 0.4451275}
+      - {x: 0.20341834, y: 0.39012748}
+      - {x: 0.19341834, y: 0.39762747}
+      - {x: 0.16591835, y: 0.39512748}
+      - {x: 0.15841834, y: 0.38512748}
+      - {x: 0.14341834, y: 0.35762748}
+      - {x: 0.03841835, y: 0.19512749}
+      - {x: -0.011581649, y: 0.11762749}
+      - {x: -0.029081648, y: 0.09012748}
+      - {x: -0.029081648, y: 0.065127485}
+      - {x: -0.0140816495, y: 0.045127485}
+      - {x: -0.02408165, y: 0.032627486}
+      - {x: -0.04658165, y: -0.0048725125}
+      - {x: -0.051581647, y: -0.017372513}
+      - {x: -0.051581647, y: -0.05237251}
+      - {x: -0.04158165, y: -0.062372513}
+      - {x: -0.00908165, y: -0.062372513}
+      - {x: 0.01591835, y: -0.04487251}
+      - {x: 0.050918348, y: 0.0051274872}
+      - {x: 0.08091835, y: 0.00012748718}
+--- !u!114 &4594657486046077421
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -787,7 +893,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5465951589882559344}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79acaa05f50a74d6fa4eeb7620a0dd71, type: 3}
+  m_Script: {fileID: 11500000, guid: 5eae53d312588496f8dbc59c67986cf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &5465951589884303915
@@ -1077,7 +1183,7 @@ GameObject:
   - component: {fileID: 1624188879}
   - component: {fileID: 1143922065}
   - component: {fileID: 1143922064}
-  - component: {fileID: 1143922063}
+  - component: {fileID: 9165505670926906097}
   m_Layer: 0
   m_Name: Agata
   m_TagString: Agata
@@ -1241,7 +1347,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.34188962, y: 0.40938568}
   m_EdgeRadius: 0
---- !u!114 &1143922063
+--- !u!114 &9165505670926906097
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1250,10 +1356,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 5465951590381497298}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd40250372f0647f28ad931851cfe415, type: 3}
+  m_Script: {fileID: 11500000, guid: 1c6583e915be54e2fa41f81dea7feea0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userInterface: {fileID: 0}
 --- !u!1001 &2072110123531834466
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -2,12 +2,13 @@
   "levels": [
     {
       "number": 0,
+      "globeEnabled": false,
       "ingredients": [
+        "Flour",
+        "Flour",
         "Egg",
         "Egg",
-        "Egg",
-        "Egg",
-        "Egg"
+        "Milk"
       ],
       "hints": [
         "Hint1",
