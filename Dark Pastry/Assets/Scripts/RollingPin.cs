@@ -10,7 +10,12 @@ public class RollingPin : MonoBehaviour
         if (!other.gameObject.CompareTag("Enemy") || AgataNew.GetAnimatorHash() != AttackHash)
             return;
 
-        other.GetComponent<NewEnemy>().OnHit();
-        other.GetComponent<Rigidbody>().AddForce(transform.position * -50);
+        var enemy = other.GetComponentInParent<Enemy>();
+        var agata = GetComponentInParent<AgataNew>();
+        var enemyBody = other.transform.GetComponentInParent<Rigidbody2D>();
+        var agataBody = agata.transform.GetComponentInParent<Rigidbody2D>();
+        
+        enemy.OnHit();
+        enemyBody.AddForce(agataBody.position * -5, ForceMode2D.Impulse);
     }
 }

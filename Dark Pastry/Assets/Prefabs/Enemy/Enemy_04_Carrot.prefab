@@ -588,7 +588,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 5
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -637,9 +637,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3054758160364748958}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54b32900115a4b7eb2369a3b84a74e3f, type: 3}
+  m_Script: {fileID: 11500000, guid: 6949ed5ff9b32475398acf054c3cd77c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Speed: 0
   dropsHeart: 0
   dropsItem: 0
 --- !u!1 &3054758160376079662

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Enemies;
+﻿using Enemies;
 using UnityEngine;
 
 public class EnemyWeapon : MonoBehaviour
@@ -9,12 +7,15 @@ public class EnemyWeapon : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!other.gameObject.CompareTag("Agata")) //|| AgataNew.GetAnimatorHash() != AttackHash)
+        if (!other.gameObject.CompareTag("Agata") || Enemy.GetAnimatorHash() != AttackHash)
             return;
 
-        var damage = other.GetComponent<NewEnemy>().GetDamage();
-        AgataNew.SetLife(-damage);
+        var enemy = GetComponentInParent<Enemy>();
+        var agata = other.GetComponentInParent<AgataNew>();
+        var enemyBody = agata.transform.GetComponentInParent<Rigidbody2D>();
+        var agataBody = other.transform.GetComponentInParent<Rigidbody>(); 
 
-        other.GetComponent<Rigidbody>().AddForce(transform.position * -50);
+        AgataNew.SetLife(-enemy.GetDamage());
+        agataBody.AddForce(enemyBody.position * -10, ForceMode.Impulse);
     }
 }
