@@ -427,7 +427,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.39}
@@ -1210,7 +1210,7 @@ GameObject:
   - component: {fileID: 1624188879}
   - component: {fileID: 1143922065}
   - component: {fileID: 9165505670926906097}
-  - component: {fileID: 257016441583649153}
+  - component: {fileID: 8802700900353365202}
   m_Layer: 0
   m_Name: Agata
   m_TagString: Agata
@@ -1360,7 +1360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c6583e915be54e2fa41f81dea7feea0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!60 &257016441583649153
+--- !u!60 &8802700900353365202
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1384,7 +1384,20 @@ PolygonCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   m_Points:
-    m_Paths: []
+    m_Paths:
+    - - {x: 0.014182479, y: 1.1205502}
+      - {x: -0.13556963, y: 0.98268014}
+      - {x: -0.27577287, y: 0.86450386}
+      - {x: -0.21955027, y: 0.55837905}
+      - {x: -0.3080752, y: 0.3697152}
+      - {x: -0.17442027, y: 0.27542365}
+      - {x: -0.19355819, y: 0.11138868}
+      - {x: -0.010665664, y: 0.08721495}
+      - {x: 0.18126175, y: 0.13569498}
+      - {x: 0.29902124, y: 0.34713554}
+      - {x: 0.22258182, y: 0.5960685}
+      - {x: 0.275773, y: 0.82904816}
+      - {x: 0.19229913, y: 0.9614066}
 --- !u!1001 &2072110123531834466
 PrefabInstance:
   m_ObjectHideFlags: 0
