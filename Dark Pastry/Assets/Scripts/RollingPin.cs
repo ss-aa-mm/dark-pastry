@@ -14,8 +14,38 @@ public class RollingPin : MonoBehaviour
         var agata = GetComponentInParent<AgataNew>();
         var enemyBody = other.transform.GetComponentInParent<Rigidbody2D>();
         var agataBody = agata.transform.GetComponentInParent<Rigidbody2D>();
-        
+        var newPosition = new Vector2();
+
         enemy.OnHit();
-        enemyBody.AddForce(agataBody.position * -5, ForceMode2D.Impulse);
+
+        if (agataBody.position.x > enemyBody.position.x) //Agata is to the right of the enemy
+        {
+            if (enemyBody.position.x >= 0)
+                newPosition.x = enemyBody.position.x * -5;
+            else
+                newPosition.x = enemyBody.position.x * 5;
+        }
+        else //Agata is to the left of the enemy
+        {
+            if (enemyBody.position.x >= 0)
+                newPosition.x = enemyBody.position.x * 5;
+            else
+                newPosition.x = enemyBody.position.x * -5;
+        }
+
+        if (agataBody.position.y > enemyBody.position.y) //Agata is above the enemy
+        {
+            if (enemyBody.position.y >= 0)
+                newPosition.y = enemyBody.position.y * -5;
+            else
+                newPosition.y = enemyBody.position.y * 5;
+        }
+        else //Agata is below the enemy
+        if (enemyBody.position.y >= 0)
+            newPosition.y = enemyBody.position.y * 5;
+        else
+            newPosition.y = enemyBody.position.y * -5;
+
+        enemyBody.AddForce(newPosition, ForceMode2D.Impulse);
     }
 }
