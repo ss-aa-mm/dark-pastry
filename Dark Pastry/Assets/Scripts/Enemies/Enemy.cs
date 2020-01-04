@@ -1,38 +1,58 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using Random = UnityEngine.Random;
 
 namespace Enemies
 {
-    public abstract class NewEnemy : MonoBehaviour
+    public abstract class Enemy : MonoBehaviour
     {
         protected float DamageInflicted;
         protected float MovementTime;
         protected float Speed;
         protected float Health;
+        private static Animator _animator;
         protected GameObject ItemDropped;
         private GameObject _heart;
         private GameObject _agata;
         public bool dropsHeart;
         public bool dropsItem;
+        private static bool _isAttacking;
+        private static bool _isActive;
+        private static bool _paused;
+        private static readonly int Attack = Animator.StringToHash("Attack");
+        private static readonly int Death = Animator.StringToHash("Die");
         private float _timeLeft = 1f;
 
         private void Awake()
         {
             _heart = Resources.Load<GameObject>("Prefabs/Heart");
             _agata = GameObject.Find("Agata");
+            _isAttacking = false;
+            _paused = false;
+            _isActive = true;
+            _animator = GetComponent<Animator>();
             AssignReferences();
         }
 
         private void Update()
         {
+            if (!_isActive)
+                return;
+
+            if (!_paused)
+                UpdateAnimator(_isAttacking);
+
+            if (Vector2.Distance(_agata.transform.position, transform.position) < 1)
+                _isAttacking = true;
+
             MovementPattern();
         }
 
-        private void OnCollisionEnter2D(Collision2D other)
+        private static void UpdateAnimator(bool isAttacking)
         {
-            if (!other.gameObject.CompareTag("Agata")) return;
-            AgataNew.SetLife(-DamageInflicted);
+            if (isAttacking)
+            {
+                _animator.SetTrigger(Attack);
+            }
         }
 
         private void OnDeath()
@@ -41,7 +61,9 @@ namespace Enemies
                 Instantiate(_heart, transform.position, Quaternion.identity);
             if (dropsItem)
                 Instantiate(ItemDropped, transform.position, Quaternion.identity);
-            Destroy(gameObject);
+
+            _isActive = false;
+            _animator.SetTrigger(Death);
         }
 
         public void OnHit()
@@ -66,7 +88,7 @@ namespace Enemies
             if (_timeLeft > 0)
                 return;
 
-            var dir = UnityEngine.Random.Range(0, 4);
+            var dir = Random.Range(0, 4);
 
             switch (dir)
             {
@@ -109,6 +131,11 @@ namespace Enemies
                 Vector2.MoveTowards(transform.position, _agata.transform.position * -1, Speed * Time.deltaTime);
 
             _timeLeft += MovementTime;
+        }
+
+        public static int GetAnimatorHash()
+        {
+            return _animator.GetCurrentAnimatorStateInfo(0).tagHash;
         }
     }
 }

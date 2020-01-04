@@ -2,7 +2,7 @@
 
 namespace Enemies
 {
-    public class Coffee : NewEnemy
+    public class Coffee : Enemy
     {
         private int _frames;
         private int _xAxis;
@@ -12,8 +12,8 @@ namespace Enemies
         {
             Health = 1f;
             DamageInflicted = 0.5f;
-            MovementTime = 0.2f;
-            Speed = 3f;
+            MovementTime = 0.1f;
+            Speed = 1f;
             ItemDropped = Resources.Load<GameObject>("Prefabs/DroppedEgg");
         }
 
