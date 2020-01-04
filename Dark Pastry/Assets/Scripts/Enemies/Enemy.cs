@@ -18,8 +18,8 @@ namespace Enemies
         private static bool _isAttacking;
         private static bool _isActive;
         private static bool _paused;
-        private static readonly int Attack = Animator.StringToHash("Attack");
-        private static readonly int Death = Animator.StringToHash("Die");
+        private static readonly int Attack = Animator.StringToHash("attack");
+        private static readonly int Death = Animator.StringToHash("die");
         private float _timeLeft = 1f;
 
         private void Awake()
@@ -38,11 +38,13 @@ namespace Enemies
             if (!_isActive)
                 return;
 
-            if (!_paused)
-                UpdateAnimator(_isAttacking);
+            _isAttacking = false;
 
             if (Vector2.Distance(_agata.transform.position, transform.position) < 1)
                 _isAttacking = true;
+
+            if (!_paused)
+                UpdateAnimator(_isAttacking);
 
             MovementPattern();
         }
@@ -64,6 +66,7 @@ namespace Enemies
 
             _isActive = false;
             _animator.SetTrigger(Death);
+            Destroy(gameObject);
         }
 
         public void OnHit()
