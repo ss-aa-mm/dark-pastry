@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
+<<<<<<< HEAD
+    <e p="C:\Users\Giulia\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Giulia\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Dark Pastry.1174435904.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Giulia\Desktop\dark-pastry\Dark Pastry" t="IncludeRecursive">
+=======
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
+<<<<<<< HEAD
+>>>>>>> master
+=======
+>>>>>>> master
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -900,6 +909,30 @@
             <e p="RightArm.cs" t="Include" />
           </e>
           <e p="Enemies" t="Include">
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <e p="Biscuit.cs" t="Include" />
+            <e p="BlueBerry.cs" t="Include" />
+            <e p="Boss01.cs" t="Include" />
+            <e p="Butter.cs" t="Include" />
+            <e p="Carrot.cs" t="Include" />
+            <e p="Cheese.cs" t="Include" />
+            <e p="Cherry.cs" t="Include" />
+            <e p="Chocolate.cs" t="Include" />
+            <e p="Coffee.cs" t="Include" />
+            <e p="Egg.cs" t="Include" />
+            <e p="Flour.cs" t="Include" />
+            <e p="GenericEnemy.cs" t="Include" />
+            <e p="Jelly.cs" t="Include" />
+            <e p="LadyFinger.cs" t="Include" />
+            <e p="Lemon.cs" t="Include" />
+            <e p="Manure.cs" t="Include" />
+            <e p="Milk.cs" t="Include" />
+            <e p="RedBerry.cs" t="Include" />
+            <e p="Sugar.cs" t="Include" />
+=======
+=======
+>>>>>>> master
             <e p="Boss01.cs" t="Include" />
             <e p="Carrot.cs" t="Include" />
             <e p="Cherry.cs" t="Include" />
@@ -907,9 +940,14 @@
             <e p="Milk.cs" t="Include" />
             <e p="NewEgg.cs" t="Include" />
             <e p="NewEnemy.cs" t="Include" />
+<<<<<<< HEAD
+>>>>>>> master
+=======
+>>>>>>> master
           </e>
           <e p="EnemyEgg.cs" t="Include" />
           <e p="EnemyMovement.cs" t="Include" />
+          <e p="EnemyWeapon.cs" t="Include" />
           <e p="GenericEnemy.cs" t="Include" />
           <e p="HealingObject.cs" t="Include" />
           <e p="Heart.cs" t="Include" />
@@ -951,7 +989,7 @@
           <e p="RollingPin.cs" t="Include" />
           <e p="SmartEnemy.cs" t="Include" />
           <e p="SmartEnemyEgg.cs" t="Include" />
-          <e p="UIMechanics.cs" t="Include" />
+          <e p="UiMechanics.cs" t="Include" />
           <e p="UIMechanicsNew.cs" t="Include" />
         </e>
         <e p="Sorting_layers.txt" t="Include" />
@@ -987,9 +1025,7 @@
       <e p="Dark Pastry.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
-      <e p="Temp/bin" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
-    <e p="$USER_HOME$/Library/Caches/Rider2019.2/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/Library/Caches/Rider2019.2/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_Dark Pastry.801522427.00" t="ExcludeRecursive" />
   </component>
 </project>

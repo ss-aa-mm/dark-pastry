@@ -55,6 +55,11 @@ namespace Enemies
 
         protected abstract void MovementPattern();
 
+        public float GetDamage()
+        {
+            return DamageInflicted;
+        }
+
         protected void MoveRandomly()
         {
             _timeLeft -= Time.deltaTime;
@@ -88,7 +93,8 @@ namespace Enemies
             if (_timeLeft > 0)
                 return;
 
-            transform.position = Vector2.MoveTowards(transform.position, _agata.transform.position, Speed * Time.deltaTime);
+            transform.position =
+                Vector2.MoveTowards(transform.position, _agata.transform.position, Speed * Time.deltaTime);
 
             _timeLeft += MovementTime;
         }
@@ -99,7 +105,8 @@ namespace Enemies
             if (_timeLeft > 0)
                 return;
 
-            transform.position = Vector2.MoveTowards(transform.position, _agata.transform.position * -1, Speed * Time.deltaTime);
+            transform.position =
+                Vector2.MoveTowards(transform.position, _agata.transform.position * -1, Speed * Time.deltaTime);
 
             _timeLeft += MovementTime;
         }
