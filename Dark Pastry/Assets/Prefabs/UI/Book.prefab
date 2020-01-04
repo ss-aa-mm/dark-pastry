@@ -699,6 +699,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2930087017869618162}
   - component: {fileID: 2930087017869618163}
+  - component: {fileID: 4257945060984491523}
   m_Layer: 5
   m_Name: bookButton
   m_TagString: Untagged
@@ -791,6 +792,25 @@ MonoBehaviour:
           m_StringArgument: bookOpen
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!95 &4257945060984491523
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2930087017869618161}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 54a9458a06147f7468d4cf410f6934ee, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2930087017929249362
 GameObject:
   m_ObjectHideFlags: 0
