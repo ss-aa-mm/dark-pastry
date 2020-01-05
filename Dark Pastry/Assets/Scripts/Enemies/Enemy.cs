@@ -124,11 +124,6 @@ namespace Enemies
             _timeLeft += MovementTime;
         }
 
-        public static int GetAnimatorHash()
-        {
-            return _animator.GetCurrentAnimatorStateInfo(0).tagHash;
-        }
-
         private void OnCollisionEnter2D(Collision2D other)
         {
             if (!other.gameObject.CompareTag("Agata"))
