@@ -124,7 +124,7 @@ namespace Enemies
             _timeLeft += MovementTime;
         }
 
-        private void OnTriggerEnter2D(Collider2D other)
+        private void OnCollisionEnter2D(Collision2D other)
         {
             if (!other.gameObject.CompareTag("Agata"))
                 return;
@@ -133,7 +133,7 @@ namespace Enemies
             HitAgata(other);
         }
 
-        private void HitAgata(Component agata)
+        private void HitAgata(Collision2D agata)
         {
             var enemyBody = transform.GetComponentInParent<Rigidbody2D>();
             var agataBody = agata.transform.GetComponentInParent<Rigidbody2D>();
