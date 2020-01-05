@@ -1,4 +1,5 @@
 ﻿using Enemies;
+using MoonSharp.Interpreter;
 using UnityEngine;
 
 public class RollingPin : MonoBehaviour
@@ -10,7 +11,6 @@ public class RollingPin : MonoBehaviour
         if (!other.gameObject.CompareTag("Enemy") || AgataNew.GetAnimatorHash() != AttackHash)
             return;
 
-        other.GetComponentInParent<Enemy>().OnHit();
         HitEnemy(other);
     }
 
@@ -19,15 +19,25 @@ public class RollingPin : MonoBehaviour
         if (!other.gameObject.CompareTag("Enemy") || AgataNew.GetAnimatorHash() != AttackHash)
             return;
 
-        other.GetComponentInParent<Enemy>().OnHit();
         HitEnemy(other);
     }
-    
-    private void HitEnemy(Component enemy)
+
+    private void HitEnemy(Component other)
     {
-        var enemyBody = enemy.transform.GetComponentInParent<Rigidbody2D>();
-        var agataBody = GetComponentInParent<AgataNew>().transform.GetComponentInParent<Rigidbody2D>();
+        var enemy = other.GetComponentInParent<Enemy>();
+        var enemyBody = other.transform.GetComponentInParent<Rigidbody2D>();
+        var agataBody = GetComponentInParent<AgataNew>().transform.GetComponent<Rigidbody2D>();
         var newPosition = new Vector2();
+
+        enemy.health--;
+        if (enemy.health <= 0)
+        {
+            enemy.OnDeath();
+            enemy.isActive = false;
+            enemy.animator.SetTrigger(enemy.Death);
+            Destroy(other.gameObject);
+            return;
+        }
 
         if (agataBody.position.x > enemyBody.position.x) //Agata is to the right of the enemy
         {

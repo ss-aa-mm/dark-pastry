@@ -10,7 +10,7 @@ namespace Enemies
 
         protected override void AssignReferences()
         {
-            Health = 1f;
+            health = 1f;
             DamageInflicted = 0.5f;
             MovementTime = 0.1f;
             Speed = 1f;

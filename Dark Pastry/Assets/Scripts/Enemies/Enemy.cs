@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 namespace Enemies
@@ -8,70 +9,65 @@ namespace Enemies
         protected float DamageInflicted;
         protected float MovementTime;
         protected float Speed;
-        protected float Health;
-        private static Animator _animator;
+        public float health; 
+        public Animator animator;
         protected GameObject ItemDropped;
         private GameObject _heart;
         private static GameObject _agata;
         public bool dropsHeart;
         public bool dropsItem;
+        private static bool _isWalking;
         private static bool _isAttacking;
-        private static bool _isActive;
+        public bool isActive;
         private static bool _paused;
+        private static readonly int Walk = Animator.StringToHash("walk");
         private static readonly int AttackRight = Animator.StringToHash("attackRight");
         private static readonly int AttackLeft = Animator.StringToHash("attackLeft");
-        private static readonly int Death = Animator.StringToHash("die");
+        public readonly int Death = Animator.StringToHash("die");
         private float _timeLeft = 1f;
 
         private void Awake()
         {
             _heart = Resources.Load<GameObject>("Prefabs/Heart");
             _agata = GameObject.Find("Agata");
+            isActive = true;
+            _isWalking = true;
             _isAttacking = false;
             _paused = false;
-            _isActive = true;
-            _animator = GetComponent<Animator>();
+            animator = GetComponent<Animator>();
             AssignReferences();
         }
 
         private void Update()
         {
-            if (!_isActive)
+            if (!isActive)
                 return;
 
             _isAttacking = Vector2.Distance(_agata.transform.position, transform.position) < 2;
 
             if (!_paused)
-                UpdateAnimator(_isAttacking);
+                UpdateAnimator(_isWalking, _isAttacking);
 
+            _isWalking = true;
             MovementPattern();
         }
 
-        private void UpdateAnimator(bool isAttacking)
+        private void UpdateAnimator(bool isWalking, bool isAttacking)
         {
             if (isAttacking)
             {
-                _animator.SetTrigger(_agata.transform.position.x >= transform.position.x ? AttackRight : AttackLeft);
+                animator.SetTrigger(_agata.transform.position.x >= transform.position.x ? AttackRight : AttackLeft);
             }
+
+            animator.SetBool(Walk, isWalking);
         }
 
-        private void OnDeath()
+        public void OnDeath()
         {
             if (dropsHeart)
                 Instantiate(_heart, transform.position, Quaternion.identity);
             if (dropsItem)
                 Instantiate(ItemDropped, transform.position, Quaternion.identity);
-
-            _isActive = false;
-            _animator.SetTrigger(Death);
-            Destroy(gameObject);
-        }
-
-        public void OnHit()
-        {
-            Health--;
-            if (Health <= 0)
-                OnDeath();
         }
 
         protected abstract void AssignReferences();
@@ -135,8 +131,8 @@ namespace Enemies
 
         private void HitAgata(Collision2D agata)
         {
-            var enemyBody = transform.GetComponentInParent<Rigidbody2D>();
-            var agataBody = agata.transform.GetComponentInParent<Rigidbody2D>();
+            var enemyBody = transform.GetComponent<Rigidbody2D>();
+            var agataBody = agata.transform.GetComponent<Rigidbody2D>();
             var newPosition = new Vector2();
 
             if (enemyBody.position.x > agataBody.position.x) //The enemy is to the right of Agata
