@@ -10,13 +10,24 @@ public class RollingPin : MonoBehaviour
         if (!other.gameObject.CompareTag("Enemy") || AgataNew.GetAnimatorHash() != AttackHash)
             return;
 
-        var enemy = other.GetComponentInParent<Enemy>();
-        var agata = GetComponentInParent<AgataNew>();
-        var enemyBody = other.transform.GetComponentInParent<Rigidbody2D>();
-        var agataBody = agata.transform.GetComponentInParent<Rigidbody2D>();
-        var newPosition = new Vector2();
+        other.GetComponentInParent<Enemy>().OnHit();
+        HitEnemy(other);
+    }
 
-        enemy.OnHit();
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (!other.gameObject.CompareTag("Enemy") || AgataNew.GetAnimatorHash() != AttackHash)
+            return;
+
+        other.GetComponentInParent<Enemy>().OnHit();
+        HitEnemy(other);
+    }
+    
+    private void HitEnemy(Component enemy)
+    {
+        var enemyBody = enemy.transform.GetComponentInParent<Rigidbody2D>();
+        var agataBody = GetComponentInParent<AgataNew>().transform.GetComponentInParent<Rigidbody2D>();
+        var newPosition = new Vector2();
 
         if (agataBody.position.x > enemyBody.position.x) //Agata is to the right of the enemy
         {
@@ -46,6 +57,7 @@ public class RollingPin : MonoBehaviour
         else
             newPosition.y = enemyBody.position.y * -5;
 
+        //Push enemy away after hit
         enemyBody.AddForce(newPosition, ForceMode2D.Impulse);
     }
 }
