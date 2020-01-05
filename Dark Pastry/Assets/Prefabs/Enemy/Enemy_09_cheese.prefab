@@ -360,7 +360,7 @@ GameObject:
   - component: {fileID: 1515963674743665691}
   m_Layer: 0
   m_Name: EnemyWeapon_left
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -707,8 +707,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 729f36da01484f368caa30b7fdfa8ffe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 0
+  animator: {fileID: 0}
   dropsHeart: 0
   dropsItem: 0
+  isActive: 0
 --- !u!1 &1515963675081550556
 GameObject:
   m_ObjectHideFlags: 0
@@ -721,7 +724,7 @@ GameObject:
   - component: {fileID: 1515963675081550530}
   m_Layer: 0
   m_Name: EnemyWeapon_right
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

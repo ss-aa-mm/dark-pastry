@@ -664,7 +664,7 @@ GameObject:
   - component: {fileID: 4918758827002700396}
   m_Layer: 0
   m_Name: EnemyWeapon_right
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -943,7 +943,7 @@ GameObject:
   - component: {fileID: 4918758827616262560}
   m_Layer: 0
   m_Name: EnemyWeapon_left
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1151,8 +1151,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf7705d0e385483cbf997517d1c0e0de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 0
+  animator: {fileID: 0}
   dropsHeart: 0
   dropsItem: 0
+  isActive: 0
 --- !u!1 &4918758827921748445
 GameObject:
   m_ObjectHideFlags: 0
