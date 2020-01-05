@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ContentModelStore">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
+=======
+    <e p="C:\Users\Giulia\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Giulia\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Dark Pastry.1174435904.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Giulia\Desktop\dark-pastry\Dark Pastry" t="IncludeRecursive">
+>>>>>>> Stashed changes
 =======
     <e p="C:\Users\Giulia\.Rider2019.3\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\Giulia\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Dark Pastry.1174435904.00" t="ExcludeRecursive" />
@@ -976,9 +982,14 @@
           <e p="SmartEnemy.cs" t="Include" />
           <e p="SmartEnemyEgg.cs" t="Include" />
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
           <e p="UIMechanics.cs" t="Include" />
           <e p="UIMechanicsNew.cs" t="Include" />
           <e p="VerticalLock.cs" t="Include" />
+=======
+          <e p="UiMechanics.cs" t="Include" />
+          <e p="UiMechanicsNew.cs" t="Include" />
+>>>>>>> Stashed changes
 =======
           <e p="UiMechanics.cs" t="Include" />
           <e p="UiMechanicsNew.cs" t="Include" />

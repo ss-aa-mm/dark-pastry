@@ -1,6 +1,10 @@
 sceneSetups:
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 - path: Assets/Scenes/Levels/GameFlow/Level1.unity
+=======
+- path: Assets/Scenes/Giulia.unity
+>>>>>>> Stashed changes
 =======
 - path: Assets/Scenes/Giulia.unity
 >>>>>>> Stashed changes
