@@ -27,13 +27,14 @@ public class LevelData : MonoBehaviour
     private static GameInformation _gameData;
     private static LevelInformation _levelData;
     private static List<string>.Enumerator _hintList;
+    private static int _currentLevel;
 
     public static void DataLoad()
     {
         _gameData = JsonUtility.FromJson<GameInformation>(Resources.Load<TextAsset>("data").text);
         foreach (var level in _gameData.levels)
         {
-            if (level.number == 0)
+            if (level.number == _currentLevel)
                 _levelData = level;
         }
 
@@ -43,6 +44,11 @@ public class LevelData : MonoBehaviour
     public static LevelInformation GetInfo()
     {
         return _levelData;
+    }
+
+    public static void LevelCompleted()
+    {
+        _currentLevel++;
     }
 
     public static string AssignHint()

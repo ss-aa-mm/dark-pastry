@@ -22,6 +22,7 @@ TagManager:
   - Agata
   - EnemyWeapon
   - Boss_1
+  - BookMenu
   layers:
   - Default
   - TransparentFX
