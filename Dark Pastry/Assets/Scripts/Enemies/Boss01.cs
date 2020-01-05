@@ -2,7 +2,7 @@
 
 namespace Enemies
 {
-    public class Boss01 : NewEnemy
+    public class Boss01 : Enemy
     {
         private int _frames;
         private int _xAxis;
@@ -10,10 +10,10 @@ namespace Enemies
 
         protected override void AssignReferences()
         {
-            Health = 5f;
+            health = 5f;
             DamageInflicted = 0.5f;
-            MovementTime = 0.2f;
-            Speed = 3f;
+            MovementTime = 0.1f;
+            Speed = 1f;
             ItemDropped = Resources.Load<GameObject>("Prefabs/DroppedEgg");
         }
 

@@ -2,7 +2,7 @@
 
 namespace Enemies
 {
-    public class BlueBerry : NewEnemy
+    public class BlueBerry : Enemy
     {
         private int _frames;
         private int _xAxis;
@@ -10,11 +10,11 @@ namespace Enemies
 
         protected override void AssignReferences()
         {
-            Health = 1f;
+            health = 1f;
             DamageInflicted = 0.5f;
-            MovementTime = 0.2f;
-            Speed = 3f;
-            ItemDropped = Resources.Load<GameObject>("Prefabs/DroppedEgg");
+            MovementTime = 0.1f;
+            Speed = 1f;
+            ItemDropped = Resources.Load<GameObject>("Prefabs/Items/DroppedBlueberry");
         }
 
         protected override void MovementPattern()

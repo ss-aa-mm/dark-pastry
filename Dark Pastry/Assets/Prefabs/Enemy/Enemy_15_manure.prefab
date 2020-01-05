@@ -545,7 +545,6 @@ GameObject:
   - component: {fileID: 4918758826983507564}
   - component: {fileID: 4918758826983507571}
   - component: {fileID: 4918758826983507570}
-  - component: {fileID: 669104410494518101}
   m_Layer: 0
   m_Name: WeaponPivot_left
   m_TagString: EnemyWeapon
@@ -653,18 +652,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &669104410494518101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4918758826983507568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ff762ace09342ef9e5d188e81dcaa25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4918758827002700402
 GameObject:
   m_ObjectHideFlags: 0
@@ -757,7 +744,6 @@ GameObject:
   - component: {fileID: 4918758827011114448}
   - component: {fileID: 4918758827011114455}
   - component: {fileID: 4918758827011114454}
-  - component: {fileID: 3791227456270713072}
   m_Layer: 0
   m_Name: WeaponPivot_right
   m_TagString: EnemyWeapon
@@ -865,18 +851,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3791227456270713072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4918758827011114452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ff762ace09342ef9e5d188e81dcaa25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4918758827152433050
 GameObject:
   m_ObjectHideFlags: 0
@@ -1177,7 +1151,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf7705d0e385483cbf997517d1c0e0de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 0
   dropsHeart: 0
   dropsItem: 0
 --- !u!1 &4918758827921748445

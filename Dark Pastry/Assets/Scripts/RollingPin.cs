@@ -1,4 +1,5 @@
 ﻿using Enemies;
+using MoonSharp.Interpreter;
 using UnityEngine;
 
 public class RollingPin : MonoBehaviour
@@ -10,12 +11,63 @@ public class RollingPin : MonoBehaviour
         if (!other.gameObject.CompareTag("Enemy") || AgataNew.GetAnimatorHash() != AttackHash)
             return;
 
+        HitEnemy(other);
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (!other.gameObject.CompareTag("Enemy") || AgataNew.GetAnimatorHash() != AttackHash)
+            return;
+
+        HitEnemy(other);
+    }
+
+    private void HitEnemy(Component other)
+    {
         var enemy = other.GetComponentInParent<Enemy>();
-        var agata = GetComponentInParent<AgataNew>();
         var enemyBody = other.transform.GetComponentInParent<Rigidbody2D>();
-        var agataBody = agata.transform.GetComponentInParent<Rigidbody2D>();
-        
-        enemy.OnHit();
-        enemyBody.AddForce(agataBody.position * -5, ForceMode2D.Impulse);
+        var agataBody = GetComponentInParent<AgataNew>().transform.GetComponent<Rigidbody2D>();
+        var newPosition = new Vector2();
+
+        enemy.health--;
+        if (enemy.health <= 0)
+        {
+            enemy.OnDeath();
+            enemy.isActive = false;
+            enemy.animator.SetTrigger(enemy.Death);
+            Destroy(other.gameObject);
+            return;
+        }
+
+        if (agataBody.position.x > enemyBody.position.x) //Agata is to the right of the enemy
+        {
+            if (enemyBody.position.x >= 0)
+                newPosition.x = enemyBody.position.x * -5;
+            else
+                newPosition.x = enemyBody.position.x * 5;
+        }
+        else //Agata is to the left of the enemy
+        {
+            if (enemyBody.position.x >= 0)
+                newPosition.x = enemyBody.position.x * 5;
+            else
+                newPosition.x = enemyBody.position.x * -5;
+        }
+
+        if (agataBody.position.y > enemyBody.position.y) //Agata is above the enemy
+        {
+            if (enemyBody.position.y >= 0)
+                newPosition.y = enemyBody.position.y * -5;
+            else
+                newPosition.y = enemyBody.position.y * 5;
+        }
+        else //Agata is below the enemy
+        if (enemyBody.position.y >= 0)
+            newPosition.y = enemyBody.position.y * 5;
+        else
+            newPosition.y = enemyBody.position.y * -5;
+
+        //Push enemy away after hit
+        enemyBody.AddForce(newPosition, ForceMode2D.Impulse);
     }
 }
