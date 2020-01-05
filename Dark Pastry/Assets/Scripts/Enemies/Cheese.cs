@@ -14,7 +14,7 @@ namespace Enemies
             DamageInflicted = 0.5f;
             MovementTime = 0.1f;
             Speed = 1f;
-            ItemDropped = Resources.Load<GameObject>("Prefabs/DroppedEgg");
+            ItemDropped = Resources.Load<GameObject>("Prefabs/Items/DroppedCheese");
         }
 
         protected override void MovementPattern()

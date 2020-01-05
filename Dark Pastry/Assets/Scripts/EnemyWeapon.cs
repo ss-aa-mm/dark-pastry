@@ -7,7 +7,7 @@ public class EnemyWeapon : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!other.gameObject.CompareTag("Agata") || Enemy.GetAnimatorHash() != AttackHash)
+        if (!other.gameObject.CompareTag("Agata") )//|| GenericEnemy.GetAnimatorHash() != AttackHash)
             return;
 
         var enemy = GetComponentInParent<Enemy>();

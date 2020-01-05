@@ -4,10 +4,10 @@
       "number": 0,
       "globeEnabled": false,
       "ingredients": [
-        "Flour",
-        "Flour",
-        "Egg",
-        "Egg",
+        "Chocolate",
+        "Chocolate",
+        "Sugar",
+        "Jellybean",
         "Milk"
       ],
       "hints": [
@@ -21,6 +21,7 @@
 
 	{
       "number": 1,
+      "globeEnabled" : false,
       "ingredients": [
         "Egg",
         "Egg",

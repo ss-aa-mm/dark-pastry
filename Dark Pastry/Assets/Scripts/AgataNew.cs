@@ -19,6 +19,7 @@ public class AgataNew : MonoBehaviour
     private static Animator _animator;
     private static MonoBehaviour _instance;
     private static List<SpriteRenderer> _agataParts;
+    private static Vector3 _spawnPosition;
     private static readonly int HorizontalAxis = Animator.StringToHash("HorizontalAxis");
     private static readonly int VerticalAxis = Animator.StringToHash("VerticalAxis");
     private static readonly int IsMovingH = Animator.StringToHash("isMovingH");
@@ -37,6 +38,7 @@ public class AgataNew : MonoBehaviour
         _animator = GetComponent<Animator>();
         _agataParts = GetComponentsInChildren<SpriteRenderer>().ToList();
         _instance = this;
+        _spawnPosition = transform.position;
     }
 
     private void Update()
@@ -163,6 +165,7 @@ public class AgataNew : MonoBehaviour
         if (Time.timeScale > 0)
         {
             Time.timeScale = 0;
+            Book.Open();
             _paused = true;
         }
         else

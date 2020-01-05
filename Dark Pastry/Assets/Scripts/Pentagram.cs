@@ -12,12 +12,15 @@ public class Pentagram : MonoBehaviour
     private static bool _unlocked;
     private static bool _globeEnabled;
     private static Animator _animator;
+    private static Animator _chainAnimator;
+    private static BoxCollider2D _chainBody;
     private static Dictionary<List<string>, GameObject> _mixingDictionary;
     private static readonly int ItemPlaced = Animator.StringToHash("itemPlaced");
     private static readonly int Ready = Animator.StringToHash("ready");
     private static readonly int NotReady = Animator.StringToHash("notReady");
     private static readonly int PedestalsActive = Animator.StringToHash("pedestalsActive");
     private static readonly int Activated = Animator.StringToHash("activated");
+    private static readonly int KeyUnlock = Animator.StringToHash("keyUnlock");
 
     private void Awake()
     {
@@ -27,6 +30,8 @@ public class Pentagram : MonoBehaviour
         _itemsVector = new string[5];
         _animator = GetComponent<Animator>();
         _mixingDictionary = new Dictionary<List<string>, GameObject>();
+        _chainAnimator = GetComponentInChildren<LockChain>().gameObject.GetComponent<Animator>();
+        _chainBody = GetComponentInChildren<LockChain>().gameObject.GetComponent<BoxCollider2D>();
         InitializeDictionary();
         LevelData.DataLoad();
         _globeEnabled = LevelData.GetInfo().globeEnabled;
@@ -46,6 +51,8 @@ public class Pentagram : MonoBehaviour
             {
                 if (!coll.CompareTag("Agata") || !Input.GetButtonDown("Dance")) continue;
                 _unlocked = true;
+                _chainAnimator.SetTrigger(KeyUnlock);
+                _chainBody.enabled = false;
                 foreach (var pedestal in _pedestals)
                 {
                     Destroy(pedestal);
