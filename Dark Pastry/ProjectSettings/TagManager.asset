@@ -22,6 +22,10 @@ TagManager:
   - Agata
   - EnemyWeapon
   - Boss_1
+  - chalkBoard_1
+  - chalkBoard_2
+  - chalkBoard_3
+  - chalkBoard_4
   layers:
   - Default
   - TransparentFX
@@ -58,4 +62,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: ButtonFeedback
+    uniqueID: 224332961
     locked: 0

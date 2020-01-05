@@ -797,7 +797,7 @@ MonoBehaviour:
   hiddenTextColor: {r: 1, g: 1, b: 1, a: 0}
   writeWholeWords: 0
   forceRichText: 1
-  instantComplete: 1
+  instantComplete: 0
 --- !u!114 &2494330518232446869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -832,10 +832,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43b85556abd314f3f870c18c013fdcef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clickMode: 1
-  nextClickDelay: 0
-  cancelEnabled: 1
-  ignoreMenuClicks: 1
+  clickMode: 0
+  nextClickDelay: 0.3
+  cancelEnabled: 0
+  ignoreMenuClicks: 0
 --- !u!82 &2494330518229335283
 AudioSource:
   m_ObjectHideFlags: 0
