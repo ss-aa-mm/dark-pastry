@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 210a67a443f384061a46cb43afc23a41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chain: {fileID: 8300000, guid: 124a536a4fb05f8439d361eca37b1368, type: 3}
+  chain: {fileID: 8300000, guid: 3f4bc308a93eb477cbdbbc1dd4cfd511, type: 3}
 --- !u!61 &6147218940542482969
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5109,3 +5109,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5ee3efaf80974b3fa37a23d1b466e30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  key: {fileID: 0}
+  chain: {fileID: 0}

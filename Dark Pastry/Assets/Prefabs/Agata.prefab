@@ -1336,9 +1336,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c6583e915be54e2fa41f81dea7feea0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fall: {fileID: 8300000, guid: 398d57cf432416844ae0b05b3c3aa42a, type: 3}
-  footsteps: {fileID: 8300000, guid: 36d6a6f90fa208845a7646a719d42bef, type: 3}
-  swish: {fileID: 8300000, guid: 67b6c4cb371a23240929b9fa412b9ecf, type: 3}
+  fall: {fileID: 8300000, guid: 4d371b03bf03a46a991e36bf29feded9, type: 3}
+  swish: {fileID: 8300000, guid: b284845547e864d4d891a8e983aca4d4, type: 3}
 --- !u!60 &8802700900353365202
 PolygonCollider2D:
   m_ObjectHideFlags: 0

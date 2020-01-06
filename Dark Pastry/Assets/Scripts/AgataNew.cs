@@ -44,7 +44,7 @@ public class AgataNew : MonoBehaviour
         _instance = this;
         _transform = transform;
         _spawnPosition = _transform.position;
-        SoundManager.Instance.PlaySingle(fall);
+        //SoundManager.Instance.PlaySingle(fall);
     }
 
     private void Update()

@@ -952,12 +952,12 @@
           <e p="RollingPin.cs" t="Include" />
           <e p="Room.cs" t="Include" />
           <e p="RoomChain.cs" t="Include" />
+          <e p="SoundManager.cs" t="Include" />
           <e p="UIMechanicsNew.cs" t="Include" />
           <e p="VerticalLock.cs" t="Include" />
           <e p="Weapon.cs" t="Include" />
         </e>
         <e p="Sorting_layers.txt" t="Include" />
-        <e p="SoundManager.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
             <e p="LiberationSans - OFL.txt" t="Include" />

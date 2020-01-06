@@ -55,6 +55,25 @@
         "Hint4",
         "Hint5"
       ]
+    },
+
+    {
+      "number": 3,
+      "globeEnabled" : true,
+      "ingredients": [
+        "Butter",
+        "Blood",
+        "Blueberry",
+        "WhippedCream",
+        "Dough"
+      ],
+      "hints": [
+        "Hint1",
+        "Hint2",
+        "Hint3",
+        "Hint4",
+        "Hint5"
+      ]
     }
 
   ]
