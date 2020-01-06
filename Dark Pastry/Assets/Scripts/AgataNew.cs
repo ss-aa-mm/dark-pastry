@@ -29,9 +29,8 @@ public class AgataNew : MonoBehaviour
     private static readonly int Attack = Animator.StringToHash("Attack");
     private static readonly int Death = Animator.StringToHash("death");
     private static readonly int Dance = Animator.StringToHash("dance");
-    private static AudioClip _fall;
-    private static AudioClip _footsteps;
-    private static AudioClip _swish;
+    public AudioClip fall;
+    public AudioClip swish;
 
     private void Awake()
     {
@@ -45,6 +44,7 @@ public class AgataNew : MonoBehaviour
         _instance = this;
         _transform = transform;
         _spawnPosition = _transform.position;
+        SoundManager.Instance.PlaySingle(fall);
     }
 
     private void Update()
@@ -56,6 +56,9 @@ public class AgataNew : MonoBehaviour
         //Movement calculation
         var h = Input.GetAxis("Horizontal");
         var v = Input.GetAxis("Vertical");
+        const float tolerance = 0.000000000000001f;
+        if (Math.Abs(h) < tolerance && Math.Abs(v) < tolerance)
+            SoundManager.Instance.PlayLoop();
         _unit = Speed * Time.deltaTime;
         transform.Translate(h * _unit, v * _unit, 0);
         //End of movement calculation
@@ -74,6 +77,8 @@ public class AgataNew : MonoBehaviour
 
         //Attack
         _isAttacking = Input.GetButtonDown("Attack");
+        if (_isAttacking)
+            SoundManager.Instance.PlaySingle(swish);
         //End of Attack
 
         //Dance

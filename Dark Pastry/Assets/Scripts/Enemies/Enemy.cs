@@ -27,7 +27,7 @@ namespace Enemies
         private static readonly int AttackRight = Animator.StringToHash("attackRight");
         private static readonly int AttackLeft = Animator.StringToHash("attackLeft");
         public readonly int Death = Animator.StringToHash("die");
-        private static AudioClip _agataHit;
+        public AudioClip agataHit;
         private float _timeLeft = 1f;
 
         private void Awake()
@@ -40,7 +40,6 @@ namespace Enemies
             _paused = false;
             animator = GetComponent<Animator>();
             _y = -1;
-            _agataHit = Resources.Load<AudioClip>("Assets/Resources/SOUND/sicuri/slightscream-07.mp3");
             AssignReferences();
         }
 
@@ -104,7 +103,6 @@ namespace Enemies
             }
 
             _timeLeft += MovementTime;
-
         }
 
         protected void Chase()
@@ -120,8 +118,8 @@ namespace Enemies
         protected void CrossMovement()
         {
             _frames++;
-            transform.Translate(_x*Time.deltaTime,_y*Time.deltaTime,0);
-            switch (_frames*Multiplier)
+            transform.Translate(_x * Time.deltaTime, _y * Time.deltaTime, 0);
+            switch (_frames * Multiplier)
             {
                 case 10:
                     _y = 1;
@@ -180,7 +178,7 @@ namespace Enemies
             var agataBody = agata.transform.GetComponent<Rigidbody2D>();
             var newPosition = new Vector2();
 
-            SoundManager.instance.PlaySingle(_agataHit);
+            SoundManager.Instance.PlaySingle(agataHit);
 
             if (enemyBody.position.x > agataBody.position.x) //The enemy is to the right of Agata
             {

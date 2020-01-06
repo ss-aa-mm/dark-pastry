@@ -9,6 +9,8 @@ public abstract class Lock : HighlightableObject
     protected Animator Animator;
     protected BoxCollider2D ChainCollider;
     private static readonly int KeyUnlock = Animator.StringToHash("keyUnlock");
+    public AudioClip key;
+    public AudioClip chain;
 
     public override void Interact()
     {
@@ -18,6 +20,9 @@ public abstract class Lock : HighlightableObject
             Animator.SetTrigger(KeyUnlock);
             ChainCollider.enabled = false;
             Destroy(Animator.gameObject.GetComponent<LockChain>());
+            SoundManager.Instance.PlaySingle(key);
+            SoundManager.Instance.PlaySingle(chain);
+            
         }
         else
         {
