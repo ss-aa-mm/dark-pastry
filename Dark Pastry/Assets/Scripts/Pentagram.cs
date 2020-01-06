@@ -59,7 +59,7 @@ public class Pentagram : MonoBehaviour
                 }
             }
         }
-        else if (_objectsPlaced > 1)
+        else if (_objectsPlaced > 1 && _globeEnabled)
         {
             if (!Input.GetButtonDown("Dance")) return;
             // ReSharper disable once Unity.PreferNonAllocApi
@@ -74,7 +74,7 @@ public class Pentagram : MonoBehaviour
                 foreach (var recipe in _mixingDictionary.Where(recipe =>
                     recipe.Key.OrderBy(t => t).SequenceEqual(list.OrderBy(s => s))))
                 {
-                    Debug.Log(recipe.Value.ToString());
+                    //Debug.Log(recipe.Value.ToString());
                     valid = true;
                     obj = recipe.Value;
                 }
@@ -143,7 +143,7 @@ public class Pentagram : MonoBehaviour
 
     private static void InitializeDictionary()
     {
-        _mixingDictionary.Add(new List<string> {DropItems.Egg.ToString(),DropItems.Egg.ToString()}, Resources.Load<GameObject>("Prefabs/DroppedEgg") );
+        _mixingDictionary.Add(new List<string> {DropItems.Egg.ToString(),DropItems.Flour.ToString()}, Resources.Load<GameObject>("Prefabs/Items/DroppedDough") );
     }
 
 }
