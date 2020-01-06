@@ -297,7 +297,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5465951588859769856}
   - component: {fileID: 5465951588859769859}
-  - component: {fileID: 5313141791772810206}
   m_Layer: 0
   m_Name: AgataHead
   m_TagString: Untagged
@@ -369,18 +368,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5313141791772810206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5465951588859769857}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f15c45fdbbd474b11acdd21fb2003e4e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5465951589167558642
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,7 +439,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5465951589286988687}
-  - component: {fileID: 5270695888625976686}
   m_Layer: 0
   m_Name: Legs
   m_TagString: Untagged
@@ -476,18 +462,6 @@ Transform:
   m_Father: {fileID: 5465951589167558645}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5270695888625976686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5465951589286988684}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31b72bd0b9a7143e8b8281c221ca7c5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &5465951589468836231
 GameObject:
   m_ObjectHideFlags: 0
@@ -715,6 +689,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eae53d312588496f8dbc59c67986cf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyHit: {fileID: 8300000, guid: 2368c5079f5371248b2e58475423be7e, type: 3}
 --- !u!1 &5465951589765359300
 GameObject:
   m_ObjectHideFlags: 0
@@ -923,6 +898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eae53d312588496f8dbc59c67986cf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyHit: {fileID: 8300000, guid: 2368c5079f5371248b2e58475423be7e, type: 3}
 --- !u!1 &5465951589884303915
 GameObject:
   m_ObjectHideFlags: 0
@@ -1360,9 +1336,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c6583e915be54e2fa41f81dea7feea0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fall: {fileID: 8300000, guid: 1745a866f52607646b7a7f86d4824f8f, type: 3}
-  footsteps: {fileID: 8300000, guid: 2234aa16d376f9548b3b9bb405737909, type: 3}
-  rollingPin: {fileID: 8300000, guid: 957ae15f47db74f418bb73dbd6f165fa, type: 3}
+  fall: {fileID: 8300000, guid: 398d57cf432416844ae0b05b3c3aa42a, type: 3}
+  footsteps: {fileID: 8300000, guid: 36d6a6f90fa208845a7646a719d42bef, type: 3}
+  swish: {fileID: 8300000, guid: 67b6c4cb371a23240929b9fa412b9ecf, type: 3}
 --- !u!60 &8802700900353365202
 PolygonCollider2D:
   m_ObjectHideFlags: 0

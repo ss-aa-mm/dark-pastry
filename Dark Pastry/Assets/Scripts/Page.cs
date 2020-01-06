@@ -11,6 +11,8 @@ public class Page : HighlightableObject
         Debug.Log(_hint);
         Destroy(gameObject.GetComponent<PolygonCollider2D>());
         Fungus.Flowchart.BroadcastFungusMessage("Recipe_01_Acquired");
+        Book.UpdateBookUnlockHint(LevelData.GetCurrentLevel());
+        Book.Render();
     }
 
     protected override void AssignReferences()

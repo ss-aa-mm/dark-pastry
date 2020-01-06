@@ -5,6 +5,7 @@ namespace Items
     public class Key : DropItem
     {
         public Color color;
+
         protected override void AssignReferences()
         {
             Type = DropItems.Key;

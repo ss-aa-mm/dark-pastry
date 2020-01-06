@@ -26,6 +26,8 @@ TagManager:
   - chalkBoard_2
   - chalkBoard_3
   - chalkBoard_4
+  - Book
+  - RenderingPage
   - Boss_2
   - Boss_3
   layers:

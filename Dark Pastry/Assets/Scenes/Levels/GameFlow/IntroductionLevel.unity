@@ -5952,8 +5952,6 @@ GameObject:
   - component: {fileID: 85950242}
   - component: {fileID: 85950241}
   - component: {fileID: 85950240}
-  - component: {fileID: 85950239}
-  - component: {fileID: 85950238}
   - component: {fileID: 85950270}
   - component: {fileID: 85950269}
   - component: {fileID: 85950268}
@@ -5961,6 +5959,9 @@ GameObject:
   - component: {fileID: 85950245}
   - component: {fileID: 85950244}
   - component: {fileID: 85950237}
+  - component: {fileID: 85950249}
+  - component: {fileID: 85950239}
+  - component: {fileID: 85950238}
   m_Layer: 0
   m_Name: Boss_00_Flow
   m_TagString: Boss_1
@@ -6055,15 +6056,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 85950235}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Script: {fileID: 11500000, guid: 2d7d417659cd54a6787f70f763950c34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 37
-  indentLevel: 1
-  _duration:
-    floatRef: {fileID: 0}
-    floatVal: 0.8
-  durationOLD: 0
+  parentBlock: {fileID: 85950249}
+  message: Recipe_01_Acquired
 --- !u!114 &85950239
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6073,36 +6070,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 85950235}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 445c07472dafe4e0ead0e88c4b757401, type: 3}
+  m_Script: {fileID: 11500000, guid: d81be3d7e84da460788dccea95a3313a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 36
-  indentLevel: 1
-  _targetObject:
+  itemId: 50
+  indentLevel: 0
+  _targetGameObject:
     gameObjectRef: {fileID: 0}
     gameObjectVal: {fileID: 239001519}
-  _tweenName:
-    stringRef: {fileID: 0}
-    stringVal: 
-  _duration:
+  destroyInXSeconds:
     floatRef: {fileID: 0}
-    floatVal: 1
-  easeType: 2
-  loopType: 0
-  stopPreviousTweens: 0
-  waitUntilFinished: 1
-  targetObjectOLD: {fileID: 0}
-  tweenNameOLD: 
-  durationOLD: 0
-  _toTransform:
-    transformRef: {fileID: 0}
-    transformVal: {fileID: 5366948923941454909}
-  _toPosition:
-    vector3Ref: {fileID: 0}
-    vector3Val: {x: 0, y: 0, z: 0}
-  isLocal: 0
-  toTransformOLD: {fileID: 0}
-  toPositionOLD: {x: 0, y: 0, z: 0}
+    floatVal: 0
+  targetGameObjectOLD: {fileID: 0}
 --- !u!114 &85950240
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6281,6 +6260,32 @@ MonoBehaviour:
   scope: 0
   key: BossInteracted
   value: 0
+--- !u!114 &85950249
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85950235}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 495.12085
+    y: 191.06168
+    width: 157.83318
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 31
+  blockName: RecipeAcquired
+  description: 
+  eventHandler: {fileID: 85950238}
+  commandList:
+  - {fileID: 85950239}
 --- !u!114 &85950261
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6353,7 +6358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 4
   indentLevel: 1
-  storyText: What are you doing here my child.
+  storyText: What are you doing here, my dear?
   description: 
   character: {fileID: 5366948923283712398}
   portrait: {fileID: 0}
@@ -6409,7 +6414,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 172.05653
     y: 192
-    width: 156.5934
+    width: 141.55646
     height: 40
   tint: {r: 1, g: 0.9907824, b: 0.3254717, a: 1}
   useCustomTint: 1
@@ -6429,8 +6434,6 @@ MonoBehaviour:
   - {fileID: 85950269}
   - {fileID: 85950268}
   - {fileID: 85950240}
-  - {fileID: 85950239}
-  - {fileID: 85950238}
   - {fileID: 85950237}
   - {fileID: 85950262}
 --- !u!114 &85950267
@@ -6446,20 +6449,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 15.0815525, y: 14.043006}
+  scrollPos: {x: 129.37714, y: -92.96459}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.9100001
+  zoom: 0.9829999
   scrollViewRect:
     serializedVersion: 2
     x: -343
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
+  selectedBlocks:
+  - {fileID: 85950249}
   selectedCommands:
-  - {fileID: 85950241}
+  - {fileID: 85950239}
   variables:
   - {fileID: 85950245}
   description: 
@@ -77145,6 +77149,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -33.69995
+      objectReference: {fileID: 0}
+    - target: {fileID: 4634624874592125398, guid: 2054e3127519fa943a19df4ac6793e91,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2054e3127519fa943a19df4ac6793e91, type: 3}

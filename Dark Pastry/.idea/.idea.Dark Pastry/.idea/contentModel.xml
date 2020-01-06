@@ -892,12 +892,6 @@
           <e p="AgataNew.cs" t="Include" />
           <e p="Book.cs" t="Include" />
           <e p="Door.cs" t="Include" />
-          <e p="EmptyScripts" t="Include">
-            <e p="Body.cs" t="Include" />
-            <e p="Head.cs" t="Include" />
-            <e p="LeftArm.cs" t="Include" />
-            <e p="RightArm.cs" t="Include" />
-          </e>
           <e p="EndLevel.cs" t="Include" />
           <e p="Enemies" t="Include">
             <e p="Biscuit.cs" t="Include" />
@@ -958,9 +952,6 @@
           <e p="RollingPin.cs" t="Include" />
           <e p="Room.cs" t="Include" />
           <e p="RoomChain.cs" t="Include" />
-          <e p="SmartEnemy.cs" t="Include" />
-          <e p="SmartEnemyEgg.cs" t="Include" />
-          <e p="UIMechanics.cs" t="Include" />
           <e p="UIMechanicsNew.cs" t="Include" />
           <e p="VerticalLock.cs" t="Include" />
           <e p="Weapon.cs" t="Include" />
@@ -999,7 +990,9 @@
       <e p="Dark Pastry.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
-      <e p="Temp\bin" t="ExcludeRecursive" />
+      <e p="Temp/bin" t="ExcludeRecursive" />
     </e>
+    <e p="$USER_HOME$/Library/Caches/Rider2019.2/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.2/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_Dark Pastry.801522427.00" t="ExcludeRecursive" />
   </component>
 </project>

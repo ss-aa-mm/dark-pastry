@@ -286,6 +286,7 @@ MonoBehaviour:
   dropsHeart: 0
   dropsItem: 0
   isActive: 0
+  agataHit: {fileID: 8300000, guid: a7283c589ef2a144187064f2a0c72ae2, type: 3}
 --- !u!1 &4197024101891684903
 GameObject:
   m_ObjectHideFlags: 0

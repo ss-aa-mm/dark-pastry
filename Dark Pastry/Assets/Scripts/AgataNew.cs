@@ -29,9 +29,8 @@ public class AgataNew : MonoBehaviour
     private static readonly int Attack = Animator.StringToHash("Attack");
     private static readonly int Death = Animator.StringToHash("death");
     private static readonly int Dance = Animator.StringToHash("dance");
-    private static AudioClip _fall;
-    private static AudioClip _footsteps;
-    private static AudioClip _swish;
+    public AudioClip fall;
+    public AudioClip swish;
 
     private void Awake()
     {
@@ -45,6 +44,7 @@ public class AgataNew : MonoBehaviour
         _instance = this;
         _transform = transform;
         _spawnPosition = _transform.position;
+        SoundManager.Instance.PlaySingle(fall);
     }
 
     private void Update()
@@ -56,6 +56,9 @@ public class AgataNew : MonoBehaviour
         //Movement calculation
         var h = Input.GetAxis("Horizontal");
         var v = Input.GetAxis("Vertical");
+        const float tolerance = 0.000000000000001f;
+        if (Math.Abs(h) < tolerance && Math.Abs(v) < tolerance)
+            SoundManager.Instance.PlayLoop();
         _unit = Speed * Time.deltaTime;
         transform.Translate(h * _unit, v * _unit, 0);
         //End of movement calculation
@@ -74,6 +77,8 @@ public class AgataNew : MonoBehaviour
 
         //Attack
         _isAttacking = Input.GetButtonDown("Attack");
+        if (_isAttacking)
+            SoundManager.Instance.PlaySingle(swish);
         //End of Attack
 
         //Dance
@@ -168,12 +173,11 @@ public class AgataNew : MonoBehaviour
         return _animator.GetCurrentAnimatorStateInfo(0).tagHash;
     }
 
-    private static void PauseManager()
+    public static void PauseManager()
     {
         if (Time.timeScale > 0)
         {
             Time.timeScale = 0;
-            Book.Open();
             _paused = true;
         }
         else
@@ -191,33 +195,30 @@ public class AgataNew : MonoBehaviour
             _animator.SetBool(IsMovingH, false);
             _animator.SetBool(IsMovingV, false);
         }
+        else if (Math.Abs(h) > Math.Abs(v))
+        {
+            _animator.SetBool(Dance, false);
+            _animator.SetBool(IsMovingH, true);
+            _animator.SetBool(IsMovingV, false);
+            _animator.SetFloat(HorizontalAxis, h);
+            _animator.SetFloat(VerticalAxis, v);
+        }
         else
         {
-            if (Math.Abs(h) > Math.Abs(v))
-            {
-                _animator.SetBool(Dance, false);
-                _animator.SetBool(IsMovingH, true);
-                _animator.SetBool(IsMovingV, false);
-                _animator.SetFloat(HorizontalAxis, h);
-                _animator.SetFloat(VerticalAxis, v);
-            }
-            else
-            {
-                _animator.SetBool(Dance, false);
-                _animator.SetBool(IsMovingH, false);
-                _animator.SetBool(IsMovingV, true);
-                _animator.SetFloat(HorizontalAxis, h);
-                _animator.SetFloat(VerticalAxis, v);
-            }
-
-            SoundManager.instance.PlaySingle(_footsteps);
+            _animator.SetBool(Dance, false);
+            _animator.SetBool(IsMovingH, false);
+            _animator.SetBool(IsMovingV, true);
+            _animator.SetFloat(HorizontalAxis, h);
+            _animator.SetFloat(VerticalAxis, v);
         }
+
+        //SoundManager.instance.PlaySingle(_footsteps);
 
         if (isAttacking)
         {
             _animator.SetBool(Dance, false);
             _animator.SetTrigger(Attack);
-            SoundManager.instance.PlaySingle(_swish);
+            //SoundManager.instance.PlaySingle(_swish);
         }
 
         if (isDancing)
