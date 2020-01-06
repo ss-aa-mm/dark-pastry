@@ -6956,8 +6956,8 @@ MonoBehaviour:
   m_LightType: 0
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 1
-  m_Color: {r: 0.59400004, g: 0.1956706, b: 0.12578824, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.18039216, g: 0.12156863, b: 0.0627451, a: 1}
+  m_Intensity: 0.41
   m_LightVolumeOpacity: 1
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 21300000, guid: ec7b8e0411922494b932aa0a91d1588b,
@@ -6971,10 +6971,10 @@ MonoBehaviour:
   m_PointLightOuterRadius: 1.31
   m_PointLightDistance: 3
   m_PointLightQuality: 1
-  m_ShapeLightParametricSides: 48
+  m_ShapeLightParametricSides: 12
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 0.37
-  m_ShapeLightFalloffSize: 3.25
+  m_ShapeLightFalloffSize: 3.27
   m_ShapeLightFalloffOffset: {x: -2.69, y: -1.37}
   m_ShapePath:
   - {x: -0.5, y: -0.5, z: 0}
@@ -7375,7 +7375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 85950267}
+  selectedFlowchart: {fileID: 501751700809670942}
 --- !u!4 &210842289
 Transform:
   m_ObjectHideFlags: 1
@@ -9132,7 +9132,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 0.019607844}
+      maxColor: {r: 1, g: 0.14498517, b: 0, a: 0.5882353}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -15304,7 +15304,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 231.09279
     y: 70
-    width: 132.47423
+    width: 132.35294
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
@@ -15336,7 +15336,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 7
   indentLevel: 1
-  storyText: You better be prepared to defend yourself
+  storyText: You better be prepared to defend yourself using "O".
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}
@@ -15758,7 +15758,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 0.019607844}
+      maxColor: {r: 1, g: 0.14498517, b: 0, a: 0.5882353}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -20637,11 +20637,42 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1901996955}
-    - target: {fileID: 8626041888370770877, guid: ab281bee9a9fc7946984fbef35cb0b53,
+    - target: {fileID: 8626041888360087889, guid: ab281bee9a9fc7946984fbef35cb0b53,
         type: 3}
-      propertyPath: m_IsActive
+      propertyPath: instantComplete
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8626041888360084777, guid: ab281bee9a9fc7946984fbef35cb0b53,
+        type: 3}
+      propertyPath: cancelEnabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626041888360084777, guid: ab281bee9a9fc7946984fbef35cb0b53,
+        type: 3}
+      propertyPath: nextClickDelay
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626041888360084777, guid: ab281bee9a9fc7946984fbef35cb0b53,
+        type: 3}
+      propertyPath: clickMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626041888360089743, guid: ab281bee9a9fc7946984fbef35cb0b53,
+        type: 3}
+      propertyPath: m_Text
+      value: Welcome to the Underworld!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626041888360089743, guid: ab281bee9a9fc7946984fbef35cb0b53,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626041888360089743, guid: ab281bee9a9fc7946984fbef35cb0b53,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: bb145366ce7024469a5758b08d31802c,
+        type: 3}
     - target: {fileID: 8626041890178468168, guid: ab281bee9a9fc7946984fbef35cb0b53,
         type: 3}
       propertyPath: m_AnchorMin.x
@@ -20667,40 +20698,9 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 262
       objectReference: {fileID: 0}
-    - target: {fileID: 8626041888360089743, guid: ab281bee9a9fc7946984fbef35cb0b53,
+    - target: {fileID: 8626041888370770877, guid: ab281bee9a9fc7946984fbef35cb0b53,
         type: 3}
-      propertyPath: m_Text
-      value: Welcome to the Underworld!
-      objectReference: {fileID: 0}
-    - target: {fileID: 8626041888360089743, guid: ab281bee9a9fc7946984fbef35cb0b53,
-        type: 3}
-      propertyPath: m_FontData.m_Alignment
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8626041888360089743, guid: ab281bee9a9fc7946984fbef35cb0b53,
-        type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: bb145366ce7024469a5758b08d31802c,
-        type: 3}
-    - target: {fileID: 8626041888360087889, guid: ab281bee9a9fc7946984fbef35cb0b53,
-        type: 3}
-      propertyPath: instantComplete
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8626041888360084777, guid: ab281bee9a9fc7946984fbef35cb0b53,
-        type: 3}
-      propertyPath: cancelEnabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8626041888360084777, guid: ab281bee9a9fc7946984fbef35cb0b53,
-        type: 3}
-      propertyPath: nextClickDelay
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8626041888360084777, guid: ab281bee9a9fc7946984fbef35cb0b53,
-        type: 3}
-      propertyPath: clickMode
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -25798,8 +25798,8 @@ MonoBehaviour:
   m_LightType: 0
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 1
-  m_Color: {r: 1, g: 0.39444667, b: 0.11792451, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.18039216, g: 0.12156863, b: 0.0627451, a: 1}
+  m_Intensity: 0.41
   m_LightVolumeOpacity: 1
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 21300000, guid: ec7b8e0411922494b932aa0a91d1588b,
@@ -25813,10 +25813,10 @@ MonoBehaviour:
   m_PointLightOuterRadius: 1.31
   m_PointLightDistance: 3
   m_PointLightQuality: 1
-  m_ShapeLightParametricSides: 48
+  m_ShapeLightParametricSides: 12
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 0.37
-  m_ShapeLightFalloffSize: 3.25
+  m_ShapeLightFalloffSize: 3.27
   m_ShapeLightFalloffOffset: {x: -2.56, y: 1.16}
   m_ShapePath:
   - {x: -0.5, y: -0.5, z: 0}
@@ -27075,7 +27075,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 0.019607844}
+      maxColor: {r: 1, g: 0.14498517, b: 0, a: 0.5882353}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -32519,6 +32519,61 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Tiles.Array.data[37].second.m_ColliderType
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837287865212927967, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: m_ShapeLightParametricSides
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837287865212927967, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.12156863
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837287865212927967, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.0627451
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837287865212927967, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.18039216
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837287865212927967, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: m_FalloffIntensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837287865212927967, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: m_ShapeLightFalloffSize
+      value: 3.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837287865212927967, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 0.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825670645698119658, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.a
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825670645698119658, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825670645698119658, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.14498517
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825670645698119658, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b50d9a7a22bfaa241a4d005b3bbe21b4, type: 3}
@@ -40128,8 +40183,8 @@ MonoBehaviour:
   m_LightType: 0
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 1
-  m_Color: {r: 1, g: 0.39444667, b: 0.11792451, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.18039216, g: 0.12156863, b: 0.0627451, a: 1}
+  m_Intensity: 0.41
   m_LightVolumeOpacity: 1
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 21300000, guid: ec7b8e0411922494b932aa0a91d1588b,
@@ -40143,10 +40198,10 @@ MonoBehaviour:
   m_PointLightOuterRadius: 1.31
   m_PointLightDistance: 3
   m_PointLightQuality: 1
-  m_ShapeLightParametricSides: 48
+  m_ShapeLightParametricSides: 12
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 0.37
-  m_ShapeLightFalloffSize: 3.25
+  m_ShapeLightFalloffSize: 3.27
   m_ShapeLightFalloffOffset: {x: 0, y: -1.44}
   m_ShapePath:
   - {x: -0.5, y: -0.5, z: 0}
@@ -40349,11 +40404,42 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1901996955}
-    - target: {fileID: 8626041888370770877, guid: ab281bee9a9fc7946984fbef35cb0b53,
+    - target: {fileID: 8626041888360087889, guid: ab281bee9a9fc7946984fbef35cb0b53,
         type: 3}
-      propertyPath: m_IsActive
+      propertyPath: instantComplete
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8626041888360084777, guid: ab281bee9a9fc7946984fbef35cb0b53,
+        type: 3}
+      propertyPath: cancelEnabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626041888360084777, guid: ab281bee9a9fc7946984fbef35cb0b53,
+        type: 3}
+      propertyPath: nextClickDelay
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626041888360084777, guid: ab281bee9a9fc7946984fbef35cb0b53,
+        type: 3}
+      propertyPath: clickMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626041888360089743, guid: ab281bee9a9fc7946984fbef35cb0b53,
+        type: 3}
+      propertyPath: m_Text
+      value: Welcome to the Underworld!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626041888360089743, guid: ab281bee9a9fc7946984fbef35cb0b53,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626041888360089743, guid: ab281bee9a9fc7946984fbef35cb0b53,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: bb145366ce7024469a5758b08d31802c,
+        type: 3}
     - target: {fileID: 8626041890178468168, guid: ab281bee9a9fc7946984fbef35cb0b53,
         type: 3}
       propertyPath: m_AnchorMin.x
@@ -40379,40 +40465,9 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 262
       objectReference: {fileID: 0}
-    - target: {fileID: 8626041888360089743, guid: ab281bee9a9fc7946984fbef35cb0b53,
+    - target: {fileID: 8626041888370770877, guid: ab281bee9a9fc7946984fbef35cb0b53,
         type: 3}
-      propertyPath: m_Text
-      value: Welcome to the Underworld!
-      objectReference: {fileID: 0}
-    - target: {fileID: 8626041888360089743, guid: ab281bee9a9fc7946984fbef35cb0b53,
-        type: 3}
-      propertyPath: m_FontData.m_Alignment
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8626041888360089743, guid: ab281bee9a9fc7946984fbef35cb0b53,
-        type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: bb145366ce7024469a5758b08d31802c,
-        type: 3}
-    - target: {fileID: 8626041888360087889, guid: ab281bee9a9fc7946984fbef35cb0b53,
-        type: 3}
-      propertyPath: instantComplete
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8626041888360084777, guid: ab281bee9a9fc7946984fbef35cb0b53,
-        type: 3}
-      propertyPath: cancelEnabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8626041888360084777, guid: ab281bee9a9fc7946984fbef35cb0b53,
-        type: 3}
-      propertyPath: nextClickDelay
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8626041888360084777, guid: ab281bee9a9fc7946984fbef35cb0b53,
-        type: 3}
-      propertyPath: clickMode
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -41116,7 +41171,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 0.019607844}
+      maxColor: {r: 1, g: 0.14498517, b: 0, a: 0.5882353}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -66614,6 +66669,61 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[37].second.m_ColliderType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8837287865212927967, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: m_ShapeLightParametricSides
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837287865212927967, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.12156863
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837287865212927967, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.0627451
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837287865212927967, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.18039216
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837287865212927967, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: m_FalloffIntensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837287865212927967, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: m_ShapeLightFalloffSize
+      value: 3.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837287865212927967, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 0.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825670645698119658, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.a
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825670645698119658, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825670645698119658, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.14498517
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825670645698119658, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b50d9a7a22bfaa241a4d005b3bbe21b4, type: 3}
 --- !u!1 &1274719931
@@ -67596,7 +67706,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 0.019607844}
+      maxColor: {r: 1, g: 0.14498517, b: 0, a: 0.5882353}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -72489,7 +72599,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 0.019607844}
+      maxColor: {r: 1, g: 0.14498517, b: 0, a: 0.5882353}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -77210,13 +77320,18 @@ PrefabInstance:
     - target: {fileID: 2363340080459623810, guid: 2054e3127519fa943a19df4ac6793e91,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -33.69995
+      value: -33.700195
       objectReference: {fileID: 0}
-    - target: {fileID: 4634624874592125398, guid: 2054e3127519fa943a19df4ac6793e91,
+    - target: {fileID: 2363340080459623810, guid: 2054e3127519fa943a19df4ac6793e91,
         type: 3}
-      propertyPath: m_TagString
-      value: Untagged
+      propertyPath: m_AnchoredPosition.y
+      value: -3.6000977
       objectReference: {fileID: 0}
+    - target: {fileID: 2363340081400100318, guid: 2054e3127519fa943a19df4ac6793e91,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1901996955}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2054e3127519fa943a19df4ac6793e91, type: 3}
 --- !u!224 &1434855955 stripped
@@ -78199,8 +78314,8 @@ MonoBehaviour:
   m_LightType: 0
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 1
-  m_Color: {r: 0.18130028, g: 0.12727058, b: 0.601, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.18039216, g: 0.12156863, b: 0.0627451, a: 1}
+  m_Intensity: 0.41
   m_LightVolumeOpacity: 1
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 21300000, guid: ec7b8e0411922494b932aa0a91d1588b,
@@ -78214,10 +78329,10 @@ MonoBehaviour:
   m_PointLightOuterRadius: 1.31
   m_PointLightDistance: 3
   m_PointLightQuality: 1
-  m_ShapeLightParametricSides: 48
+  m_ShapeLightParametricSides: 12
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 0.37
-  m_ShapeLightFalloffSize: 3.25
+  m_ShapeLightFalloffSize: 3.27
   m_ShapeLightFalloffOffset: {x: 1.17, y: -3.01}
   m_ShapePath:
   - {x: -0.5, y: -0.5, z: 0}
@@ -78561,11 +78676,42 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1901996955}
-    - target: {fileID: 8626041888370770877, guid: ab281bee9a9fc7946984fbef35cb0b53,
+    - target: {fileID: 8626041888360087889, guid: ab281bee9a9fc7946984fbef35cb0b53,
         type: 3}
-      propertyPath: m_IsActive
+      propertyPath: instantComplete
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8626041888360084777, guid: ab281bee9a9fc7946984fbef35cb0b53,
+        type: 3}
+      propertyPath: cancelEnabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626041888360084777, guid: ab281bee9a9fc7946984fbef35cb0b53,
+        type: 3}
+      propertyPath: nextClickDelay
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626041888360084777, guid: ab281bee9a9fc7946984fbef35cb0b53,
+        type: 3}
+      propertyPath: clickMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626041888360089743, guid: ab281bee9a9fc7946984fbef35cb0b53,
+        type: 3}
+      propertyPath: m_Text
+      value: Welcome to the Underworld!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626041888360089743, guid: ab281bee9a9fc7946984fbef35cb0b53,
+        type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8626041888360089743, guid: ab281bee9a9fc7946984fbef35cb0b53,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: bb145366ce7024469a5758b08d31802c,
+        type: 3}
     - target: {fileID: 8626041890178468168, guid: ab281bee9a9fc7946984fbef35cb0b53,
         type: 3}
       propertyPath: m_AnchorMin.x
@@ -78591,40 +78737,9 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 262
       objectReference: {fileID: 0}
-    - target: {fileID: 8626041888360089743, guid: ab281bee9a9fc7946984fbef35cb0b53,
+    - target: {fileID: 8626041888370770877, guid: ab281bee9a9fc7946984fbef35cb0b53,
         type: 3}
-      propertyPath: m_Text
-      value: Welcome to the Underworld!
-      objectReference: {fileID: 0}
-    - target: {fileID: 8626041888360089743, guid: ab281bee9a9fc7946984fbef35cb0b53,
-        type: 3}
-      propertyPath: m_FontData.m_Alignment
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8626041888360089743, guid: ab281bee9a9fc7946984fbef35cb0b53,
-        type: 3}
-      propertyPath: m_FontData.m_Font
-      value: 
-      objectReference: {fileID: 12800000, guid: bb145366ce7024469a5758b08d31802c,
-        type: 3}
-    - target: {fileID: 8626041888360087889, guid: ab281bee9a9fc7946984fbef35cb0b53,
-        type: 3}
-      propertyPath: instantComplete
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8626041888360084777, guid: ab281bee9a9fc7946984fbef35cb0b53,
-        type: 3}
-      propertyPath: cancelEnabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8626041888360084777, guid: ab281bee9a9fc7946984fbef35cb0b53,
-        type: 3}
-      propertyPath: nextClickDelay
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8626041888360084777, guid: ab281bee9a9fc7946984fbef35cb0b53,
-        type: 3}
-      propertyPath: clickMode
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -78914,7 +79029,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 0.019607844}
+      maxColor: {r: 1, g: 0.14498517, b: 0, a: 0.5882353}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -88610,8 +88725,8 @@ MonoBehaviour:
   m_LightType: 0
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 1
-  m_Color: {r: 1, g: 0.39444667, b: 0.11792451, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.18039216, g: 0.12156863, b: 0.0627451, a: 1}
+  m_Intensity: 0.41
   m_LightVolumeOpacity: 1
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 21300000, guid: ec7b8e0411922494b932aa0a91d1588b,
@@ -88625,10 +88740,10 @@ MonoBehaviour:
   m_PointLightOuterRadius: 1.31
   m_PointLightDistance: 3
   m_PointLightQuality: 1
-  m_ShapeLightParametricSides: 48
+  m_ShapeLightParametricSides: 12
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 0.37
-  m_ShapeLightFalloffSize: 3.25
+  m_ShapeLightFalloffSize: 3.27
   m_ShapeLightFalloffOffset: {x: 0, y: -1.44}
   m_ShapePath:
   - {x: -0.5, y: -0.5, z: 0}
@@ -88701,6 +88816,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1579758006153199305, guid: 75b9d8044703a93479c9ea12f48f1392,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 1.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 1579758006153199305, guid: 75b9d8044703a93479c9ea12f48f1392,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.9406268
+      objectReference: {fileID: 0}
+    - target: {fileID: 1579758006153199305, guid: 75b9d8044703a93479c9ea12f48f1392,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.759434
+      objectReference: {fileID: 0}
+    - target: {fileID: 1579758006153199305, guid: 75b9d8044703a93479c9ea12f48f1392,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75b9d8044703a93479c9ea12f48f1392, type: 3}
@@ -89151,7 +89286,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 0.019607844}
+      maxColor: {r: 1, g: 0.14498517, b: 0, a: 0.5882353}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -94516,6 +94651,61 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[37].second.m_ColliderType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8837287865212927967, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: m_ShapeLightParametricSides
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837287865212927967, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.12156863
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837287865212927967, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.0627451
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837287865212927967, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.18039216
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837287865212927967, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: m_FalloffIntensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837287865212927967, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: m_ShapeLightFalloffSize
+      value: 3.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837287865212927967, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 0.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825670645698119658, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.a
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825670645698119658, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825670645698119658, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.14498517
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825670645698119658, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b50d9a7a22bfaa241a4d005b3bbe21b4, type: 3}
 --- !u!114 &1766388755
@@ -99413,6 +99603,19 @@ PrefabInstance:
       propertyPath: swish
       value: 
       objectReference: {fileID: 8300000, guid: b284845547e864d4d891a8e983aca4d4, type: 3}
+    - target: {fileID: 65966775, guid: be92c30891e22184fa53e2ae9b95f349, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65966775, guid: be92c30891e22184fa53e2ae9b95f349, type: 3}
+      propertyPath: sharedProfile
+      value: 
+      objectReference: {fileID: 11400000, guid: 8c1dbc89b63ac6341811af9db51ed867,
+        type: 2}
+    - target: {fileID: 65966778, guid: be92c30891e22184fa53e2ae9b95f349, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be92c30891e22184fa53e2ae9b95f349, type: 3}
 --- !u!1001 &1837021080
@@ -99535,8 +99738,8 @@ MonoBehaviour:
   m_LightType: 0
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 1
-  m_Color: {r: 1, g: 0.39444667, b: 0.11792451, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.18039216, g: 0.12156863, b: 0.0627451, a: 1}
+  m_Intensity: 0.41
   m_LightVolumeOpacity: 1
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 21300000, guid: ec7b8e0411922494b932aa0a91d1588b,
@@ -99550,10 +99753,10 @@ MonoBehaviour:
   m_PointLightOuterRadius: 1.31
   m_PointLightDistance: 3
   m_PointLightQuality: 1
-  m_ShapeLightParametricSides: 48
+  m_ShapeLightParametricSides: 12
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 0.37
-  m_ShapeLightFalloffSize: 3.25
+  m_ShapeLightFalloffSize: 3.27
   m_ShapeLightFalloffOffset: {x: 2.92, y: 1.14}
   m_ShapePath:
   - {x: -0.5, y: -0.5, z: 0}
@@ -99606,8 +99809,8 @@ MonoBehaviour:
   m_LightType: 0
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 1
-  m_Color: {r: 0.59400004, g: 0.1956706, b: 0.12578824, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.18039216, g: 0.12156863, b: 0.0627451, a: 1}
+  m_Intensity: 0.41
   m_LightVolumeOpacity: 1
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 21300000, guid: ec7b8e0411922494b932aa0a91d1588b,
@@ -99621,10 +99824,10 @@ MonoBehaviour:
   m_PointLightOuterRadius: 1.31
   m_PointLightDistance: 3
   m_PointLightQuality: 1
-  m_ShapeLightParametricSides: 48
+  m_ShapeLightParametricSides: 12
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 0.37
-  m_ShapeLightFalloffSize: 3.25
+  m_ShapeLightFalloffSize: 3.27
   m_ShapeLightFalloffOffset: {x: 2.92, y: 1.14}
   m_ShapePath:
   - {x: -0.5, y: -0.5, z: 0}
@@ -100528,6 +100731,61 @@ PrefabInstance:
       propertyPath: m_Tiles.Array.data[37].second.m_ColliderType
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8837287865212927967, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: m_ShapeLightParametricSides
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837287865212927967, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.12156863
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837287865212927967, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.0627451
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837287865212927967, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.18039216
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837287865212927967, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: m_FalloffIntensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837287865212927967, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: m_ShapeLightFalloffSize
+      value: 3.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 8837287865212927967, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: m_Intensity
+      value: 0.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825670645698119658, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.a
+      value: 0.5882353
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825670645698119658, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825670645698119658, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.14498517
+      objectReference: {fileID: 0}
+    - target: {fileID: 1825670645698119658, guid: b50d9a7a22bfaa241a4d005b3bbe21b4,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b50d9a7a22bfaa241a4d005b3bbe21b4, type: 3}
 --- !u!20 &1901996955 stripped
@@ -101155,7 +101413,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 0.019607844}
+      maxColor: {r: 1, g: 0.14498517, b: 0, a: 0.5882353}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -112526,8 +112784,8 @@ MonoBehaviour:
   m_LightType: 0
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 1
-  m_Color: {r: 0.18130028, g: 0.12727058, b: 0.601, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.18039216, g: 0.12156863, b: 0.0627451, a: 1}
+  m_Intensity: 0.41
   m_LightVolumeOpacity: 1
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 21300000, guid: ec7b8e0411922494b932aa0a91d1588b,
@@ -112541,10 +112799,10 @@ MonoBehaviour:
   m_PointLightOuterRadius: 1.31
   m_PointLightDistance: 3
   m_PointLightQuality: 1
-  m_ShapeLightParametricSides: 48
+  m_ShapeLightParametricSides: 12
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 0.37
-  m_ShapeLightFalloffSize: 3.25
+  m_ShapeLightFalloffSize: 3.27
   m_ShapeLightFalloffOffset: {x: -2.56, y: 1.16}
   m_ShapePath:
   - {x: -0.5, y: -0.5, z: 0}
@@ -113717,8 +113975,8 @@ MonoBehaviour:
   m_LightType: 0
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 1
-  m_Color: {r: 1, g: 0.39444667, b: 0.11792451, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.18039216, g: 0.12156863, b: 0.0627451, a: 1}
+  m_Intensity: 0.41
   m_LightVolumeOpacity: 1
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 21300000, guid: ec7b8e0411922494b932aa0a91d1588b,
@@ -113732,10 +113990,10 @@ MonoBehaviour:
   m_PointLightOuterRadius: 1.31
   m_PointLightDistance: 3
   m_PointLightQuality: 1
-  m_ShapeLightParametricSides: 48
+  m_ShapeLightParametricSides: 12
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 0.37
-  m_ShapeLightFalloffSize: 3.25
+  m_ShapeLightFalloffSize: 3.27
   m_ShapeLightFalloffOffset: {x: 0, y: -1.44}
   m_ShapePath:
   - {x: -0.5, y: -0.5, z: 0}
@@ -119957,11 +120215,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 67.20336, y: 6.236338}
+  scrollPos: {x: -9.654549, y: 8.483832}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.97
+  zoom: 0.85000014
   scrollViewRect:
     serializedVersion: 2
     x: -343
@@ -119971,7 +120229,7 @@ MonoBehaviour:
   selectedBlocks:
   - {fileID: 388182611}
   selectedCommands:
-  - {fileID: 388182609}
+  - {fileID: 388182612}
   variables:
   - {fileID: 388182601}
   description: 
@@ -120008,8 +120266,7 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks:
-  - {fileID: 8758085793310015965}
+  selectedBlocks: []
   selectedCommands:
   - {fileID: 1521965401}
   variables:
@@ -120362,7 +120619,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 0.019607844}
+      maxColor: {r: 1, g: 0.14498517, b: 0, a: 0.5882353}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -125192,7 +125449,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 0.019607844}
+      maxColor: {r: 1, g: 0.14498517, b: 0, a: 0.5882353}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -134589,8 +134846,8 @@ MonoBehaviour:
   m_LightType: 0
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 1
-  m_Color: {r: 0.18130028, g: 0.12727058, b: 0.601, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.18039216, g: 0.12156863, b: 0.0627451, a: 1}
+  m_Intensity: 0.41
   m_LightVolumeOpacity: 1
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 21300000, guid: ec7b8e0411922494b932aa0a91d1588b,
@@ -134604,10 +134861,10 @@ MonoBehaviour:
   m_PointLightOuterRadius: 1.31
   m_PointLightDistance: 3
   m_PointLightQuality: 1
-  m_ShapeLightParametricSides: 48
+  m_ShapeLightParametricSides: 12
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 0.37
-  m_ShapeLightFalloffSize: 3.25
+  m_ShapeLightFalloffSize: 3.27
   m_ShapeLightFalloffOffset: {x: 1.17, y: -3.01}
   m_ShapePath:
   - {x: -0.5, y: -0.5, z: 0}
@@ -139399,8 +139656,8 @@ MonoBehaviour:
   m_LightType: 0
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 1
-  m_Color: {r: 0.59400004, g: 0.1956706, b: 0.12578824, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.18039216, g: 0.12156863, b: 0.0627451, a: 1}
+  m_Intensity: 0.41
   m_LightVolumeOpacity: 1
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 21300000, guid: ec7b8e0411922494b932aa0a91d1588b,
@@ -139414,10 +139671,10 @@ MonoBehaviour:
   m_PointLightOuterRadius: 1.31
   m_PointLightDistance: 3
   m_PointLightQuality: 1
-  m_ShapeLightParametricSides: 48
+  m_ShapeLightParametricSides: 12
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 0.37
-  m_ShapeLightFalloffSize: 3.25
+  m_ShapeLightFalloffSize: 3.27
   m_ShapeLightFalloffOffset: {x: -2.69, y: -1.37}
   m_ShapePath:
   - {x: -0.5, y: -0.5, z: 0}
@@ -148959,8 +149216,8 @@ MonoBehaviour:
   m_LightType: 0
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 1
-  m_Color: {r: 0.59400004, g: 0.1956706, b: 0.12578824, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.18039216, g: 0.12156863, b: 0.0627451, a: 1}
+  m_Intensity: 0.41
   m_LightVolumeOpacity: 1
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 21300000, guid: ec7b8e0411922494b932aa0a91d1588b,
@@ -148974,10 +149231,10 @@ MonoBehaviour:
   m_PointLightOuterRadius: 1.31
   m_PointLightDistance: 3
   m_PointLightQuality: 1
-  m_ShapeLightParametricSides: 48
+  m_ShapeLightParametricSides: 12
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 0.37
-  m_ShapeLightFalloffSize: 3.25
+  m_ShapeLightFalloffSize: 3.27
   m_ShapeLightFalloffOffset: {x: 2.92, y: 1.14}
   m_ShapePath:
   - {x: -0.5, y: -0.5, z: 0}
@@ -149205,7 +149462,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 0.019607844}
+      maxColor: {r: 1, g: 0.14498517, b: 0, a: 0.5882353}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -154218,7 +154475,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 0.019607844}
+      maxColor: {r: 1, g: 0.14498517, b: 0, a: 0.5882353}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -158796,8 +159053,8 @@ MonoBehaviour:
   m_LightType: 0
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 1
-  m_Color: {r: 0.18130028, g: 0.12727058, b: 0.601, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.18039216, g: 0.12156863, b: 0.0627451, a: 1}
+  m_Intensity: 0.41
   m_LightVolumeOpacity: 1
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 21300000, guid: ec7b8e0411922494b932aa0a91d1588b,
@@ -158811,10 +159068,10 @@ MonoBehaviour:
   m_PointLightOuterRadius: 1.31
   m_PointLightDistance: 3
   m_PointLightQuality: 1
-  m_ShapeLightParametricSides: 48
+  m_ShapeLightParametricSides: 12
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 0.37
-  m_ShapeLightFalloffSize: 3.25
+  m_ShapeLightFalloffSize: 3.27
   m_ShapeLightFalloffOffset: {x: -2.56, y: 1.16}
   m_ShapePath:
   - {x: -0.5, y: -0.5, z: 0}
@@ -160304,6 +160561,12 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1901996955}
+    - target: {fileID: 2494330518232387991, guid: 5706ab6bd7c13974c840344d9e84b5a6,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a80562bc0822ad544a980ec1d6cb50a1,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5706ab6bd7c13974c840344d9e84b5a6, type: 3}
 --- !u!1 &5366948923915812014
