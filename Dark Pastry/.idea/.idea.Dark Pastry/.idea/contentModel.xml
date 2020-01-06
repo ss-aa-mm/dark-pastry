@@ -889,8 +889,6 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="Agata.cs" t="Include" />
-          <e p="AgataMovement.cs" t="Include" />
           <e p="AgataNew.cs" t="Include" />
           <e p="Book.cs" t="Include" />
           <e p="Door.cs" t="Include" />
@@ -922,9 +920,6 @@
             <e p="RedBerry.cs" t="Include" />
             <e p="Sugar.cs" t="Include" />
           </e>
-          <e p="EnemyEgg.cs" t="Include" />
-          <e p="EnemyMovement.cs" t="Include" />
-          <e p="GenericEnemy.cs" t="Include" />
           <e p="HealingObject.cs" t="Include" />
           <e p="Heart.cs" t="Include" />
           <e p="HighlightableObject.cs" t="Include" />
@@ -953,12 +948,6 @@
             <e p="Key.cs" t="Include" />
           </e>
           <e p="LevelData.cs" t="Include" />
-          <e p="LevelScripts" t="Include">
-            <e p="GenericLevel.cs" t="Include" />
-            <e p="Level0.cs" t="Include" />
-            <e p="Level1.cs" t="Include" />
-            <e p="Level2.cs" t="Include" />
-          </e>
           <e p="Lock.cs" t="Include" />
           <e p="LockChain.cs" t="Include" />
           <e p="MainMenu.cs" t="Include" />
@@ -976,6 +965,7 @@
           <e p="VerticalLock.cs" t="Include" />
         </e>
         <e p="Sorting_layers.txt" t="Include" />
+        <e p="SoundManager.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
             <e p="LiberationSans - OFL.txt" t="Include" />
@@ -1008,9 +998,7 @@
       <e p="Dark Pastry.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
-      <e p="Temp/bin" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
-    <e p="$USER_HOME$/Library/Caches/Rider2019.2/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/Library/Caches/Rider2019.2/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_Dark Pastry.801522427.00" t="ExcludeRecursive" />
   </component>
 </project>

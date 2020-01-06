@@ -29,6 +29,9 @@ public class AgataNew : MonoBehaviour
     private static readonly int Attack = Animator.StringToHash("Attack");
     private static readonly int Death = Animator.StringToHash("death");
     private static readonly int Dance = Animator.StringToHash("dance");
+    private static AudioClip _fall;
+    private static AudioClip _footsteps;
+    private static AudioClip _swish;
 
     private void Awake()
     {
@@ -63,7 +66,7 @@ public class AgataNew : MonoBehaviour
             _interactiveObject.Interact();
         }
         //End of interaction with objects
-        
+
         // Pausing - resuming game
         if (Input.GetButtonDown("Pause"))
             PauseManager();
@@ -72,7 +75,7 @@ public class AgataNew : MonoBehaviour
         //Attack
         _isAttacking = Input.GetButtonDown("Attack");
         //End of Attack
-        
+
         //Dance
         _isDancing = Input.GetButtonDown("Dance");
         //End of Dance
@@ -85,8 +88,8 @@ public class AgataNew : MonoBehaviour
         //END OF DEBUG COMMANDS
 
         //Animation
-        if(!_paused)
-            UpdateAnimator(h, v, _isAttacking,_isDancing);
+        if (!_paused)
+            UpdateAnimator(h, v, _isAttacking, _isDancing);
         //End of Animation
     }
 
@@ -149,14 +152,15 @@ public class AgataNew : MonoBehaviour
             {
                 part.color = Color.red;
             }
+
             yield return new WaitForSeconds(0.2f);
             foreach (var part in _agataParts)
             {
                 part.color = Color.white;
             }
+
             yield return new WaitForSeconds(0.2f);
         }
-        
     }
 
     public static int GetAnimatorHash()
@@ -184,30 +188,36 @@ public class AgataNew : MonoBehaviour
         const float tolerance = 0.000000000000001f;
         if (Math.Abs(h) < tolerance && Math.Abs(v) < tolerance)
         {
-            _animator.SetBool(IsMovingH,false);
-            _animator.SetBool(IsMovingV,false);
-        }
-        else if (Math.Abs(h) > Math.Abs(v))
-        {
-            _animator.SetBool(Dance,false);
-            _animator.SetBool(IsMovingH,true);
-            _animator.SetBool(IsMovingV,false);
-            _animator.SetFloat(HorizontalAxis,h);
-            _animator.SetFloat(VerticalAxis,v);
+            _animator.SetBool(IsMovingH, false);
+            _animator.SetBool(IsMovingV, false);
         }
         else
         {
-            _animator.SetBool(Dance,false);
-            _animator.SetBool(IsMovingH,false);
-            _animator.SetBool(IsMovingV,true);
-            _animator.SetFloat(HorizontalAxis,h);
-            _animator.SetFloat(VerticalAxis,v);
+            if (Math.Abs(h) > Math.Abs(v))
+            {
+                _animator.SetBool(Dance, false);
+                _animator.SetBool(IsMovingH, true);
+                _animator.SetBool(IsMovingV, false);
+                _animator.SetFloat(HorizontalAxis, h);
+                _animator.SetFloat(VerticalAxis, v);
+            }
+            else
+            {
+                _animator.SetBool(Dance, false);
+                _animator.SetBool(IsMovingH, false);
+                _animator.SetBool(IsMovingV, true);
+                _animator.SetFloat(HorizontalAxis, h);
+                _animator.SetFloat(VerticalAxis, v);
+            }
+
+            SoundManager.instance.PlaySingle(_footsteps);
         }
-        
+
         if (isAttacking)
-        { 
-            _animator.SetBool(Dance,false);
+        {
+            _animator.SetBool(Dance, false);
             _animator.SetTrigger(Attack);
+            SoundManager.instance.PlaySingle(_swish);
         }
 
         if (isDancing)
@@ -215,5 +225,4 @@ public class AgataNew : MonoBehaviour
             _animator.SetBool(Dance, true);
         }
     }
-
 }
