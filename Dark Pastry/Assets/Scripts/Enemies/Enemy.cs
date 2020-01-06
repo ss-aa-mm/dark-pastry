@@ -20,6 +20,10 @@ namespace Enemies
         private static bool _isAttacking;
         public bool isActive;
         private static bool _paused;
+        private static int _frames;
+        private static float _x;
+        private static float _y;
+        private const float Multiplier = 0.1f;
         private static readonly int Walk = Animator.StringToHash("walk");
         private static readonly int AttackRight = Animator.StringToHash("attackRight");
         private static readonly int AttackLeft = Animator.StringToHash("attackLeft");
@@ -35,6 +39,7 @@ namespace Enemies
             _isAttacking = false;
             _paused = false;
             animator = GetComponent<Animator>();
+            _y = -1;
             AssignReferences();
         }
 
@@ -98,6 +103,7 @@ namespace Enemies
             }
 
             _timeLeft += MovementTime;
+
         }
 
         protected void Chase()
@@ -108,6 +114,44 @@ namespace Enemies
             transform.position =
                 Vector2.MoveTowards(transform.position, _agata.transform.position, Speed * Time.deltaTime);
             _timeLeft += MovementTime;
+        }
+
+        protected void CrossMovement()
+        {
+            _frames++;
+            transform.Translate(_x*Time.deltaTime,_y*Time.deltaTime,0);
+            switch (_frames*Multiplier)
+            {
+                case 10:
+                    _y = 1;
+                    break;
+                case 20:
+                    _x = -1;
+                    _y = 0;
+                    break;
+                case 30:
+                    _x = 1;
+                    break;
+                case 40:
+                    _x = 0;
+                    _y = 1;
+                    break;
+                case 50:
+                    _y = -1;
+                    break;
+                case 60:
+                    _x = 1;
+                    _y = 0;
+                    break;
+                case 70:
+                    _x = -1;
+                    break;
+                case 80:
+                    _x = 0;
+                    _y = -1;
+                    _frames = 0;
+                    break;
+            }
         }
 
         protected void Escape()

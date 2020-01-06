@@ -5,6 +5,7 @@ using System.Linq;
 using TMPro;
 using Unity.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 [Serializable]
@@ -49,6 +50,7 @@ public class LevelData : MonoBehaviour
     public static void LevelCompleted()
     {
         _currentLevel++;
+        SceneManager.LoadScene("Level" + _currentLevel);
     }
 
     public static string AssignHint()

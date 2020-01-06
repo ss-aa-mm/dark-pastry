@@ -1,5 +1,4 @@
 ﻿using Enemies;
-using MoonSharp.Interpreter;
 using UnityEngine;
 
 public class RollingPin : MonoBehaviour
@@ -32,6 +31,7 @@ public class RollingPin : MonoBehaviour
         enemy.health--;
         if (enemy.health <= 0)
         {
+            Fungus.Flowchart.BroadcastFungusMessage("Boss_01_died");
             enemy.OnDeath();
             enemy.isActive = false;
             enemy.animator.SetTrigger(enemy.Death);

@@ -61,7 +61,7 @@ public class Pentagram : MonoBehaviour
         }
         else if (_objectsPlaced > 1)
         {
-            if(!Input.GetButtonDown("Dance")) return;
+            if (!Input.GetButtonDown("Dance")) return;
             // ReSharper disable once Unity.PreferNonAllocApi
             var collisions = Physics2D.OverlapCircleAll(transform.position, 0.3f);
             foreach (var coll in collisions)
@@ -71,7 +71,8 @@ public class Pentagram : MonoBehaviour
                 list.RemoveAll(s => s == "None");
                 var valid = false;
                 GameObject obj = null;
-                foreach (var recipe in _mixingDictionary.Where(recipe => recipe.Key.OrderBy(t => t).SequenceEqual(list.OrderBy(s => s))))
+                foreach (var recipe in _mixingDictionary.Where(recipe =>
+                    recipe.Key.OrderBy(t => t).SequenceEqual(list.OrderBy(s => s))))
                 {
                     Debug.Log(recipe.Value.ToString());
                     valid = true;
@@ -114,7 +115,7 @@ public class Pentagram : MonoBehaviour
         UpdateItemsVector();
         switch (_objectsPlaced)
         {
-            case 1:
+            case 1 when _globeEnabled:
                 _animator.SetTrigger(NotReady);
                 break;
             case 0:

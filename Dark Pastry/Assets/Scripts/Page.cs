@@ -9,7 +9,8 @@ public class Page : HighlightableObject
     public override void Interact()
     {
         Debug.Log(_hint);
-        Destroy(gameObject);
+        Destroy(gameObject.GetComponent<PolygonCollider2D>());
+        Fungus.Flowchart.BroadcastFungusMessage("Recipe_01_Acquired");
     }
 
     protected override void AssignReferences()

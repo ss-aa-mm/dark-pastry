@@ -12,15 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Game.unity
     guid: 7112e9f26707c47d0b59bffa793d7ba5
   - enabled: 1
-    path: Assets/Scenes/Levels/Level_0.unity
-    guid: 0a2423c1cbb18a94db33b4fc3752a57e
-  - enabled: 1
-    path: Assets/Scenes/Levels/Level_1.unity
-    guid: 32c8457ca60f93140906050bb84b3f04
-  - enabled: 1
-    path: Assets/Scenes/Levels/Level_2.unity
-    guid: 942a579d0881b074491bc2163a96c780
-  - enabled: 1
     path: Assets/Scenes/Levels/FinishGame.unity
     guid: 15985eee5eae6654b97100852c0432c8
+  - enabled: 1
+    path: Assets/Scenes/Levels/GameFlow/BakeryScene.unity
+    guid: fd694fbdfabc9e743887cbc507a83848
+  - enabled: 1
+    path: Assets/Scenes/Levels/GameFlow/Level1.unity
+    guid: 9f4d7427f94b7fa4185508f18ed3c375
   m_configObjects: {}

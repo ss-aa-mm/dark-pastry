@@ -9867,6 +9867,7 @@ GameObject:
   - component: {fileID: 4434719104402454599}
   - component: {fileID: 4434719104402454596}
   - component: {fileID: 7232788357150358916}
+  - component: {fileID: 7519065330294739563}
   m_Layer: 0
   m_Name: ChainRecipeHorizontal
   m_TagString: Untagged
@@ -9937,6 +9938,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 8.58832, y: 1.3041115}
   m_EdgeRadius: 0
+--- !u!114 &7519065330294739563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4434719104402454598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7a36922da94e4bc5a9c221af2d353f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4434719105501344546
 GameObject:
   m_ObjectHideFlags: 0

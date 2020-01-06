@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AgataNew : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class AgataNew : MonoBehaviour
     private static MonoBehaviour _instance;
     private static List<SpriteRenderer> _agataParts;
     private static Vector3 _spawnPosition;
+    private static Transform _transform;
     private static readonly int HorizontalAxis = Animator.StringToHash("HorizontalAxis");
     private static readonly int VerticalAxis = Animator.StringToHash("VerticalAxis");
     private static readonly int IsMovingH = Animator.StringToHash("isMovingH");
@@ -38,7 +40,8 @@ public class AgataNew : MonoBehaviour
         _animator = GetComponent<Animator>();
         _agataParts = GetComponentsInChildren<SpriteRenderer>().ToList();
         _instance = this;
-        _spawnPosition = transform.position;
+        _transform = transform;
+        _spawnPosition = _transform.position;
     }
 
     private void Update()
@@ -135,6 +138,7 @@ public class AgataNew : MonoBehaviour
         _isActive = false;
         _animator.SetTrigger(Death);
         yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     private static IEnumerator DamageAnimation()
