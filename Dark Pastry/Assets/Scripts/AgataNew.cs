@@ -45,6 +45,10 @@ public class AgataNew : MonoBehaviour
         _instance = this;
         _transform = transform;
         _spawnPosition = _transform.position;
+        _fall = Resources.Load<AudioClip>("Assets/Resources/SOUND/sicuri/fall.wav");
+        _footsteps = Resources.Load<AudioClip>("Assets/Resources/SOUND/sicuri/footsteps .mp3");
+        _swish = Resources.Load<AudioClip>("Assets/Resources/SOUND/sicuri/swish_2.wav");
+        SoundManager.instance.PlaySingle(_fall);
     }
 
     private void Update()
