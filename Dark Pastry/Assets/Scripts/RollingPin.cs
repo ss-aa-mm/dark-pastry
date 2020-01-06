@@ -34,7 +34,7 @@ public class RollingPin : MonoBehaviour
         var agataBody = GetComponentInParent<AgataNew>().transform.GetComponent<Rigidbody2D>();
         var newPosition = new Vector2();
 
-        SoundManager.instance.PlaySingle(_enemyHit);
+        //SoundManager.instance.PlaySingle(_enemyHit);
 
         enemy.health--;
         if (enemy.health <= 0)

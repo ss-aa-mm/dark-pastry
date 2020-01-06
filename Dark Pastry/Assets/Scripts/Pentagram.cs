@@ -53,6 +53,10 @@ public class Pentagram : MonoBehaviour
                 _unlocked = true;
                 _chainAnimator.SetTrigger(KeyUnlock);
                 _chainBody.enabled = false;
+                Book.UpdateBookRevealRecipe(LevelData.GetCurrentLevel());
+                Book.Render();
+                /*AgataNew.PauseManager();
+                Book.Spawn();*/
                 foreach (var pedestal in _pedestals)
                 {
                     Destroy(pedestal);

@@ -168,12 +168,11 @@ public class AgataNew : MonoBehaviour
         return _animator.GetCurrentAnimatorStateInfo(0).tagHash;
     }
 
-    private static void PauseManager()
+    public static void PauseManager()
     {
         if (Time.timeScale > 0)
         {
             Time.timeScale = 0;
-            Book.Open();
             _paused = true;
         }
         else
@@ -191,33 +190,30 @@ public class AgataNew : MonoBehaviour
             _animator.SetBool(IsMovingH, false);
             _animator.SetBool(IsMovingV, false);
         }
+        else if (Math.Abs(h) > Math.Abs(v))
+        {
+            _animator.SetBool(Dance, false);
+            _animator.SetBool(IsMovingH, true);
+            _animator.SetBool(IsMovingV, false);
+            _animator.SetFloat(HorizontalAxis, h);
+            _animator.SetFloat(VerticalAxis, v);
+        }
         else
         {
-            if (Math.Abs(h) > Math.Abs(v))
-            {
-                _animator.SetBool(Dance, false);
-                _animator.SetBool(IsMovingH, true);
-                _animator.SetBool(IsMovingV, false);
-                _animator.SetFloat(HorizontalAxis, h);
-                _animator.SetFloat(VerticalAxis, v);
-            }
-            else
-            {
-                _animator.SetBool(Dance, false);
-                _animator.SetBool(IsMovingH, false);
-                _animator.SetBool(IsMovingV, true);
-                _animator.SetFloat(HorizontalAxis, h);
-                _animator.SetFloat(VerticalAxis, v);
-            }
-
-            SoundManager.instance.PlaySingle(_footsteps);
+            _animator.SetBool(Dance, false);
+            _animator.SetBool(IsMovingH, false);
+            _animator.SetBool(IsMovingV, true);
+            _animator.SetFloat(HorizontalAxis, h);
+            _animator.SetFloat(VerticalAxis, v);
         }
+
+        //SoundManager.instance.PlaySingle(_footsteps);
 
         if (isAttacking)
         {
             _animator.SetBool(Dance, false);
             _animator.SetTrigger(Attack);
-            SoundManager.instance.PlaySingle(_swish);
+            //SoundManager.instance.PlaySingle(_swish);
         }
 
         if (isDancing)

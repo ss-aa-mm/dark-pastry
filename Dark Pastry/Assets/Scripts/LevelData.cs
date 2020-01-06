@@ -29,6 +29,7 @@ public class LevelData : MonoBehaviour
     private static LevelInformation _levelData;
     private static List<string>.Enumerator _hintList;
     private static int _currentLevel;
+    public static Tuple<Sprite, Sprite>[] BookStructure;
 
     public static void DataLoad()
     {
@@ -50,6 +51,8 @@ public class LevelData : MonoBehaviour
     public static void LevelCompleted()
     {
         _currentLevel++;
+        Book.UpdateBookUnlockLevel(_currentLevel);
+        Book.Render();
         SceneManager.LoadScene("Level" + _currentLevel);
     }
 
@@ -57,6 +60,11 @@ public class LevelData : MonoBehaviour
     {
         _hintList.MoveNext();
         return _hintList.Current;
+    }
+
+    public static int GetCurrentLevel()
+    {
+        return _currentLevel;
     }
     
 }
