@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 namespace Enemies
@@ -9,7 +8,7 @@ namespace Enemies
         protected float DamageInflicted;
         protected float MovementTime;
         protected float Speed;
-        public float health; 
+        public float health;
         public Animator animator;
         protected GameObject ItemDropped;
         private GameObject _heart;
@@ -28,6 +27,7 @@ namespace Enemies
         private static readonly int AttackRight = Animator.StringToHash("attackRight");
         private static readonly int AttackLeft = Animator.StringToHash("attackLeft");
         public readonly int Death = Animator.StringToHash("die");
+        private static AudioClip _agataHit;
         private float _timeLeft = 1f;
 
         private void Awake()
@@ -40,6 +40,7 @@ namespace Enemies
             _paused = false;
             animator = GetComponent<Animator>();
             _y = -1;
+            _agataHit = Resources.Load<AudioClip>("Assets/Resources/SOUND/sicuri/slightscream-07.mp3");
             AssignReferences();
         }
 
@@ -178,6 +179,8 @@ namespace Enemies
             var enemyBody = transform.GetComponent<Rigidbody2D>();
             var agataBody = agata.transform.GetComponent<Rigidbody2D>();
             var newPosition = new Vector2();
+
+            SoundManager.instance.PlaySingle(_agataHit);
 
             if (enemyBody.position.x > agataBody.position.x) //The enemy is to the right of Agata
             {

@@ -4,6 +4,12 @@ using UnityEngine;
 public class RollingPin : MonoBehaviour
 {
     private static readonly int AttackHash = Animator.StringToHash("Attack");
+    private static AudioClip _enemyHit;
+
+    private void Awake()
+    {
+        _enemyHit = Resources.Load<AudioClip>("Assets/Resources/SOUND/sicuri/pain25_1.wav");
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -27,6 +33,8 @@ public class RollingPin : MonoBehaviour
         var enemyBody = other.transform.GetComponentInParent<Rigidbody2D>();
         var agataBody = GetComponentInParent<AgataNew>().transform.GetComponent<Rigidbody2D>();
         var newPosition = new Vector2();
+
+        SoundManager.instance.PlaySingle(_enemyHit);
 
         enemy.health--;
         if (enemy.health <= 0)
