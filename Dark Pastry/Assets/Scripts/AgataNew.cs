@@ -29,9 +29,9 @@ public class AgataNew : MonoBehaviour
     private static readonly int Attack = Animator.StringToHash("Attack");
     private static readonly int Death = Animator.StringToHash("death");
     private static readonly int Dance = Animator.StringToHash("dance");
-    private static AudioClip _fall;
-    private static AudioClip _footsteps;
-    private static AudioClip _swish;
+    public AudioClip fall;
+    public AudioClip footsteps;
+    public AudioClip swish;
 
     private void Awake()
     {
@@ -45,10 +45,7 @@ public class AgataNew : MonoBehaviour
         _instance = this;
         _transform = transform;
         _spawnPosition = _transform.position;
-        _fall = Resources.Load<AudioClip>("Assets/Resources/SOUND/sicuri/fall.wav");
-        _footsteps = Resources.Load<AudioClip>("Assets/Resources/SOUND/sicuri/footsteps .mp3");
-        _swish = Resources.Load<AudioClip>("Assets/Resources/SOUND/sicuri/swish_2.wav");
-        SoundManager.instance.PlaySingle(_fall);
+        SoundManager.Instance.PlaySingle(fall);
     }
 
     private void Update()
@@ -60,6 +57,9 @@ public class AgataNew : MonoBehaviour
         //Movement calculation
         var h = Input.GetAxis("Horizontal");
         var v = Input.GetAxis("Vertical");
+        const float tolerance = 0.000000000000001f;
+        if (Math.Abs(h) < tolerance && Math.Abs(v) < tolerance)
+            SoundManager.Instance.PlayLoop();
         _unit = Speed * Time.deltaTime;
         transform.Translate(h * _unit, v * _unit, 0);
         //End of movement calculation
@@ -78,6 +78,8 @@ public class AgataNew : MonoBehaviour
 
         //Attack
         _isAttacking = Input.GetButtonDown("Attack");
+        if (_isAttacking)
+            SoundManager.Instance.PlaySingle(swish);
         //End of Attack
 
         //Dance
@@ -213,15 +215,12 @@ public class AgataNew : MonoBehaviour
                 _animator.SetFloat(HorizontalAxis, h);
                 _animator.SetFloat(VerticalAxis, v);
             }
-
-            SoundManager.instance.PlaySingle(_footsteps);
         }
 
         if (isAttacking)
         {
             _animator.SetBool(Dance, false);
             _animator.SetTrigger(Attack);
-            SoundManager.instance.PlaySingle(_swish);
         }
 
         if (isDancing)

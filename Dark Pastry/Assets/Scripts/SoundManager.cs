@@ -1,14 +1,18 @@
 ﻿//Code from https://learn.unity.com/tutorial/architecture-and-polish
 
+using System;
 using UnityEngine;
 using System.Collections;
+using Random = UnityEngine.Random;
 
 public class SoundManager : MonoBehaviour
 {
     public AudioSource efxSource; //Drag a reference to the audio source which will play the sound effects.
     public AudioSource musicSource; //Drag a reference to the audio source which will play the music.
+    public AudioSource footStepsSource; //Drag a reference to the audio source which will play the music.
 
-    public static SoundManager instance = null; //Allows other scripts to call functions from SoundManager.                
+    public static SoundManager
+        Instance = null; //Allows other scripts to call functions from SoundManager.                
 
     public float lowPitchRange = .95f; //The lowest a sound effect will be randomly pitched.
     public float highPitchRange = 1.05f; //The highest a sound effect will be randomly pitched.
@@ -17,11 +21,11 @@ public class SoundManager : MonoBehaviour
     void Awake()
     {
         //Check if there is already an instance of SoundManager
-        if (instance == null)
+        if (Instance == null)
             //if not, set it to this.
-            instance = this;
+            Instance = this;
         //If instance already exists:
-        else if (instance != this)
+        else if (Instance != this)
             //Destroy this, this enforces our singleton pattern so there can only be one instance of SoundManager.
             Destroy(gameObject);
 
@@ -40,6 +44,13 @@ public class SoundManager : MonoBehaviour
         efxSource.Play();
     }
 
+    public void PlayLoop()
+    {
+        while (true)
+        {
+            footStepsSource.Play();
+        }
+    }
 
     //RandomizeSfx chooses randomly between various audio clips and slightly changes their pitch.
     public void RandomizeSfx(params AudioClip[] clips)
