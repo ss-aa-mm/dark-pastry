@@ -3702,6 +3702,12 @@ PrefabInstance:
       propertyPath: character
       value: 
       objectReference: {fileID: 990306190}
+    - target: {fileID: 3466246072987546558, guid: d344eea402404a44c978dc0556d60f28,
+        type: 3}
+      propertyPath: storyText
+      value: Maybe I was too reckless... You are part of my family and I should be
+        honored if you manage to surpass me
+      objectReference: {fileID: 0}
     - target: {fileID: 3466246072987546559, guid: d344eea402404a44c978dc0556d60f28,
         type: 3}
       propertyPath: indentLevel
@@ -3712,10 +3718,15 @@ PrefabInstance:
       propertyPath: character
       value: 
       objectReference: {fileID: 990306190}
+    - target: {fileID: 3466246072987546559, guid: d344eea402404a44c978dc0556d60f28,
+        type: 3}
+      propertyPath: storyText
+      value: 'Here, this recipe will help you completing that wicked book! '
+      objectReference: {fileID: 0}
     - target: {fileID: 3466246072987546555, guid: d344eea402404a44c978dc0556d60f28,
         type: 3}
       propertyPath: commandList.Array.size
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3466246072987546555, guid: d344eea402404a44c978dc0556d60f28,
         type: 3}
