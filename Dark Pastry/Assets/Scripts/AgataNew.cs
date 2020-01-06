@@ -30,7 +30,6 @@ public class AgataNew : MonoBehaviour
     private static readonly int Death = Animator.StringToHash("death");
     private static readonly int Dance = Animator.StringToHash("dance");
     public AudioClip fall;
-    public AudioClip footsteps;
     public AudioClip swish;
 
     private void Awake()

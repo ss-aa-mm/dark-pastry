@@ -46,10 +46,7 @@ public class SoundManager : MonoBehaviour
 
     public void PlayLoop()
     {
-        while (true)
-        {
-            footStepsSource.Play();
-        }
+        footStepsSource.Play();
     }
 
     //RandomizeSfx chooses randomly between various audio clips and slightly changes their pitch.
