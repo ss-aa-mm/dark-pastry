@@ -1,17 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/IndividulWorkScenes/Scene_Kemal.unity
-  isLoaded: 0
-  isActive: 0
-  isSubScene: 0
-- path: Assets/Scenes/Levels/GameFlow/Level1.unity
-  isLoaded: 0
-  isActive: 0
-  isSubScene: 0
-- path: Assets/Scenes/Levels/GameFlow/BakeryScene.unity
-  isLoaded: 0
-  isActive: 0
-  isSubScene: 0
-- path: Assets/Scenes/Levels/GameFlow/IntroductionLevel.unity
+- path: Assets/Scenes/Giulia.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
