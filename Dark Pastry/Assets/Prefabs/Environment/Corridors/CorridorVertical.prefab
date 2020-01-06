@@ -2026,8 +2026,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3242153644589199679}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.010000229, y: 0.283, z: -3.3995957}
-  m_LocalScale: {x: 1.9001969, y: 1.4251478, z: 1.9001969}
+  m_LocalPosition: {x: 0, y: 0.38, z: 0}
+  m_LocalScale: {x: 0.62, y: 1.4251478, z: 1.9001969}
   m_Children: []
   m_Father: {fileID: 6141271538554851321}
   m_RootOrder: 2
@@ -2047,7 +2047,7 @@ MonoBehaviour:
   m_LightType: 0
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 1
-  m_Color: {r: 1, g: 0.44383222, b: 0.21226418, a: 1}
+  m_Color: {r: 1, g: 0.57678586, b: 0.4009434, a: 1}
   m_Intensity: 1
   m_LightVolumeOpacity: 1
   m_ApplyToSortingLayers: 00000000
@@ -2064,9 +2064,9 @@ MonoBehaviour:
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 48
   m_ShapeLightParametricAngleOffset: 0
-  m_ShapeLightParametricRadius: 0.37
-  m_ShapeLightFalloffSize: 3.25
-  m_ShapeLightFalloffOffset: {x: 2.55, y: -1.22}
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 5.63
+  m_ShapeLightFalloffOffset: {x: 3.59, y: -0.3}
   m_ShapePath:
   - {x: -0.5, y: -0.5, z: 0}
   - {x: 0.5, y: -0.5, z: 0}
@@ -2373,7 +2373,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5918440391734691092}
   serializedVersion: 6
-  lengthInSec: 5
+  lengthInSec: 1
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -2448,7 +2448,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -8106,7 +8106,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 0.019607844}
+      maxColor: {r: 1, g: 1, b: 1, a: 0.42745098}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}

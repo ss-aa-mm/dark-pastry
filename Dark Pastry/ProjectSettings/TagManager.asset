@@ -66,3 +66,9 @@ TagManager:
   - name: ButtonFeedback
     uniqueID: 224332961
     locked: 0
+  - name: Lightreceived
+    uniqueID: 1578885273
+    locked: 0
+  - name: Lightblocked
+    uniqueID: 1840733243
+    locked: 0
