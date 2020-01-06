@@ -939,6 +939,7 @@
             <e p="DropCherry.cs" t="Include" />
             <e p="DropChocolate.cs" t="Include" />
             <e p="DropCoffee.cs" t="Include" />
+            <e p="DropDough.cs" t="Include" />
             <e p="DropEgg.cs" t="Include" />
             <e p="DropFlour.cs" t="Include" />
             <e p="DropItem.cs" t="Include" />

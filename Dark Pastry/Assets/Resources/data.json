@@ -36,6 +36,25 @@
         "Hint4",
         "Hint5"
       ]
+    },
+
+    {
+      "number": 2,
+      "globeEnabled" : true,
+      "ingredients": [
+        "Cherry",
+        "Butter",
+        "Milk",
+        "Dough",
+        "Sugar"
+      ],
+      "hints": [
+        "Hint1",
+        "Hint2",
+        "Hint3",
+        "Hint4",
+        "Hint5"
+      ]
     }
 
   ]

@@ -61,6 +61,7 @@ public class Pedestal : HighlightableObject
         _pedestalSprites.Add(DropItems.Raspberry, Resources.Load<Sprite>("PedestalItems/Raspberry"));
         _pedestalSprites.Add(DropItems.Sugar, Resources.Load<Sprite>("PedestalItems/Sugar"));
         _pedestalSprites.Add(DropItems.WhippedCream, Resources.Load<Sprite>("PedestalItems/WhippedCream"));
+        _pedestalSprites.Add(DropItems.Dough, Resources.Load<Sprite>("PedestalItems/Dough"));
     }
 
     public DropItems GetObject()

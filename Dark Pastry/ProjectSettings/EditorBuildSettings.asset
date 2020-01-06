@@ -18,6 +18,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/GameFlow/BakeryScene.unity
     guid: fd694fbdfabc9e743887cbc507a83848
   - enabled: 1
+    path: Assets/Scenes/Levels/GameFlow/IntroductionLevel.unity
+    guid: 99657a5eef88622448a5d9814bb1bf1a
+  - enabled: 1
     path: Assets/Scenes/Levels/GameFlow/Level1.unity
     guid: 9f4d7427f94b7fa4185508f18ed3c375
+  - enabled: 1
+    path: Assets/Scenes/Levels/GameFlow/Level2.unity
+    guid: 7edce52429dabea44a2858f5b47db0d4
   m_configObjects: {}

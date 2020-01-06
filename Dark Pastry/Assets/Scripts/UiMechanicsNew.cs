@@ -28,7 +28,8 @@ public enum DropItems
     Cheese,
     Blueberry,
     Raspberry,
-    Blood
+    Blood,
+    Dough
 }
 
 public static class Extensions
@@ -131,6 +132,7 @@ public class UiMechanicsNew : MonoBehaviour
         _itemsSprites.Add(DropItems.Raspberry,Resources.Load<Sprite>("PocketItems/Raspberry"));
         _itemsSprites.Add(DropItems.Sugar,Resources.Load<Sprite>("PocketItems/Sugar"));
         _itemsSprites.Add(DropItems.WhippedCream,Resources.Load<Sprite>("PocketItems/WhippedCream"));
+        _itemsSprites.Add(DropItems.Dough,Resources.Load<Sprite>("PocketItems/Dough"));
     }
     
 }
