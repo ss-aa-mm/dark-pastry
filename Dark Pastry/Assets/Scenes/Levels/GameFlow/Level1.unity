@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1861,7 +1861,7 @@ PrefabInstance:
     - target: {fileID: 2363340081400100317, guid: 2054e3127519fa943a19df4ac6793e91,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2363340081400100305, guid: 2054e3127519fa943a19df4ac6793e91,
         type: 3}
@@ -1971,68 +1971,73 @@ PrefabInstance:
     - target: {fileID: 2363340081928360151, guid: 2054e3127519fa943a19df4ac6793e91,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2363340081928360151, guid: 2054e3127519fa943a19df4ac6793e91,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2363340081928360151, guid: 2054e3127519fa943a19df4ac6793e91,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 166.245
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2363340081928360151, guid: 2054e3127519fa943a19df4ac6793e91,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -99.6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2363340080099856945, guid: 2054e3127519fa943a19df4ac6793e91,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2363340080099856945, guid: 2054e3127519fa943a19df4ac6793e91,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2363340080099856945, guid: 2054e3127519fa943a19df4ac6793e91,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 230.395
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2363340080099856945, guid: 2054e3127519fa943a19df4ac6793e91,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -99.6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2363340081781167233, guid: 2054e3127519fa943a19df4ac6793e91,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2363340081781167233, guid: 2054e3127519fa943a19df4ac6793e91,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2363340081781167233, guid: 2054e3127519fa943a19df4ac6793e91,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 294.545
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2363340081781167233, guid: 2054e3127519fa943a19df4ac6793e91,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -99.6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2363340080459623810, guid: 2054e3127519fa943a19df4ac6793e91,
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -33.700073
       objectReference: {fileID: 0}
+    - target: {fileID: 2363340081400100318, guid: 2054e3127519fa943a19df4ac6793e91,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1029941623}
     - target: {fileID: 2363340080250911398, guid: 2054e3127519fa943a19df4ac6793e91,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -5246,7 +5251,7 @@ PrefabInstance:
     - target: {fileID: 5465951590381497303, guid: be92c30891e22184fa53e2ae9b95f349,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.74
+      value: -14.95
       objectReference: {fileID: 0}
     - target: {fileID: 5465951590381497303, guid: be92c30891e22184fa53e2ae9b95f349,
         type: 3}
@@ -5333,6 +5338,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be92c30891e22184fa53e2ae9b95f349, type: 3}
+--- !u!20 &1029941623 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 608460837, guid: be92c30891e22184fa53e2ae9b95f349,
+    type: 3}
+  m_PrefabInstance: {fileID: 1029941622}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1030311654
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7258,6 +7269,7 @@ MonoBehaviour:
   dropsHeart: 0
   dropsItem: 0
   isActive: 0
+  agataHit: {fileID: 0}
 --- !u!95 &1481331409 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 4858261919481605388, guid: 87459caf218769049b7175d46c23505f,
