@@ -963,6 +963,7 @@
           <e p="UIMechanics.cs" t="Include" />
           <e p="UIMechanicsNew.cs" t="Include" />
           <e p="VerticalLock.cs" t="Include" />
+          <e p="Weapon.cs" t="Include" />
         </e>
         <e p="Sorting_layers.txt" t="Include" />
         <e p="SoundManager.cs" t="Include" />
