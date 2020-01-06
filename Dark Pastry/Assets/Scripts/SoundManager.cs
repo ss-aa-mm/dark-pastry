@@ -49,6 +49,20 @@ public class SoundManager : MonoBehaviour
         footStepsSource.Play();
     }
 
+    public void PauseMusic()
+    {
+        efxSource.Pause();
+        musicSource.Pause();
+        footStepsSource.Pause();
+    }
+
+    public void UnPauseMusic()
+    {
+        efxSource.UnPause();
+        musicSource.UnPause();
+        footStepsSource.UnPause();
+    }
+
     //RandomizeSfx chooses randomly between various audio clips and slightly changes their pitch.
     public void RandomizeSfx(params AudioClip[] clips)
     {
