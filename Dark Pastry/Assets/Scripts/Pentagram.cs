@@ -96,7 +96,7 @@ public class Pentagram : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("Invalid recipe");
+                    //Debug.Log("Invalid recipe");
                 }
             }
         }
