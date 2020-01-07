@@ -133,6 +133,7 @@ public class UiMechanicsNew : MonoBehaviour
         _itemsSprites.Add(DropItems.Sugar,Resources.Load<Sprite>("PocketItems/Sugar"));
         _itemsSprites.Add(DropItems.WhippedCream,Resources.Load<Sprite>("PocketItems/WhippedCream"));
         _itemsSprites.Add(DropItems.Dough,Resources.Load<Sprite>("PocketItems/Dough"));
+        _itemsSprites.Add(DropItems.Blood,Resources.Load<Sprite>("PocketItems/Blood"));
     }
     
 }

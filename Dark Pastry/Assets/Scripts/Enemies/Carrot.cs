@@ -19,7 +19,7 @@ namespace Enemies
 
         protected override void MovementPattern()
         {
-            MoveRandomly();
+            CrossMovement();
         }
     }
 }

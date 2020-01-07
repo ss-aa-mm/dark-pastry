@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using MoonSharp.Interpreter;
+using Table = MoonSharp.Interpreter.Table;
 
 namespace Fungus
 {
@@ -55,7 +56,7 @@ namespace Fungus
         /// <summary>
         /// Cached reference to the string table (if loaded).
         /// </summary>
-        protected Table stringTable;
+        protected MoonSharp.Interpreter.Table stringTable;
 
         /// <summary>
         /// Cached reference to the Lua Environment component.
@@ -178,7 +179,7 @@ namespace Fungus
             MoonSharp.Interpreter.Script interpreter = luaEnvironment.Interpreter;
 
             // Require the Fungus module and assign it to the global 'fungus'
-            Table fungusTable = null;
+            MoonSharp.Interpreter.Table fungusTable = null;
             MoonSharp.Interpreter.DynValue value = interpreter.RequireModule("fungus");
             if (value != null &&
                 value.Type == DataType.Function)
@@ -211,7 +212,7 @@ namespace Fungus
             }
 
             // Populate the string table by parsing the string table JSON files
-            stringTable = new Table(interpreter); 
+            stringTable = new MoonSharp.Interpreter.Table(interpreter); 
             fungusTable["stringtable"] = stringTable;
             foreach (TextAsset stringFile in stringTables)
             {
@@ -236,7 +237,7 @@ namespace Fungus
                         continue;
                     }
 
-                    Table entriesTable = new Table(interpreter);
+                    MoonSharp.Interpreter.Table entriesTable = new MoonSharp.Interpreter.Table(interpreter);
                     stringTable[stringKey] = entriesTable;
 
                     JSONObject entries = stringsJSON.GetField(stringKey);

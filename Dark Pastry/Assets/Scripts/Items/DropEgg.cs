@@ -8,7 +8,7 @@ namespace Items
         {
             HighlightedSprite = Resources.Load<Sprite>("Items/DropEgg/Selected");
             NormalSprite = Resources.Load<Sprite>("Items/DropEgg/Normal");
-            //WrongSprite = Resources.Load<Sprite>("");
+            WrongSprite = Resources.Load<Sprite>("Items/DropEgg/Wrong");
             Type = DropItems.Egg;
         }
     }

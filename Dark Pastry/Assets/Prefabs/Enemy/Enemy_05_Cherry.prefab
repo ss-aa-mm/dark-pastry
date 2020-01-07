@@ -252,6 +252,7 @@ GameObject:
   - component: {fileID: 7554606100997177090}
   - component: {fileID: 7554606100997177117}
   - component: {fileID: 3292626387838363341}
+  - component: {fileID: 8450771804488729233}
   m_Layer: 0
   m_Name: WeaponPivot_right
   m_TagString: EnemyWeapon
@@ -359,6 +360,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &8450771804488729233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7554606100997177119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 940e718d34c9f4bc4942a8a212df09cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7554606101003845641
 GameObject:
   m_ObjectHideFlags: 0
@@ -10659,6 +10672,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7554606101837777320}
   - component: {fileID: 7554606101837777321}
+  - component: {fileID: 182813827750565953}
   m_Layer: 0
   m_Name: EnemyWeapon_left (1)
   m_TagString: Enemy
@@ -10729,6 +10743,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &182813827750565953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7554606101837777323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 940e718d34c9f4bc4942a8a212df09cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7554606101863221771
 GameObject:
   m_ObjectHideFlags: 0

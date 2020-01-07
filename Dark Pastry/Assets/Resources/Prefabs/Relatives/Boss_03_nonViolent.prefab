@@ -1590,6 +1590,7 @@ GameObject:
   - component: {fileID: 1941316856049414378}
   - component: {fileID: 1941316856049414388}
   - component: {fileID: 7847709556119207774}
+  - component: {fileID: 4321506561534662316}
   m_Layer: 0
   m_Name: WeaponPivot_left
   m_TagString: Untagged
@@ -1717,6 +1718,18 @@ PolygonCollider2D:
       - {x: 0.3764869, y: 0.2610341}
       - {x: 0.30679667, y: 0.9625273}
       - {x: -0.22295226, y: 1.2906473}
+--- !u!114 &4321506561534662316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941316856049414390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 940e718d34c9f4bc4942a8a212df09cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1941316856124873639
 GameObject:
   m_ObjectHideFlags: 0
@@ -1821,6 +1834,7 @@ GameObject:
   - component: {fileID: 1941316856531821570}
   - component: {fileID: 6646344843400326383}
   - component: {fileID: 1941316856531821580}
+  - component: {fileID: 754943134394132727}
   m_Layer: 0
   m_Name: WeaponPivot_right
   m_TagString: Untagged
@@ -1946,6 +1960,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &754943134394132727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1941316856531821582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 940e718d34c9f4bc4942a8a212df09cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1941316856543015050
 GameObject:
   m_ObjectHideFlags: 0
@@ -2632,15 +2658,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db7d79848d6b24d0f859e1d00d432d2a, type: 3}
---- !u!4 &3721036611214531910 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2977783633902214160, guid: db7d79848d6b24d0f859e1d00d432d2a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1941316855945544022}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3085492136504119939 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3468105574750229461, guid: db7d79848d6b24d0f859e1d00d432d2a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1941316855945544022}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3721036611214531910 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2977783633902214160, guid: db7d79848d6b24d0f859e1d00d432d2a,
     type: 3}
   m_PrefabInstance: {fileID: 1941316855945544022}
   m_PrefabAsset: {fileID: 0}

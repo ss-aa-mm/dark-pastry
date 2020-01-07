@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2449856943224692159}
   - component: {fileID: 2449856943224692156}
   - component: {fileID: 2449856943224692037}
+  - component: {fileID: 1024430625487175754}
   m_Layer: 0
   m_Name: WeaponPivot_left
   m_TagString: Untagged
@@ -119,6 +120,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1024430625487175754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2449856943224692154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 940e718d34c9f4bc4942a8a212df09cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4858261918638886228
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,7 +511,6 @@ GameObject:
   - component: {fileID: 4858261919481605388}
   - component: {fileID: 6431279709514218080}
   - component: {fileID: 7809967573551493266}
-  - component: {fileID: 4858261919481605397}
   m_Layer: 0
   m_Name: Boss_01_Violent
   m_TagString: Enemy
@@ -602,21 +614,6 @@ PolygonCollider2D:
       - {x: -0.589756, y: -0.054233417}
       - {x: 0.58941144, y: -0.06703169}
       - {x: 0.75735873, y: 0.8049143}
---- !u!114 &4858261919481605397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4858261919481605386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f42538aacdd0c54d98e69a8fddbd0fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dropsHeart: 0
-  dropsPocketItem: 0
-  agata: {fileID: 0}
 --- !u!1 &4858261919642598017
 GameObject:
   m_ObjectHideFlags: 0
@@ -1207,6 +1204,7 @@ GameObject:
   - component: {fileID: 6995514984832041645}
   - component: {fileID: 6995514984832041634}
   - component: {fileID: 6995514984832041644}
+  - component: {fileID: 5921320103101082295}
   m_Layer: 0
   m_Name: WeaponPivot_right
   m_TagString: Untagged
@@ -1314,6 +1312,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5921320103101082295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6995514984832041632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 940e718d34c9f4bc4942a8a212df09cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6995514985088839502
 GameObject:
   m_ObjectHideFlags: 0

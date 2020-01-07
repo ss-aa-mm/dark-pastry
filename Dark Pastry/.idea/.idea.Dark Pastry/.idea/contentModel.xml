@@ -892,9 +892,11 @@
           <e p="AgataNew.cs" t="Include" />
           <e p="Book.cs" t="Include" />
           <e p="Door.cs" t="Include" />
+          <e p="End.cs" t="Include" />
           <e p="EndLevel.cs" t="Include" />
           <e p="Enemies" t="Include">
             <e p="Biscuit.cs" t="Include" />
+            <e p="Blood.cs" t="Include" />
             <e p="BlueBerry.cs" t="Include" />
             <e p="Boss01.cs" t="Include" />
             <e p="Butter.cs" t="Include" />
@@ -921,6 +923,7 @@
           <e p="Inventory.cs" t="Include" />
           <e p="Items" t="Include">
             <e p="DropBiscuit.cs" t="Include" />
+            <e p="DropBlood.cs" t="Include" />
             <e p="DropBlueberry.cs" t="Include" />
             <e p="DropButter.cs" t="Include" />
             <e p="DropCarrot.cs" t="Include" />
@@ -944,6 +947,7 @@
           <e p="LevelData.cs" t="Include" />
           <e p="Lock.cs" t="Include" />
           <e p="LockChain.cs" t="Include" />
+          <e p="Main.cs" t="Include" />
           <e p="MainMenu.cs" t="Include" />
           <e p="Page.cs" t="Include" />
           <e p="Pedestal.cs" t="Include" />
@@ -953,6 +957,7 @@
           <e p="Room.cs" t="Include" />
           <e p="RoomChain.cs" t="Include" />
           <e p="SoundManager.cs" t="Include" />
+          <e p="Tablet.cs" t="Include" />
           <e p="UIMechanicsNew.cs" t="Include" />
           <e p="VerticalLock.cs" t="Include" />
           <e p="Weapon.cs" t="Include" />

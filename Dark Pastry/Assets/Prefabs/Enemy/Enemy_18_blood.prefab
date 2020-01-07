@@ -400,6 +400,7 @@ GameObject:
   - component: {fileID: 7750547242379754635}
   - component: {fileID: 7750547242379754636}
   - component: {fileID: 7750547242379754637}
+  - component: {fileID: 9031314624875400775}
   m_Layer: 0
   m_Name: WeaponPivot_left
   m_TagString: EnemyWeapon
@@ -507,6 +508,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &9031314624875400775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7750547242379754639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 940e718d34c9f4bc4942a8a212df09cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7750547242583363314
 GameObject:
   m_ObjectHideFlags: 0
@@ -903,7 +916,7 @@ GameObject:
   - component: {fileID: 7750547243362818257}
   - component: {fileID: 7750547243362818259}
   - component: {fileID: 7750547243362818260}
-  - component: {fileID: 3237324595808470097}
+  - component: {fileID: 2547325736035559209}
   m_Layer: 0
   m_Name: Enemy_18_blood
   m_TagString: Enemy
@@ -1018,7 +1031,7 @@ PolygonCollider2D:
       - {x: -0.5493326, y: 0.097358584}
       - {x: 0.38598037, y: 0.17970872}
       - {x: 0.23427105, y: 0.6432167}
---- !u!114 &3237324595808470097
+--- !u!114 &2547325736035559209
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1027,7 +1040,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7750547243362818261}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27401a7fe2da42b7b15abc43e73a18d5, type: 3}
+  m_Script: {fileID: 11500000, guid: cf5c49cce45ab4ecbaff46ba9812db13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   health: 0
@@ -1035,7 +1048,7 @@ MonoBehaviour:
   dropsHeart: 0
   dropsItem: 0
   isActive: 0
-  agataHit: {fileID: 8300000, guid: a7283c589ef2a144187064f2a0c72ae2, type: 3}
+  agataHit: {fileID: 0}
 --- !u!1 &7750547243373473183
 GameObject:
   m_ObjectHideFlags: 0
@@ -1080,6 +1093,7 @@ GameObject:
   - component: {fileID: 7750547243537202816}
   - component: {fileID: 7750547243537202817}
   - component: {fileID: 7750547243537202818}
+  - component: {fileID: 7312894483203352456}
   m_Layer: 0
   m_Name: WeaponPivot_right
   m_TagString: EnemyWeapon
@@ -1187,6 +1201,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7312894483203352456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7750547243537202820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 940e718d34c9f4bc4942a8a212df09cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7750547243549479283
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,7 +14,7 @@ namespace Fungus
     /// </summary>
     public class LuaStore : LuaBindingsBase
     {
-        protected Table primeTable;
+        protected MoonSharp.Interpreter.Table primeTable;
 
         protected bool initialized;
 
@@ -68,7 +68,7 @@ namespace Fungus
         /// <summary>
         /// A Lua table that can be shared between multiple LuaEnvironments.
         /// </summary>
-        public virtual Table PrimeTable { get { return primeTable; } }
+        public virtual MoonSharp.Interpreter.Table PrimeTable { get { return primeTable; } }
 
         #endregion
 
@@ -82,7 +82,7 @@ namespace Fungus
             }
 
             MoonSharp.Interpreter.Script interpreter = luaEnv.Interpreter;
-            Table globals = interpreter.Globals;
+            MoonSharp.Interpreter.Table globals = interpreter.Globals;
 
             if (globals == null)
             {
@@ -91,7 +91,7 @@ namespace Fungus
             }
 
             // If the fungus global table is defined then add the store to it
-            Table fungusTable = globals.Get("fungus").Table;
+            MoonSharp.Interpreter.Table fungusTable = globals.Get("fungus").Table;
             if (fungusTable != null)
             {
                 fungusTable["store"] = primeTable;

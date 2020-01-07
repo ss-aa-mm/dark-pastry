@@ -22,6 +22,7 @@ namespace Enemies
         private static int _frames;
         private static float _x;
         private static float _y;
+        private const int Force = 1;
         private const float Multiplier = 0.1f;
         private static readonly int Walk = Animator.StringToHash("walk");
         private static readonly int AttackRight = Animator.StringToHash("attackRight");
@@ -183,30 +184,30 @@ namespace Enemies
             if (enemyBody.position.x > agataBody.position.x) //The enemy is to the right of Agata
             {
                 if (agataBody.position.x >= 0)
-                    newPosition.x = agataBody.position.x * -5;
+                    newPosition.x = agataBody.position.x * -Force;
                 else
-                    newPosition.x = agataBody.position.x * 5;
+                    newPosition.x = agataBody.position.x * Force;
             }
             else //The enemy is to the left of Agata
             {
                 if (agataBody.position.x >= 0)
-                    newPosition.x = agataBody.position.x * 5;
+                    newPosition.x = agataBody.position.x * Force;
                 else
-                    newPosition.x = agataBody.position.x * -5;
+                    newPosition.x = agataBody.position.x * -Force;
             }
 
             if (enemyBody.position.y > agataBody.position.y) //The enemy is above Agata
             {
                 if (agataBody.position.y >= 0)
-                    newPosition.y = agataBody.position.y * -5;
+                    newPosition.y = agataBody.position.y * -Force;
                 else
-                    newPosition.y = agataBody.position.y * 5;
+                    newPosition.y = agataBody.position.y * Force;
             }
             else //The enemy is below Agata
             if (agataBody.position.y >= 0)
-                newPosition.y = agataBody.position.y * 5;
+                newPosition.y = agataBody.position.y * Force;
             else
-                newPosition.y = agataBody.position.y * -5;
+                newPosition.y = agataBody.position.y * -Force;
 
             //Push Agata away after hit
             agataBody.AddForce(newPosition, ForceMode2D.Impulse);

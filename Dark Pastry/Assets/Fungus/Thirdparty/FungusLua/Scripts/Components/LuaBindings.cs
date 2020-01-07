@@ -5,6 +5,7 @@
 using System.Collections.Generic;
 using MoonSharp.Interpreter;
 using System;
+using Table = MoonSharp.Interpreter.Table;
 
 namespace Fungus
 {
@@ -88,9 +89,9 @@ namespace Fungus
             }
 
             MoonSharp.Interpreter.Script interpreter = luaEnv.Interpreter;
-            Table globals = interpreter.Globals;
+            MoonSharp.Interpreter.Table globals = interpreter.Globals;
 
-            Table bindingsTable = null;
+            MoonSharp.Interpreter.Table bindingsTable = null;
             if (tableName == "")
             {
                 // Add directly to globals table
@@ -107,7 +108,7 @@ namespace Fungus
                 else
                 {
                     // Create a new table
-                    bindingsTable = new Table(globals.OwnerScript);
+                    bindingsTable = new MoonSharp.Interpreter.Table(globals.OwnerScript);
                     globals[tableName] = bindingsTable; 
                 }
             }

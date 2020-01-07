@@ -5,7 +5,6 @@ using UnityEngine;
 using MoonSharp.Interpreter.Loaders;
 using System.Collections.Generic;
 using System;
-using MoonSharp.Interpreter;
 
 namespace Fungus
 {
@@ -20,6 +19,7 @@ namespace Fungus
 
         /// <summary>
         // Bypasses the standard path resolution logic for require.
+
         /// </summary>
         protected override string ResolveModuleName(string modname, string[] paths)
         {
@@ -33,7 +33,7 @@ namespace Fungus
             this.luaScripts = luaScripts;
         }
 
-        public override object LoadFile(string file, Table globalContext)
+        public override object LoadFile(string file, MoonSharp.Interpreter.Table globalContext)
         {
             foreach (TextAsset luaScript in luaScripts)
             {
