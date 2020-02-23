@@ -58,7 +58,16 @@ public class AgataNew : MonoBehaviour
         var v = Input.GetAxis("Vertical");
         const float tolerance = 0.000000000000001f;
         if (Math.Abs(h) < tolerance && Math.Abs(v) < tolerance)
-            SoundManager.Instance.PlayLoop();
+        {
+            try
+            {
+                SoundManager.Instance.PlayLoop();
+            }
+            catch (NullReferenceException e)
+            {
+                Console.WriteLine(e);
+            }
+        }
         _unit = Speed * Time.deltaTime;
         transform.Translate(h * _unit, v * _unit, 0);
         //End of movement calculation
@@ -78,7 +87,16 @@ public class AgataNew : MonoBehaviour
         //Attack
         _isAttacking = Input.GetButtonDown("Attack");
         if (_isAttacking)
-            SoundManager.Instance.PlaySingle(swish);
+        {
+            try
+            {
+                SoundManager.Instance.PlaySingle(swish);
+            }
+            catch (NullReferenceException e)
+            {
+                Console.WriteLine(e);
+            }
+        }
         //End of Attack
 
         //Dance
@@ -179,6 +197,7 @@ public class AgataNew : MonoBehaviour
         {
             Time.timeScale = 0;
             _paused = true;
+            SoundManager.Instance.PauseLoop();
         }
         else
         {

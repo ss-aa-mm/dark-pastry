@@ -49,6 +49,11 @@ public class SoundManager : MonoBehaviour
         footStepsSource.Play();
     }
 
+    public void PauseLoop()
+    {
+        footStepsSource.Pause();
+    }
+
     public void PauseMusic()
     {
         efxSource.Pause();

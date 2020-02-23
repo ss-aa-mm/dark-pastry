@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -5682,7 +5682,7 @@ MonoBehaviour:
     width: 0
     height: 0
   selectedBlocks:
-  - {fileID: 5465951590262445245}
+  - {fileID: 5465951590262445213}
   selectedCommands: []
   variables:
   - {fileID: 1298327983}
@@ -18485,7 +18485,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 49
+  itemId: 111
   blockName: agataFlipPages (Copy) (Copy)
   description: 
   eventHandler: {fileID: 5465951590262445229}
@@ -18975,7 +18975,7 @@ MonoBehaviour:
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
-  itemId: 33
+  itemId: 110
   blockName: agataPickedUp (Copy) (Copy)
   description: 
   eventHandler: {fileID: 5465951590262445246}
