@@ -28,7 +28,7 @@ public abstract class HighlightableObject : MonoBehaviour
         _renderer.sprite = HighlightedSprite;
     }
 
-    private void Normal()
+    public void Normal()
     {
         _highlighted = false;
         _renderer.sprite = NormalSprite;

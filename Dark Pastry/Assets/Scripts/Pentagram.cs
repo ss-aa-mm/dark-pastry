@@ -59,6 +59,7 @@ public class Pentagram : MonoBehaviour
                 Book.Spawn();*/
                 foreach (var pedestal in _pedestals)
                 {
+                    pedestal.Normal();
                     Destroy(pedestal);
                 }
             }
