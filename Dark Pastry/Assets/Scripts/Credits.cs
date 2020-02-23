@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Main : MonoBehaviour
+public class Credits : MonoBehaviour
 {
 
     // Update is called once per frame
@@ -11,12 +11,8 @@ public class Main : MonoBehaviour
     {
         if (Input.GetButtonDown("Objects Interaction"))
         {
-            SceneManager.LoadScene("BakeryScene");
-        }
-
-        if (Input.GetButtonDown("Pause"))
-        {
-            SceneManager.LoadScene("CreditsSection");
+            SceneManager.LoadScene("MainMenu");
         }
     }
 }
+

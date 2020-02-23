@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Levels/GameFlow/MainMenu.unity
     guid: 8aec851ac67b19c4aade57d1ed3e7156
   - enabled: 1
+    path: Assets/Scenes/Levels/GameFlow/CreditsSection.unity
+    guid: 6fc28b1cd0b3f42b4b0b61e9810c7a24
+  - enabled: 1
     path: Assets/Scenes/Levels/GameFlow/BakeryScene.unity
     guid: fd694fbdfabc9e743887cbc507a83848
   - enabled: 1

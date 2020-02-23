@@ -891,6 +891,7 @@
         <e p="Scripts" t="Include">
           <e p="AgataNew.cs" t="Include" />
           <e p="Book.cs" t="Include" />
+          <e p="Credits.cs" t="Include" />
           <e p="Door.cs" t="Include" />
           <e p="End.cs" t="Include" />
           <e p="EndLevel.cs" t="Include" />
